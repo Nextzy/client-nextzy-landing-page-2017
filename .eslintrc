@@ -1,13 +1,12 @@
 {
-    "extends": "react-app",
-    "env": {
-        "serviceworker": true,
-        "browser": true
-    },
+    "extends": [
+        "react-app",
+        "prettier"
+    ],
+    "plugins": [
+        "prettier"
+    ],
     "rules": {
-        "semi": [
-            "error",
-            "never"
-        ]
+        "semi": ["error", "never"]
     }
 }
