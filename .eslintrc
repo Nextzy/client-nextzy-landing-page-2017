@@ -3,5 +3,11 @@
     "env": {
         "serviceworker": true,
         "browser": true
+    },
+    "rules": {
+        "semi": [
+            "error",
+            "never"
+        ]
     }
 }
