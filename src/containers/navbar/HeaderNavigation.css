@@ -1,3 +1,7 @@
 .HeaderNavigation {
   margin-bottom: 0;
 }
+
+.navbar-logo {
+  max-height: 100%;
+}

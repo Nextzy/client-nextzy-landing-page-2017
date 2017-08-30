@@ -1,12 +1,13 @@
 import React from 'react'
+import './Service.css'
 
 class Service extends React.Component {
   render() {
     return (
-      <section>
-        <i className={this.props.icon} />
+      <div className="Services">
+        <img src={this.props.icon} alt={this.props.text} />
         <h3>{this.props.text}</h3>
-      </section>
+      </div>
     )
   }
 }

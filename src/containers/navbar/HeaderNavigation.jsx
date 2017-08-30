@@ -1,7 +1,10 @@
 import React from 'react'
-import { Navbar, Nav, NavItem } from 'react-bootstrap'
+import { Navbar, Nav } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 import menus from '../../constants/menus'
+import RouteNavItem from '../../components/RouteNavItem'
 import './HeaderNavigation.css'
+import logo from '../../images/logo_nextzy_black.png'
 
 class HeaderNavigation extends React.Component {
   constructor(props) {
@@ -13,9 +16,9 @@ class HeaderNavigation extends React.Component {
     if (data !== null) {
       return data.map(menu => {
         return (
-          <NavItem key={menu.key} eventKey={menu.key} href={menu.href}>
+          <RouteNavItem key={menu.key} eventKey={menu.key} href={menu.link}>
             {menu.name}
-          </NavItem>
+          </RouteNavItem>
         )
       })
     }
@@ -26,7 +29,13 @@ class HeaderNavigation extends React.Component {
       <Navbar className="HeaderNavigation" collapseOnSelect>
         <Navbar.Header>
           <Navbar.Brand>
-            <a href="/">Nextzy</a>
+            <Link to="/">
+              <img
+                src={logo}
+                alt="Nextzy Technologies"
+                className="navbar-logo"
+              />
+            </Link>
           </Navbar.Brand>
           <Navbar.Toggle />
         </Navbar.Header>

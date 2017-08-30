@@ -1,37 +1,27 @@
 module.exports = [
   {
     key: 1,
-    href: '#home',
+    link: '#home',
     name: 'Home'
   },
   {
     key: 2,
-    href: '#services',
+    link: '#services',
     name: 'Services'
   },
   {
     key: 3,
-    href: '#works',
-    name: 'Our works'
+    link: '#works',
+    name: 'Works'
   },
   {
     key: 4,
-    href: '#team',
+    link: '#team',
     name: 'Team'
   },
   {
     key: 5,
-    href: '#contact',
+    link: '#contact',
     name: 'Contact'
-  },
-  {
-    key: 6,
-    href: 'https://blog.nextzy.me/',
-    name: 'Blog'
-  },
-  {
-    key: 7,
-    href: '/careers',
-    name: 'Careers'
   }
 ]

@@ -1,0 +1,8 @@
+.Services {
+  display: flex;
+  flex-direction: row;
+}
+
+.Services>img {
+  height: 60px;
+}

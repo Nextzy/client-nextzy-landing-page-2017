@@ -1,19 +1,28 @@
 .top-banner {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  padding-right: 20px;
-  background-color: rgba(33, 40, 45, 0.6);
-  height: 1000px;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0);
+  height: 100vh;
   width: 100%;
 }
 
 .top-banner>.description {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: flex-start;
+  color: #fff;
+  font-family: 'Montserrat', 'sans-serif';
+  padding-left: 35vw;
 }
 
-.top-banner>.description>h1, h6 {
-  color: #fff;
+.top-banner>.description>h1 {
+  font-weight: 700;
+  font-size: 60px;
+}
+
+.top-banner>.description>h6 {
+  font-weight: 500;
+  font-size: 20px;
+  text-justify: auto;
 }

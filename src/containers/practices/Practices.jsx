@@ -1,7 +1,8 @@
 import React from 'react'
 import Service from '../../components/Service'
-import practices from '../../constants/practices'
+import { practices } from '../../constants/practices'
 import { Col } from 'react-bootstrap'
+import './Practices.css'
 
 class Practices extends React.Component {
   constructor(props) {
@@ -23,9 +24,14 @@ class Practices extends React.Component {
 
   render() {
     return (
-      <section className="section-content">
-        {this._renderPractices(practices)}
-      </section>
+      <Col className="Practices" xs={12} sm={12} md={12} lg={12}>
+        <Col className="title" xs={12} sm={12} md={6} lg={6}>
+          <h1>Our practices</h1>
+        </Col>
+        <Col className="description" xs={12} sm={12} md={6} lg={6}>
+          {this._renderPractices(practices)}
+        </Col>
+      </Col>
     )
   }
 }

@@ -2,7 +2,6 @@
 @import "~slick-carousel/slick/slick-theme.css";
 
 .App {
-  background-image: url('http://nextzy.me/images/nextzy02.jpg');
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -13,5 +12,4 @@
   padding: 0;
   margin: 0;
   width: 100%;
-  height: 1000px;
 }
