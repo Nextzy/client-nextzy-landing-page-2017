@@ -1,6 +1,7 @@
 import React from 'react'
 import { Navbar, Nav, NavItem } from 'react-bootstrap'
 import menus from '../../constants/menus'
+import './HeaderNavigation.css'
 
 class HeaderNavigation extends React.Component {
   constructor(props) {
@@ -22,7 +23,7 @@ class HeaderNavigation extends React.Component {
 
   render() {
     return (
-      <Navbar collapseOnSelect>
+      <Navbar className="HeaderNavigation" collapseOnSelect>
         <Navbar.Header>
           <Navbar.Brand>
             <a href="/">Nextzy</a>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Banner from '../banner/Banner'
-import { img, title, subtitle } from '../../constants/banner'
+import { title, subtitle } from '../../constants/banner'
 import HeaderNavigation from '../navbar/HeaderNavigation'
 import Practices from '../practices/Practices'
 import { Grid } from 'react-bootstrap'
@@ -11,7 +11,7 @@ class App extends Component {
     return (
       <div className="App">
         <HeaderNavigation />
-        <Grid>
+        <Grid className="containers">
           <Banner title={title} subtitle={subtitle} />
           <Practices />
         </Grid>

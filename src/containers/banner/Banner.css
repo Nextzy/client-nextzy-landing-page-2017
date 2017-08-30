@@ -1,1 +1,19 @@
-/* TODOD: background opacity*/
+.top-banner {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 20px;
+  background-color: rgba(33, 40, 45, 0.6);
+  height: 1000px;
+  width: 100%;
+}
+
+.top-banner>.description {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.top-banner>.description>h1, h6 {
+  color: #fff;
+}

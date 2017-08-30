@@ -1,7 +1,7 @@
 import React from 'react'
 import Service from '../../components/Service'
 import practices from '../../constants/practices'
-import { Grid, Row, Col } from 'react-bootstrap'
+import { Col } from 'react-bootstrap'
 
 class Practices extends React.Component {
   constructor(props) {
@@ -13,7 +13,7 @@ class Practices extends React.Component {
     if (list !== null) {
       return list.map(practice => {
         return (
-          <Col sm={6} md={4}>
+          <Col key={practice.text} sm={6} md={4}>
             <Service icon={practice.icon} text={practice.text} />
           </Col>
         )
@@ -23,7 +23,9 @@ class Practices extends React.Component {
 
   render() {
     return (
-      <Row className="section-content">{this._renderPractices(practices)}</Row>
+      <section className="section-content">
+        {this._renderPractices(practices)}
+      </section>
     )
   }
 }
