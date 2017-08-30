@@ -1,4 +1,4 @@
-export const practices = [
+module.exports = [
   {
     icon: 'icon-focus',
     text: 'Pixel Perfect'
