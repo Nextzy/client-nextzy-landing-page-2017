@@ -31,7 +31,7 @@ class Services extends React.Component {
         <Col className="service-items" xs={12} sm={12} md={6} lg={6}>
           {this._renderServices(services)}
         </Col>
-        <Col xs={12} sm={12} md={6} lg={6}>
+        <Col className="service-title" xs={12} sm={12} md={6} lg={6}>
           <ServiceTitle />
         </Col>
       </Col>

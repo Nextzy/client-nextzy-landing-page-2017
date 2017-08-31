@@ -1,8 +1,14 @@
 .ServiceTitle {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  color: #FAFAFA;
 }
 
-.ServiceTitle>img {
-  height: 60px;
+.ServiceTitle>.icon>img {
+  height: 150px;
+}
+
+.ServiceTitle>.title>h1 {
+  font-weight: bold;
 }
