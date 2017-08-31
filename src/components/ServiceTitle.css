@@ -1,0 +1,8 @@
+.ServiceTitle {
+  display: flex;
+  flex-direction: column;
+}
+
+.ServiceTitle>img {
+  height: 60px;
+}

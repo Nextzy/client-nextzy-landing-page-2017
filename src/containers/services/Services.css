@@ -1,3 +1,9 @@
 .Services {
+  display: flex;
   background: #eee;
+  padding-left: 0;
+}
+
+.Services>.service-items {
+  padding-left: 0;
 }

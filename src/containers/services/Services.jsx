@@ -1,6 +1,7 @@
 import React from 'react'
 import { Col } from 'react-bootstrap'
 import Service from '../../components/Service'
+import ServiceTitle from '../../components/ServiceTitle'
 import { services } from '../../constants/services'
 import './Services.css'
 
@@ -27,10 +28,12 @@ class Services extends React.Component {
   render() {
     return (
       <Col className="Services" xs={12} sm={12} md={12} lg={12}>
-        <Col xs={12} sm={12} md={6} lg={6}>
+        <Col className="service-items" xs={12} sm={12} md={6} lg={6}>
           {this._renderServices(services)}
         </Col>
-        <Col xs={12} sm={12} md={6} lg={6} />
+        <Col xs={12} sm={12} md={6} lg={6}>
+          <ServiceTitle />
+        </Col>
       </Col>
     )
   }
