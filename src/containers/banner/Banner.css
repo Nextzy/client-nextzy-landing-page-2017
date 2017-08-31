@@ -1,16 +1,18 @@
 .top-banner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(0, 0, 0, 0);
-  height: 100vh;
+  position: relative;
+  display: inline-block;
+}
+
+.Banner>.top-banner>.background-image {
+  height: auto;
   width: 100%;
 }
 
 .top-banner>.description {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  position: absolute;
+  left: 60%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   color: #fff;
 }
 
