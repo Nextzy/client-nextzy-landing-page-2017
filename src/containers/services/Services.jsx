@@ -2,6 +2,7 @@ import React from 'react'
 import { Col } from 'react-bootstrap'
 import Service from '../../components/Service'
 import { services } from '../../constants/services'
+import './Services.css'
 
 class Services extends React.Component {
   constructor(props) {
@@ -12,7 +13,7 @@ class Services extends React.Component {
   _renderServices(data) {
     if (data !== null) {
       return data.map(service => (
-        <Col xs={12} sm={12} md={6} lg={6}>
+        <Col key={service.name}>
           <Service
             icon={service.icon}
             name={service.name}
@@ -25,11 +26,11 @@ class Services extends React.Component {
 
   render() {
     return (
-      <Col xs={12} sm={12} md={12} lg={12}>
-        <Col xs={12} sm={12} md={6} lg={6} />
+      <Col className="Services" xs={12} sm={12} md={12} lg={12}>
         <Col xs={12} sm={12} md={6} lg={6}>
           {this._renderServices(services)}
         </Col>
+        <Col xs={12} sm={12} md={6} lg={6} />
       </Col>
     )
   }

@@ -7,22 +7,28 @@ import java_script_normal from '../images/icon_java_script_normal.png'
 
 const services = [
   {
-    icon_hover: android_hover,
-    icon_normal: android_normal,
+    icon: {
+      icon_hover: android_hover,
+      icon_normal: android_normal
+    },
     name: 'Android',
     description:
       'We use Lollipop features, Support multiple screen, Retrofit and Glide.'
   },
   {
-    icon_hover: apple_hover,
-    icon_normal: apple_normal,
+    icon: {
+      icon_hover: apple_hover,
+      icon_normal: apple_normal
+    },
     name: 'iOS',
     description:
       'Swift, Objective-C, Cocoa Pods, AFNetworking, AlamoFire and Spring.'
   },
   {
-    icon_hover: java_script_hover,
-    icon_normal: java_script_normal,
+    icon: {
+      icon_hover: java_script_hover,
+      icon_normal: java_script_normal
+    },
     name: 'Node.JS & Angular',
     description:
       'HTML5, CSS3, JavaScript, Node.JS, Angular.JS, React.JS and MEAN Stack.'

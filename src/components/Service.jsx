@@ -1,12 +1,19 @@
 import React from 'react'
+import './Service.css'
 
 class Service extends React.Component {
   render() {
     return (
       <div className="Service">
-        <img src={this.props.icon} alt={this.props.name} />
-        {this.props.name}
-        {this.props.description}
+        <div className="icon">
+          <img src={this.props.icon.icon_normal} alt={this.props.name} />
+        </div>
+        <div className="name">
+          <h3>{this.props.name}</h3>
+        </div>
+        <div className="description">
+          <h6>{this.props.description}</h6>
+        </div>
       </div>
     )
   }
