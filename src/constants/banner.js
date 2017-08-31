@@ -1,5 +1,6 @@
-const title = 'Nextzy Technologies'
+const nextzy = 'Nextzy'
+const tech = 'Technologies'
 const subtitle =
   'We are pirates. We sail and hunt the best mobile and web solution.'
 
-export { title, subtitle }
+export { nextzy, tech, subtitle }

@@ -1,10 +1,10 @@
 import React from 'react'
-import './Service.css'
+import './Practice.css'
 
-class Service extends React.Component {
+class Practice extends React.Component {
   render() {
     return (
-      <div className="Services">
+      <div className="Practice">
         <img src={this.props.icon} alt={this.props.text} />
         <h3>{this.props.text}</h3>
       </div>
@@ -12,4 +12,4 @@ class Service extends React.Component {
   }
 }
 
-export default Service
+export default Practice
