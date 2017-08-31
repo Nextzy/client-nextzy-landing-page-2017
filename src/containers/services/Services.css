@@ -1,5 +1,6 @@
 .Services {
   display: flex;
+  flex-wrap: wrap;
   background: #eee;
   padding-left: 0;
   padding-right: 0;
@@ -8,11 +9,4 @@
 .Services>.service-items {
   padding-left: 0;
   padding-right: 0;
-}
-
-.Services>.service-title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: radial-gradient(circle at center, #03375F 0%, #181A41 100%);
 }

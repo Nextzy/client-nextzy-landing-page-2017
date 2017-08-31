@@ -1,6 +1,11 @@
 import React from 'react'
-import './Banner.css'
 import { Col } from 'react-bootstrap'
+import banner from '../../images/banner_header.jpg'
+import './Banner.css'
+
+const appStyle = {
+  backgroundImage: `url(${banner})`
+}
 
 class Banner extends React.Component {
   render() {

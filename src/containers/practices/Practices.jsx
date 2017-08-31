@@ -14,9 +14,11 @@ class Practices extends React.Component {
     if (list !== null) {
       return list.map(practice => {
         return (
-          <Col key={practice.text}>
-            <Practice icon={practice.icon} text={practice.text} />
-          </Col>
+          <Practice
+            icon={practice.icon}
+            text={practice.text}
+            key={practice.text}
+          />
         )
       })
     }

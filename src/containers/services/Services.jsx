@@ -14,13 +14,12 @@ class Services extends React.Component {
   _renderServices(data) {
     if (data !== null) {
       return data.map(service => (
-        <Col key={service.name}>
-          <Service
-            icon={service.icon}
-            name={service.name}
-            description={service.description}
-          />
-        </Col>
+        <Service
+          key={service.name}
+          icon={service.icon}
+          name={service.name}
+          description={service.description}
+        />
       ))
     }
   }
@@ -31,9 +30,7 @@ class Services extends React.Component {
         <Col className="service-items" xs={12} sm={12} md={6} lg={6}>
           {this._renderServices(services)}
         </Col>
-        <Col className="service-title" xs={12} sm={12} md={6} lg={6}>
-          <ServiceTitle />
-        </Col>
+        <ServiceTitle />
       </Col>
     )
   }

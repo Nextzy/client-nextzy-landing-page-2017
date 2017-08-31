@@ -2,7 +2,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   color: #FAFAFA;
+  background: radial-gradient(circle at center, #03375F 0%, #181A41 100%);
 }
 
 .ServiceTitle>.icon>img {
