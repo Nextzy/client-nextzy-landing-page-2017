@@ -6,6 +6,7 @@ import Banner from '../banner/Banner'
 import Practices from '../practices/Practices'
 import Services from '../services/Services'
 import Works from '../works/Works'
+import Clients from '../clients/Clients'
 import './App.css'
 
 class App extends Component {
@@ -18,6 +19,7 @@ class App extends Component {
           <Practices />
           <Services />
           <Works />
+          <Clients />
         </Grid>
       </div>
     )
