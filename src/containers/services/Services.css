@@ -1,6 +1,6 @@
 .Services {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap-reverse;
   background: #eee;
   padding-left: 0;
   padding-right: 0;
