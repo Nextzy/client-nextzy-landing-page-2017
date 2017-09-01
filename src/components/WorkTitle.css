@@ -1,0 +1,9 @@
+.WorkTitle {
+  display: flex;
+  justify-content: center;
+  padding: 100px;
+}
+
+.WorkTitle>h1 {
+  font-weight: bold;
+}
