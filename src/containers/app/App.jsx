@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
-import Banner from '../banner/Banner'
 import { nextzy, tech, subtitle } from '../../constants/banner'
-import HeaderNavigation from '../navbar/HeaderNavigation'
-import Practices from '../practices/Practices'
 import { Grid } from 'react-bootstrap'
+import HeaderNavigation from '../navbar/HeaderNavigation'
+import Banner from '../banner/Banner'
+import Practices from '../practices/Practices'
 import Services from '../services/Services'
+import Works from '../works/Works'
 import './App.css'
 
 class App extends Component {
@@ -16,6 +17,7 @@ class App extends Component {
           <Banner nextzy={nextzy} tech={tech} subtitle={subtitle} />
           <Practices />
           <Services />
+          <Works />
         </Grid>
       </div>
     )

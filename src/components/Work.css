@@ -1,0 +1,33 @@
+.Work {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 20px;
+}
+
+.Work>.preview-image {
+  display: flex;
+  background: #333;
+  height: 250px;
+  width: 250px;
+  justify-content: center;
+}
+
+.Work>.preview-image>img {
+  height: 100%;
+  width: auto;
+}
+
+.Work>.detail {
+  display: flex;
+  padding: 20px;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-justify: auto;
+  background: #eee;
+}
+
+.Work>.detail>h2 {
+  font-weight: bold;
+}
