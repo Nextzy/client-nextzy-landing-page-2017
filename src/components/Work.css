@@ -6,6 +6,7 @@
 }
 
 .Work>.preview-image {
+  flex-grow: 1;
   display: flex;
   background: #333;
   height: 250px;
@@ -19,9 +20,10 @@
 }
 
 .Work>.detail {
+  flex-grow: 3;
   display: flex;
   padding: 20px;
-  width: 100%;
+  width: 380px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -31,4 +33,6 @@
 
 .Work>.detail>h2 {
   font-weight: bold;
+  text-align: center;
+  word-wrap: break-word;
 }
