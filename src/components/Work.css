@@ -5,16 +5,16 @@
 }
 
 .Work>.preview-image {
-  display: flex;
+  display: inline-block;
   background: #333;
   height: 250px;
   width: 250px;
-  justify-content: center;
+  overflow: hidden;
+  vertical-align: top;
 }
 
 .Work>.preview-image>img {
   height: 100%;
-  width: auto;
 }
 
 .Work>.detail {
