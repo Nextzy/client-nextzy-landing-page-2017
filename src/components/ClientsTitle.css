@@ -1,0 +1,11 @@
+.Clients-Title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 40px;
+}
+
+.Clients-Title > h1 {
+  color: #EEE;
+}

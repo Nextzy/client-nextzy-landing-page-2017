@@ -1,5 +1,6 @@
 import React from 'react'
 import { Col } from 'react-bootstrap'
+import ClientsTitle from '../../components/ClientsTitle'
 import Slider from 'react-slick'
 import Client from '../../components/Client'
 import { clients } from '../../constants/clients'
@@ -68,19 +69,22 @@ class Clients extends React.Component {
   render() {
     return (
       <Col className="Clients" xs={12} sm={12} md={12} lg={12}>
-        <Slider className="clients-slider" {...settings}>
-          {this._renderClient(clients).map(slide => (
-            <div
-              key={generator.generate({
-                length: 18,
-                numbers: true,
-                symbols: true
-              })}
-            >
-              {slide}
-            </div>
-          ))}
-        </Slider>
+        <ClientsTitle />
+        <Col className="clients-slider-wrapper" xs={12} sm={12} md={12} lg={12}>
+          <Slider className="clients-slider" {...settings}>
+            {this._renderClient(clients).map(slide => (
+              <div
+                key={generator.generate({
+                  length: 18,
+                  numbers: true,
+                  symbols: true
+                })}
+              >
+                {slide}
+              </div>
+            ))}
+          </Slider>
+        </Col>
       </Col>
     )
   }
