@@ -1,50 +1,12 @@
 import React from 'react'
 import { Col } from 'react-bootstrap'
-import Member from '../../components/member/Member'
+import Member from '../../components/team/Member'
 import generator from 'generate-password'
 import Slider from 'react-slick'
 import { members } from '../../constants/members'
-
-const settings = {
-  autoplay: true,
-  infinite: true,
-  dots: true,
-  speed: 500,
-  pauseOnHover: true,
-  responsive: [
-    {
-      breakpoint: 100000,
-      settings: {
-        slidesToShow: 5,
-        slidesToScroll: 5,
-        infinite: true,
-        dots: true
-      }
-    },
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 3
-      }
-    },
-    {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2,
-        initialSlide: 2
-      }
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1
-      }
-    }
-  ]
-}
+import TeamTitle from '../../components/team/TeamTitle'
+import { settings } from './sliderSetting'
+import './Team.css'
 
 class Team extends React.Component {
   constructor(props) {
@@ -72,6 +34,7 @@ class Team extends React.Component {
   render() {
     return (
       <Col xs={12} sm={12} md={12} lg={12}>
+        <TeamTitle />
         <Slider className="member-slider" {...settings}>
           {this._renderTeamMember(members).map(slide => (
             <div
