@@ -1,6 +1,6 @@
 import React from 'react'
 import './Service.css'
-import { normalStyle, hoverStyle } from '../constants/servicesStyle'
+import { normalStyle, hoverStyle } from '../../constants/servicesStyle'
 
 class Service extends React.Component {
   constructor(props) {

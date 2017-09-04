@@ -1,7 +1,7 @@
 import React from 'react'
 import { Col } from 'react-bootstrap'
-import WorkTitle from '../../components/WorkTitle'
-import Work from '../../components/Work'
+import WorkTitle from '../../components/work/WorkTitle'
+import Work from '../../components/work/Work'
 import { work_list } from '../../constants/works'
 import './Works.css'
 

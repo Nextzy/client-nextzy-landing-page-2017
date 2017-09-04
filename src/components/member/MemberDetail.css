@@ -1,0 +1,11 @@
+.MemberDetail {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.MemberDetail>h5 {
+  font-weight: bold;
+}

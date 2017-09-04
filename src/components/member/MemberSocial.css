@@ -1,0 +1,13 @@
+.MemberSocial {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 18px;
+  padding-bottom: 30px;
+}
+
+.MemberSocial>a>.social_icon_logo {
+  width: 20px;
+  height: auto;
+}

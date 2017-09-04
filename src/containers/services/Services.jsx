@@ -1,7 +1,7 @@
 import React from 'react'
 import { Col } from 'react-bootstrap'
-import Service from '../../components/Service'
-import ServiceTitle from '../../components/ServiceTitle'
+import Service from '../../components/service/Service'
+import ServiceTitle from '../../components/service/ServiceTitle'
 import { services } from '../../constants/services'
 import './Services.css'
 

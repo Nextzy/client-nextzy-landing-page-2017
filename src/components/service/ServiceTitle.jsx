@@ -1,5 +1,5 @@
 import React from 'react'
-import service_icon from '../images/icon_our_service.png'
+import service_icon from '../../images/icon_our_service.png'
 import { Col } from 'react-bootstrap'
 import './ServiceTitle.css'
 

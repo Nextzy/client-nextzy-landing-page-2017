@@ -1,0 +1,9 @@
+.Member {
+  box-shadow: 0 0 0 2px #9D9D9D;
+  background: #FFF;
+}
+
+.Member>img {
+  width: 250px;
+  height: auto;
+}

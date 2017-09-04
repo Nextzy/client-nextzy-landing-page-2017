@@ -1,5 +1,5 @@
 import React from 'react'
-import Practice from '../../components/Practice'
+import Practice from '../../components/practice/Practice'
 import { practices } from '../../constants/practices'
 import { Col } from 'react-bootstrap'
 import './Practices.css'
