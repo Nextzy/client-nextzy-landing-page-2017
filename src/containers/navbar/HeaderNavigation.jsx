@@ -2,9 +2,10 @@ import React from 'react'
 import { Navbar, Nav } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import menus from '../../constants/menus'
-import RouteNavItem from '../../components/RouteNavItem'
+import { NavItem } from 'react-bootstrap'
 import './HeaderNavigation.css'
 import logo from '../../images/logo_nextzy_black.png'
+import Scrollchor from 'react-scrollchor'
 
 class HeaderNavigation extends React.Component {
   constructor(props) {
@@ -16,9 +17,9 @@ class HeaderNavigation extends React.Component {
     if (data !== null) {
       return data.map(menu => {
         return (
-          <RouteNavItem key={menu.key} eventKey={menu.key} href={menu.link}>
-            {menu.name}
-          </RouteNavItem>
+          <NavItem key={menu.key} eventKey={menu.key}>
+            <Scrollchor to={menu.link}>{menu.name}</Scrollchor>
+          </NavItem>
         )
       })
     }

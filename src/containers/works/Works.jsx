@@ -23,7 +23,7 @@ class Works extends React.Component {
 
   render() {
     return (
-      <Col className="Works" xs={12} sm={12} md={12} lg={12}>
+      <Col className="Works" id="works" xs={12} sm={12} md={12} lg={12}>
         <WorkTitle />
         {this._renderWork(work_list)}
       </Col>

@@ -26,7 +26,7 @@ class Services extends React.Component {
 
   render() {
     return (
-      <Col className="Services" xs={12} sm={12} md={12} lg={12}>
+      <Col className="Services" id="services" xs={12} sm={12} md={12} lg={12}>
         <Col className="service-items" xs={12} sm={12} md={6} lg={6}>
           {this._renderServices(services)}
         </Col>

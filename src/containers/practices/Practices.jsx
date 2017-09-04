@@ -26,7 +26,7 @@ class Practices extends React.Component {
 
   render() {
     return (
-      <Col className="Practices" xs={12} sm={12} md={12} lg={12}>
+      <Col className="Practices" id="practices" xs={12} sm={12} md={12} lg={12}>
         <Col className="title" xs={12} sm={6} md={6} lg={6}>
           <div className="text">
             <h1>Our</h1>

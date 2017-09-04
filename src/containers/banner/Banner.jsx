@@ -5,7 +5,7 @@ import './Banner.css'
 class Banner extends React.Component {
   render() {
     return (
-      <section className="Banner">
+      <section className="Banner" id="banner">
         <div className="top-banner">
           <img className="background-image" src={banner} alt="Nextzy" />
           <div className="description">

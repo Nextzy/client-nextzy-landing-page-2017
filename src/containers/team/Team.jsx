@@ -33,7 +33,7 @@ class Team extends React.Component {
 
   render() {
     return (
-      <Col xs={12} sm={12} md={12} lg={12}>
+      <Col className="Team" id="team" xs={12} sm={12} md={12} lg={12}>
         <TeamTitle />
         <Slider className="member-slider" {...settings}>
           {this._renderTeamMember(members).map(slide => (
