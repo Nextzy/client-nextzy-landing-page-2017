@@ -35,11 +35,7 @@ class HeaderNavigation extends React.Component {
         <Navbar.Header>
           <Navbar.Brand>
             <Link to="/">
-              <img
-                src={logo}
-                alt="Nextzy Technologies"
-                className="navbar-logo"
-              />
+              <img src={logo} alt="Nextzy Technologies" />
             </Link>
           </Navbar.Brand>
           <Navbar.Toggle />
