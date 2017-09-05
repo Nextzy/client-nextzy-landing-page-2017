@@ -1,0 +1,18 @@
+.Contact {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap-reverse;
+  padding: 40px 0px 0px 0px;
+}
+
+.Contact > .map {
+  padding: 0px;
+}
+
+.Contact > .detail {
+  display: flex;
+  align-items: center;
+  padding-left: 8em;
+  color: #EEE;
+  background: linear-gradient(45deg, #181A41, #03375F);
+}

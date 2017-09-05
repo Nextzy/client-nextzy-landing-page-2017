@@ -5,6 +5,7 @@
   justify-content: center;
   color: #FAFAFA;
   background: radial-gradient(circle at center, #03375F 0%, #181A41 100%);
+  padding: 60px;
 }
 
 .ServiceTitle>.icon>img {
@@ -13,4 +14,5 @@
 
 .ServiceTitle>.title>h1 {
   font-weight: bold;
+  text-align: center;
 }

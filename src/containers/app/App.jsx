@@ -23,7 +23,7 @@ class App extends Component {
           <Works />
           <Clients />
           <Team />
-          {/* <Contact /> */}
+          <Contact />
         </Grid>
       </div>
     )
