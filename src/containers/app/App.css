@@ -10,6 +10,6 @@
 
 .App>.containers {
   padding: 0;
-  margin: 0;
+  margin: 50px 0 0 0;
   width: 100%;
 }

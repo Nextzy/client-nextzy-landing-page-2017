@@ -5,20 +5,24 @@ import menus from '../../constants/menus'
 import { NavItem } from 'react-bootstrap'
 import './HeaderNavigation.css'
 import logo from '../../images/logo_nextzy_black.png'
-import Scrollchor from 'react-scrollchor'
 
 class HeaderNavigation extends React.Component {
   constructor(props) {
     super(props)
     this._renderMenu = this._renderMenu.bind(this)
+    this.handleSelect = this.handleSelect.bind(this)
+  }
+
+  handleSelect(eventKey) {
+    window.open(menus[eventKey - 1].link, '_self')
   }
 
   _renderMenu(data) {
     if (data !== null) {
       return data.map(menu => {
         return (
-          <NavItem key={menu.key} eventKey={menu.key}>
-            <Scrollchor to={menu.link}>{menu.name}</Scrollchor>
+          <NavItem key={menu.key} eventKey={menu.key} href={menu.link}>
+            {menu.name}
           </NavItem>
         )
       })
@@ -27,7 +31,7 @@ class HeaderNavigation extends React.Component {
 
   render() {
     return (
-      <Navbar className="HeaderNavigation" collapseOnSelect>
+      <Navbar className="HeaderNavigation" fixedTop fluid collapseOnSelect>
         <Navbar.Header>
           <Navbar.Brand>
             <Link to="/">
@@ -41,7 +45,9 @@ class HeaderNavigation extends React.Component {
           <Navbar.Toggle />
         </Navbar.Header>
         <Navbar.Collapse>
-          <Nav pullRight>{this._renderMenu(menus)}</Nav>
+          <Nav pullRight onSelect={this.handleSelect}>
+            {this._renderMenu(menus)}
+          </Nav>
         </Navbar.Collapse>
       </Navbar>
     )

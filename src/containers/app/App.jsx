@@ -8,6 +8,7 @@ import Services from '../services/Services'
 import Works from '../works/Works'
 import Clients from '../clients/Clients'
 import Team from '../team/Team'
+import Contact from '../contact/Contact'
 import './App.css'
 
 class App extends Component {
@@ -22,6 +23,7 @@ class App extends Component {
           <Works />
           <Clients />
           <Team />
+          {/* <Contact /> */}
         </Grid>
       </div>
     )
