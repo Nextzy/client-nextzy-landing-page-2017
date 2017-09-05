@@ -1,0 +1,8 @@
+.FooterContacts {
+  display: flex;
+  justify-content: space-around;
+}
+
+.FooterContacts>a>img {
+  height: 32px;
+}

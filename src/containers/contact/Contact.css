@@ -9,9 +9,10 @@
   padding: 0px;
 }
 
-.Contact > .detail {
+.Contact>.detail {
   display: flex;
   align-items: center;
+  justify-content: flex-start;
   padding-left: 8em;
   color: #EEE;
   background: linear-gradient(45deg, #181A41, #03375F);
