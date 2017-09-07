@@ -1,10 +1,11 @@
 import React from 'react'
+import './ContactDetail.css'
 
 class ContactDetail extends React.Component {
   render() {
     return (
       <div className="ContactDetail">
-        <h1>Contact Us</h1>
+        <h1>CONTACT US</h1>
         <h3>Address</h3>
         <h5>
           219/22 7<sup>th</sup> Asoke Towers<br />

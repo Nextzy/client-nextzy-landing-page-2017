@@ -10,10 +10,24 @@
 }
 
 .Contact>.detail {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  padding-left: 8em;
   color: #EEE;
   background: linear-gradient(45deg, #181A41, #03375F);
+}
+
+@media screen and (min-width: 320px) {
+  .Contact>.detail {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .Contact>.detail {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 8em;
+  }
 }
