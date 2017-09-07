@@ -7,11 +7,12 @@
 
 .WorkTitle>h1 {
   font-weight: bold;
+  letter-spacing: 0.4em;
 }
 
 @media screen and (min-width: 320px) {
   .WorkTitle>h1 {
-    font-size: 1pt;
+    font-size: 22pt;
   }
 }
 

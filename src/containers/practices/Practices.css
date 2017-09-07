@@ -12,6 +12,11 @@
   align-items: flex-start;
 }
 
+.Practices>.title>.text>h1 {
+  font-weight: bold;
+  letter-spacing: 0.4em;
+}
+
 @media screen and (min-width: 320px) {
   .Practices>.title {
     display: flex;
@@ -21,7 +26,6 @@
   }
   .Practices>.title>.text>h1 {
     font-size: 20pt;
-    font-weight: bold;
   }
   .Practices>.description>.Practice>h3 {
     font-size: 16pt;
@@ -32,7 +36,6 @@
 @media screen and (min-width: 425px) {
   .Practices>.title>.text>h1 {
     font-size: 20pt;
-    font-weight: bold;
   }
   .Practices>.description>.Practice>h3 {
     font-size: 18pt;
@@ -50,7 +53,6 @@
   }
   .Practices>.title>.text>h1 {
     font-size: 22pt;
-    font-weight: bold;
   }
   .Practices>.description>.Practice>h3 {
     font-size: 18pt;
@@ -61,7 +63,6 @@
 @media screen and (min-width: 1024px) {
   .Practices>.title>.text>h1 {
     font-size: 30pt;
-    font-weight: bold;
   }
   .Practices>.description>.Practice>h3 {
     font-size: 18pt;
@@ -72,7 +73,6 @@
 @media screen and (min-width: 1440px) {
   .Practices>.title>.text>h1 {
     font-size: 44pt;
-    font-weight: bold;
   }
   .Practices>.description>.Practice>h3 {
     font-size: 26pt;
@@ -86,7 +86,6 @@
   }
   .Practices>.title>.text>h1 {
     font-size: 60pt;
-    font-weight: bold;
   }
   .Practices>.description>.Practice>h3 {
     font-size: 34pt;

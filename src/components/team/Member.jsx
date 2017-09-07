@@ -9,7 +9,10 @@ class Member extends React.Component {
     this.onMouseEnter = this.onMouseEnter.bind(this)
     this.onMouseLeave = this.onMouseLeave.bind(this)
     this.state = {
-      hover: false
+      hover: false,
+      facebook: this.props.facebook ? this.props.facebook : null,
+      github: this.props.github ? this.props.github : null,
+      linkedin: this.props.linkedin ? this.props.linkedin : null
     }
   }
 
@@ -46,9 +49,9 @@ class Member extends React.Component {
           />
         ) : (
           <MemberSocial
-            facebook={this.props.facebook}
-            github={this.props.github}
-            linkedin={this.props.linkedin}
+            facebook={this.state.facebook}
+            github={this.state.github}
+            linkedin={this.state.linkedin}
           />
         )}
       </div>

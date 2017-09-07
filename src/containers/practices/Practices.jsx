@@ -29,8 +29,8 @@ class Practices extends React.Component {
       <Col className="Practices" id="practices" xs={12} sm={12} md={12} lg={12}>
         <Col className="title" xs={12} sm={6} md={6} lg={6}>
           <div className="text">
-            <h1>O U R</h1>
-            <h1>P R A C T I C E S</h1>
+            <h1>OUR</h1>
+            <h1>PRACTICES</h1>
           </div>
         </Col>
         <Col className="description" xs={12} sm={6} md={6} lg={6}>

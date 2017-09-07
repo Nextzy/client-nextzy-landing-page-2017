@@ -1,5 +1,5 @@
-const nextzy = 'N E X T Z Y'
-const tech = 'T E C H N O L G I E S'
+const nextzy = 'NEXTZY'
+const tech = 'TECHNOLGIES'
 const subtitle =
   'We are pirates. We sail and hunt the best mobile and web solution.'
 

@@ -11,7 +11,7 @@ class ServiceTitle extends React.Component {
           <img src={service_icon} alt="Our Services" />
         </div>
         <div className="title">
-          <h1>O U R &nbsp;S E R V I C E S</h1>
+          <h1>OUR SERVICES</h1>
         </div>
       </Col>
     )
