@@ -7,10 +7,62 @@
   padding: 85px;
 }
 
-.Service>.icon>img {
-  height: 70px;
-}
-
 .Service>.name>h3 {
   font-weight: bold;
+}
+
+@media screen and (min-width: 320px) {
+  .Service>.icon>img {
+    height: 80px;
+  }
+  .Service>.name>h3 {
+    font-size: 20pt;
+  }
+  .Service>.description>h6 {
+    font-size: 12pt;
+  }
+}
+
+@media screen and (min-width: 425px) {
+  .Service>.icon>img {
+    height: 80px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .Service>.icon>img {
+    height: 90px;
+  }
+  .Service>.name>h3 {
+    font-size: 24pt;
+  }
+
+  .Service>.description>h6 {
+    font-size: 16pt;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .Service>.icon>img {
+    height: 90px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .Service>.icon>img {
+    height: 110px;
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  .Service>.icon>img {
+    height: 130px;
+  }
+  .Service>.name>h3 {
+    font-size: 30pt;
+  }
+
+  .Service>.description>h6 {
+    font-size: 20pt;
+  }
 }
