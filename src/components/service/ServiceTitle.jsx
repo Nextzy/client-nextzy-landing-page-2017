@@ -8,10 +8,10 @@ class ServiceTitle extends React.Component {
     return (
       <Col className="ServiceTitle" xs={12} sm={12} md={6} lg={6}>
         <div className="icon">
-          <img src={service_icon} alt="Our services" />
+          <img src={service_icon} alt="Our Services" />
         </div>
         <div className="title">
-          <h1>Our Services</h1>
+          <h1>O U R &nbsp;S E R V I C E S</h1>
         </div>
       </Col>
     )

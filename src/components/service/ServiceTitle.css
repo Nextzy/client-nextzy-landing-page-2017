@@ -8,11 +8,61 @@
   padding: 60px;
 }
 
-.ServiceTitle>.icon>img {
-  height: 150px;
-}
-
 .ServiceTitle>.title>h1 {
   font-weight: bold;
   text-align: center;
+}
+
+@media screen and (min-width: 320px) {
+  .ServiceTitle>.icon>img {
+    height: 150px;
+  }
+  .ServiceTitle>.title>h1 {
+    font-size: 14pt
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .ServiceTitle>.icon>img {
+    height: 150px;
+  }
+  .ServiceTitle>.title>h1 {
+    font-size: 18pt
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .ServiceTitle>.icon>img {
+    height: 150px;
+  }
+  .ServiceTitle>.title>h1 {
+    font-size: 20pt
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .ServiceTitle>.icon>img {
+    height: 200px;
+  }
+  .ServiceTitle>.title>h1 {
+    font-size: 26pt
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .ServiceTitle>.icon>img {
+    height: 260px;
+  }
+  .ServiceTitle>.title>h1 {
+    font-size: 34pt
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  .ServiceTitle>.icon>img {
+    height: 340px;
+  }
+  .ServiceTitle>.title>h1 {
+    font-size: 48pt
+  }
 }
