@@ -14,7 +14,13 @@ class HeaderNavigation extends React.Component {
   }
 
   handleSelect(eventKey) {
-    window.open(menus[eventKey - 1].link, '_self')
+    if (menus[eventKey - 1].link.indexOf('#') !== -1) {
+      document.querySelector(`${menus[eventKey - 1].link}`).scrollIntoView({
+        behavior: 'smooth'
+      })
+    } else {
+      window.open(menus[eventKey - 1].link, '_self')
+    }
   }
 
   _renderMenu(data) {
