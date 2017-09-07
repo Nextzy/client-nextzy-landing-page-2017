@@ -4,7 +4,44 @@
   padding-top: 40px;
 }
 
-.Practice>img {
-  height: 60px;
-  padding-right: 20px;
+@media screen and (min-width: 320px) {
+  .Practice>img {
+    height: 60px;
+    padding-right: 20px;
+  }
+}
+
+@media screen and (min-width: 425px) {
+  .Practice>img {
+    height: 60px;
+    padding-right: 20px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .Practice>img {
+    height: 60px;
+    padding-right: 20px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .Practice>img {
+    height: 64px;
+    padding-right: 20px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .Practice>img {
+    height: 78px;
+    padding-right: 20px;
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  .Practice>img {
+    height: 88px;
+    padding-right: 20px;
+  }
 }
