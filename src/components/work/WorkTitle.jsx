@@ -5,7 +5,7 @@ class WorkTitle extends React.Component {
   render() {
     return (
       <div className="WorkTitle">
-        <h1>Our Works</h1>
+        <h1>O U R &nbsp;W O R K S</h1>
       </div>
     )
   }
