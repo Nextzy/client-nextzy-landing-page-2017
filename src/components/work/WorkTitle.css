@@ -8,3 +8,39 @@
 .WorkTitle>h1 {
   font-weight: bold;
 }
+
+@media screen and (min-width: 320px) {
+  .WorkTitle>h1 {
+    font-size: 1pt;
+  }
+}
+
+@media screen and (min-width: 425px) {
+  .WorkTitle>h1 {
+    font-size: 22pt;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .WorkTitle>h1 {
+    font-size: 32pt;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .WorkTitle>h1 {
+    font-size: 38pt;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .WorkTitle>h1 {
+    font-size: 46pt;
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  .WorkTitle>h1 {
+    font-size: 56pt;
+  }
+}
