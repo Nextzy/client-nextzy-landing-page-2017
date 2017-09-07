@@ -5,7 +5,7 @@ class ClientsTitle extends React.Component {
   render() {
     return (
       <div className="Clients-Title">
-        <h1>Our Clients</h1>
+        <h1>OUR CLIENTS</h1>
       </div>
     )
   }

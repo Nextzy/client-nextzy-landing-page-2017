@@ -8,4 +8,42 @@
 
 .Clients-Title > h1 {
   color: #EEE;
+  font-weight: bold;
+  letter-spacing: 0.4em;
+}
+
+@media screen and (min-width: 320px) {
+  .Clients-Title>h1 {
+    font-size: 10pt;
+  }
+}
+
+@media screen and (min-width: 425px) {
+  .Clients-Title>h1 {
+    font-size: 10pt;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .Clients-Title>h1 {
+    font-size: 10pt;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .Clients-Title>h1 {
+    font-size: 10pt;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .Clients-Title>h1 {
+    font-size: 10pt;
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  .Clients-Title>h1 {
+    font-size: 60pt;
+  }
 }

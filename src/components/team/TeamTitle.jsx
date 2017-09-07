@@ -5,7 +5,7 @@ class TeamTitle extends React.Component {
   render() {
     return (
       <div className="TeamTitle">
-        <h1>Our Team</h1>
+        <h1>OUR TEAM</h1>
       </div>
     )
   }
