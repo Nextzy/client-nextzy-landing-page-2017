@@ -18,7 +18,7 @@ class MemberSocial extends React.Component {
     return (
       <div className="MemberSocial">
         {this.props.facebook.length > 0 ? (
-          <a href={this.state.facebook}>
+          <a href={this.state.facebook} target="_blank">
             <img
               className="social_icon_logo"
               src={facebook_logo}
@@ -27,12 +27,12 @@ class MemberSocial extends React.Component {
           </a>
         ) : null}
         {this.state.github.length > 0 ? (
-          <a href={this.state.github}>
+          <a href={this.state.github} target="_blank">
             <img className="social_icon_logo" src={github_logo} alt="Github" />
           </a>
         ) : null}
         {this.state.linkedin.length > 0 ? (
-          <a href={this.state.linkedin}>
+          <a href={this.state.linkedin} target="_blank">
             <img
               className="social_icon_logo"
               src={linkedin_logo}
