@@ -7,6 +7,7 @@
 .TeamTitle>h1 {
   font-weight: bold;
   letter-spacing: 0.4em;
+  text-align: center;
 }
 
 @media screen and (min-width: 320px) {

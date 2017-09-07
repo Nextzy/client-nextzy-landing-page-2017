@@ -10,40 +10,41 @@
   color: #EEE;
   font-weight: bold;
   letter-spacing: 0.4em;
+  text-align: center;
 }
 
 @media screen and (min-width: 320px) {
   .Clients-Title>h1 {
-    font-size: 10pt;
+    font-size: 22pt;
   }
 }
 
 @media screen and (min-width: 425px) {
   .Clients-Title>h1 {
-    font-size: 10pt;
+    font-size: 22pt;
   }
 }
 
 @media screen and (min-width: 768px) {
   .Clients-Title>h1 {
-    font-size: 10pt;
+    font-size: 32pt;
   }
 }
 
 @media screen and (min-width: 1024px) {
   .Clients-Title>h1 {
-    font-size: 10pt;
+    font-size: 38pt;
   }
 }
 
 @media screen and (min-width: 1440px) {
   .Clients-Title>h1 {
-    font-size: 10pt;
+    font-size: 46pt;
   }
 }
 
 @media screen and (min-width: 2560px) {
   .Clients-Title>h1 {
-    font-size: 60pt;
+    font-size: 56pt;
   }
 }
