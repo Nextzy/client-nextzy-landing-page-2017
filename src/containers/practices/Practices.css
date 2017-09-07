@@ -81,6 +81,9 @@
 }
 
 @media screen and (min-width: 2560px) {
+  .Practice {
+    padding: 60px;
+  }
   .Practices>.title>.text>h1 {
     font-size: 78pt;
     font-weight: bold;
