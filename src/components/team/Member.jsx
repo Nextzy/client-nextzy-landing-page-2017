@@ -2,7 +2,6 @@ import React from 'react'
 import MemberDetail from './MemberDetail'
 import MemberSocial from './MemberSocial'
 import './Member.css'
-import { CSSTransitionGroup } from 'react-transition-group'
 
 class Member extends React.Component {
   constructor(props) {
@@ -13,22 +12,19 @@ class Member extends React.Component {
       hover: false,
       facebook: this.props.facebook ? this.props.facebook : null,
       github: this.props.github ? this.props.github : null,
-      linkedin: this.props.linkedin ? this.props.linkedin : null,
-      image: this.props.image.normal
+      linkedin: this.props.linkedin ? this.props.linkedin : null
     }
   }
 
   onMouseEnter() {
     this.setState({
-      hover: true,
-      image: this.props.image.hover
+      hover: true
     })
   }
 
   onMouseLeave() {
     this.setState({
-      hover: false,
-      image: this.props.image.normal
+      hover: false
     })
   }
 
@@ -39,12 +35,15 @@ class Member extends React.Component {
         onMouseEnter={this.onMouseEnter}
         onMouseLeave={this.onMouseLeave}
       >
-        <CSSTransitionGroup
-          className="cross-fade-wrapper"
-          transitionName="cross-fade"
-        >
-          <img src={this.state.image} alt="Profile" />
-        </CSSTransitionGroup>
+        {!this.state.hover ? (
+          <div className="profile-wrapper normal">
+            <img src={this.props.image.normal} alt="Profile" />
+          </div>
+        ) : (
+          <div className="profile-wrapper hover">
+            <img src={this.props.image.hover} alt="Profile" />
+          </div>
+        )}
         {!this.state.hover ? (
           <MemberDetail
             first_name={this.props.first_name}

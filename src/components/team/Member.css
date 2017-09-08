@@ -5,29 +5,100 @@
   height: 100%;
 }
 
-.Member>.cross-fade-wrapper>img {
+.Member>.profile-wrapper>img {
   width: 250px;
   height: auto;
 }
 
-img .cross-fade-leave {
-  opacity: 1;
+.Member>.hover {
+  animation: fadein 0.75s;
+  -moz-animation: fadein 0.75s;
+  -webkit-animation: fadein 0.75s;
+  -o-animation: fadein 0.75s;
 }
 
-img .cross-fade-leave.cross-fade-leave-active {
-  opacity: 0;
-  transition: opacity 1s ease-in;
+.Member>.normal {
+  animation: fadein-normal 0.75s;
+  -moz-animation: fadein-normal 0.75s;
+  -webkit-animation: fadein-normal 0.75s;
+  -o-animation: fadein-normal 0.75s;
 }
 
-img .cross-fade-enter {
-  opacity: 0;
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-img .cross-fade-enter.cross-fade-enter-active {
-  opacity: 1;
-  transition: opacity 1s ease-in;
+@-moz-keyframes fadein {
+  /* Firefox */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-img .cross-fade-height {
-  transition: height .5s ease-in-out;
+@-webkit-keyframes fadein {
+  /* Safari and Chrome */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
+
+@-o-keyframes fadein {
+  /* Opera */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein-normal {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadein-normal {
+  /* Firefox */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadein-normal {
+  /* Safari and Chrome */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadein-normal {
+  /* Opera */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
