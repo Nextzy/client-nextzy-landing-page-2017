@@ -14,6 +14,9 @@
   .TeamTitle>h1 {
     font-size: 22pt;
   }
+  .TeamTitle {
+    padding: 0px;
+  }
 }
 
 @media screen and (min-width: 425px) {

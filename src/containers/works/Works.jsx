@@ -12,7 +12,7 @@ class Works extends React.Component {
   }
 
   _renderWork(works) {
-    if (works !== null) {
+    if (works) {
       return works.map(work => (
         <Col xs={12} sm={12} md={6} lg={6} key={work.title}>
           <Work img={work.img} title={work.title} subtitle={work.subtitle} />

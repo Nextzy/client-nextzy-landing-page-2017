@@ -12,7 +12,7 @@ class Services extends React.Component {
   }
 
   _renderServices(data) {
-    if (data !== null) {
+    if (data) {
       return data.map(service => (
         <Service
           key={service.name}

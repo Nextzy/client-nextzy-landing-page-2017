@@ -15,7 +15,7 @@ class Team extends React.Component {
   }
 
   _renderTeamMember(data) {
-    if (data !== null) {
+    if (data) {
       return data.map(member => (
         <Member
           key={generator.generate({ length: 18, numbers: true, symbols: true })}

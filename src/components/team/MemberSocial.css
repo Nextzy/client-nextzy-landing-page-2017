@@ -5,9 +5,52 @@
   align-items: center;
   padding: 18px;
   padding-bottom: 30px;
+  animation: fadein 0.75s;
+  -moz-animation: fadein 0.75s;
+  -webkit-animation: fadein 0.75s;
+  -o-animation: fadein 0.75s;
 }
 
 .MemberSocial>a>.social_icon_logo {
   width: 20px;
   height: auto;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadein {
+  /* Firefox */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadein {
+  /* Safari and Chrome */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadein {
+  /* Opera */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

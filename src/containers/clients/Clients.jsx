@@ -15,7 +15,7 @@ class Clients extends React.Component {
   }
 
   _renderClient(data) {
-    if (data !== null) {
+    if (data) {
       return data.map(client => (
         <Client
           key={generator.generate({ length: 18, numbers: true, symbols: true })}

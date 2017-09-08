@@ -1,9 +1,33 @@
 .Member {
   box-shadow: 0 0 0 2px #9D9D9D;
   background: #FFF;
+  width: 250px;
+  height: 100%;
 }
 
-.Member>img {
+.Member>.cross-fade-wrapper>img {
   width: 250px;
   height: auto;
+}
+
+img .cross-fade-leave {
+  opacity: 1;
+}
+
+img .cross-fade-leave.cross-fade-leave-active {
+  opacity: 0;
+  transition: opacity 1s ease-in;
+}
+
+img .cross-fade-enter {
+  opacity: 0;
+}
+
+img .cross-fade-enter.cross-fade-enter-active {
+  opacity: 1;
+  transition: opacity 1s ease-in;
+}
+
+img .cross-fade-height {
+  transition: height .5s ease-in-out;
 }

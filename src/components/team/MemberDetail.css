@@ -4,8 +4,51 @@
   align-content: center;
   justify-content: center;
   text-align: center;
+  animation: fadein 0.75s;
+  -moz-animation: fadein 0.75s;
+  -webkit-animation: fadein 0.75s;
+  -o-animation: fadein 0.75s;
 }
 
 .MemberDetail>h5 {
   font-weight: bold;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadein {
+  /* Firefox */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadein {
+  /* Safari and Chrome */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadein {
+  /* Opera */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

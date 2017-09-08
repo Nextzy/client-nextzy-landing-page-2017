@@ -24,7 +24,7 @@ class HeaderNavigation extends React.Component {
   }
 
   _renderMenu(data) {
-    if (data !== null) {
+    if (data) {
       return data.map(menu => {
         return (
           <NavItem key={menu.key} eventKey={menu.key} href={menu.link}>

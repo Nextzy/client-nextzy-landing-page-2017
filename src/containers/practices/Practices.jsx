@@ -10,9 +10,9 @@ class Practices extends React.Component {
     this._renderPractices = this._renderPractices.bind(this)
   }
 
-  _renderPractices(list) {
-    if (list !== null) {
-      return list.map(practice => {
+  _renderPractices(data) {
+    if (data) {
+      return data.map(practice => {
         return (
           <Practice
             icon={practice.icon}

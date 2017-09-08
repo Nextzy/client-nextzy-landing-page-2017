@@ -21,8 +21,7 @@ const services = [
       icon_normal: apple_normal
     },
     name: 'iOS',
-    description:
-      'Swift, Objective-C, Cocoa Pods, AFNetworking, AlamoFire and Spring.'
+    description: 'Swift and Objective-C.'
   },
   {
     icon: {
@@ -31,7 +30,7 @@ const services = [
     },
     name: 'Node.JS & Angular',
     description:
-      'HTML5, CSS3, JavaScript, Node.JS, Angular.JS, React.JS and MEAN Stack.'
+      'HTML5, CSS3, JavaScript, Node.JS, Angular, React.JS and MEAN Stack.'
   }
 ]
 
