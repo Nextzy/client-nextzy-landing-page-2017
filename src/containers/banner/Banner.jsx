@@ -12,7 +12,12 @@ class Banner extends React.Component {
           <img className="background-image" src={banner} alt="Nextzy" />
           <div className="text-layer">
             <Col className="icon" xs={12} sm={12} md={4} lg={4}>
-              <img id="astronaut" src={astronaut} alt="Astronaut" />
+              <img
+                id="astronaut"
+                className="animated infinite pulse"
+                src={astronaut}
+                alt="Astronaut"
+              />
             </Col>
             <Col className="description" xs={12} sm={12} md={8} lg={8}>
               <h1 className="text-title">{this.props.nextzy}</h1>
