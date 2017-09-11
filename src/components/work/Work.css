@@ -36,3 +36,15 @@
   text-align: center;
   word-wrap: break-word;
 }
+
+@media screen and (min-width: 320px) {
+  .Work>.detail>h3 {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .Work>.detail>h3 {
+    text-align: start;
+  }
+}
