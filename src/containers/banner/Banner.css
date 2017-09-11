@@ -3,79 +3,117 @@
   display: inline-block;
 }
 
-.Banner>.top-banner>.background-image {
-  height: auto;
-  width: 100%;
-}
-
-.top-banner>.description {
+.top-banner>.text-layer {
   position: absolute;
-  left: 60%;
+  left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   color: #fff;
 }
 
-.top-banner>.description>.text-subtitle {
+.top-banner>.text-layer>.description>.text-subtitle {
   font-weight: 500;
   text-align: justify;
 }
 
-.Banner>.top-banner>.description>h1 {
+.Banner>.top-banner>.text-layer>.description>h1 {
   font-weight: bold;
   letter-spacing: 0.4em;
 }
 
 @media screen and (min-width: 320px) {
-  .Banner>.top-banner>.description>h1 {
-    font-size: 12pt;
+  .Banner>.top-banner>.background-image {
+    height: 400px;
+    width: 100%;
   }
-  .Banner>.top-banner>.description>h6 {
-    font-size: 8pt;
+  .Banner>.top-banner>.text-layer>.description>h1 {
+    font-size: 18pt;
+  }
+  .Banner>.top-banner>.text-layer>.description>h6 {
+    font-size: 14pt;
+  }
+  .Banner>.top-banner>.text-layer>.description {
+    text-align: center;
+  }
+  .top-banner>.text-layer>.icon {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+  #astronaut {
+    height: 160px;
   }
 }
 
 @media screen and (min-width: 425px) {
-  .Banner>.top-banner>.description>h1 {
-    font-size: 12pt;
+  .Banner>.top-banner>.text-layer>.description>h1 {
+    font-size: 20pt;
   }
-  .Banner>.top-banner>.description>h6 {
-    font-size: 10pt;
+    .Banner>.top-banner>.text-layer>.description>h6 {
+    font-size: 16pt;
+  }
+  #astronaut {
+    height: 160px;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .Banner>.top-banner>.description>h1 {
+  .Banner>.top-banner>.text-layer>.description>h1 {
     font-size: 22pt;
   }
-  .Banner>.top-banner>.description>h6 {
+  .Banner>.top-banner>.text-layer>.description>h6 {
     font-size: 16pt;
+  }
+  #astronaut {
+    height: 160px;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .Banner>.top-banner>.description>h1 {
+    .Banner>.top-banner>.text-layer>.description>h1 {
     font-size: 30pt;
   }
-  .Banner>.top-banner>.description>h6 {
+    .Banner>.top-banner>.text-layer>.description>h6 {
     font-size: 18pt;
+  }
+  .top-banner>.text-layer {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+  }
+  #astronaut {
+    height: 220px;
+  }
+  .Banner>.top-banner>.background-image {
+    height: auto;
+    width: 100%;
+  }
+  .Banner>.top-banner>.text-layer>.description {
+    text-align: start;
   }
 }
 
 @media screen and (min-width: 1440px) {
-  .Banner>.top-banner>.description>h1 {
+    .Banner>.top-banner>.text-layer>.description>h1 {
     font-size: 44pt;
   }
-  .Banner>.top-banner>.description>h6 {
+    .Banner>.top-banner>.text-layer>.description>h6 {
     font-size: 24pt;
+  }
+  #astronaut {
+    height: 300px;
   }
 }
 
 @media screen and (min-width: 2560px) {
-  .Banner>.top-banner>.description>h1 {
+    .Banner>.top-banner>.text-layer>.description>h1 {
     font-size: 78pt;
   }
-  .Banner>.top-banner>.description>h6 {
+    .Banner>.top-banner>.text-layer>.description>h6 {
     font-size: 34pt;
+  }
+  #astronaut {
+    height: 450px;
   }
 }
