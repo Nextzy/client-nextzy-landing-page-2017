@@ -251,9 +251,9 @@ const members = [
       normal: coming_soon_normal,
       hover: coming_soon_hover
     },
-    facebook: 'f',
-    github: 'f',
-    linkedin: 'f'
+    facebook: null,
+    github: null,
+    linkedin: null
   },
   {
     first_name: 'Tanalat',
@@ -263,8 +263,8 @@ const members = [
       normal: coming_soon_normal,
       hover: coming_soon_hover
     },
-    facebook: 'f',
-    github: 'f',
+    facebook: null,
+    github: null,
     linkedin: 'tanalat-boonfuang-8a759113a'
   },
   {
@@ -275,9 +275,9 @@ const members = [
       normal: require('../images/person_tanapruk_tangphianphan_normal.png'),
       hover: require('../images/person_tanapruk_tangphianphan_hover.png')
     },
-    facebook: 'f',
-    github: 'f',
-    linkedin: 'f'
+    facebook: null,
+    github: null,
+    linkedin: null
   },
   {
     first_name: 'Tararat',
@@ -287,9 +287,9 @@ const members = [
       normal: coming_soon_normal,
       hover: coming_soon_hover
     },
-    facebook: 'f',
-    github: 'f',
-    linkedin: 'f'
+    facebook: null,
+    github: null,
+    linkedin: null
   },
   {
     first_name: 'Thongpak',
