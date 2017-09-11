@@ -21,6 +21,9 @@
     justify-content: center;
     padding: 20px;
   }
+  .map {
+    height: 500px;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -29,5 +32,8 @@
     align-items: center;
     justify-content: flex-start;
     padding-left: 8em;
+  }
+  .map {
+    height: 600px;
   }
 }

@@ -12,8 +12,8 @@ class NextzyMap extends React.Component {
     return (
       <GoogleMapContainer
         className="NextzyMap"
-        containerElement={<div style={{ width: '100%', height: `500px` }} />}
-        mapElement={<div style={{ width: '100%', height: `500px` }} />}
+        containerElement={<div style={{ width: '100%', height: `100%` }} />}
+        mapElement={<div style={{ width: '100%', height: `100%` }} />}
         marker={{
           position: {
             lat: 13.7456,
