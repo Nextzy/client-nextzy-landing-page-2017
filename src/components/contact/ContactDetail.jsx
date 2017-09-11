@@ -8,9 +8,11 @@ class ContactDetail extends React.Component {
         <h1>CONTACT US</h1>
         <h3>Address</h3>
         <h5>
-          219/22 7<sup>th</sup> Asoke Towers<br />
-          Soi Sukhumvit 21, Sukhumvit Rd.<br />
-          Wattana Bangkok 10110
+          Nextzy Technologies Co., Ltd.<br />
+          219/22 Asoke Towers 7<sup>th</sup>
+          <br />
+          Soi Sukhumvit 21 Rd., Klongtoey Nua,<br />
+          Wattana, Bangkok 10110, Thailand.
         </h5>
         <h3>Phones</h3>
         <h5>
