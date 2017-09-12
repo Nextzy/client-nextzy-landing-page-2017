@@ -3,7 +3,6 @@ import { Navbar, Nav } from 'react-bootstrap'
 import menus from '../../constants/menus'
 import { NavItem } from 'react-bootstrap'
 import './HeaderNavigation.css'
-import { smooth_scroll_to } from './scroll'
 import logo from '../../images/logo_nextzy_black.png'
 
 class HeaderNavigation extends React.Component {
