@@ -8,6 +8,10 @@
   padding: 60px;
 }
 
+#ufo {
+  animation-duration: 4s;
+}
+
 .ServiceTitle>.title>h1 {
   font-weight: bold;
   text-align: center;

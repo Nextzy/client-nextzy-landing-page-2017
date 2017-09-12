@@ -9,6 +9,7 @@ class ServiceTitle extends React.Component {
       <Col className="ServiceTitle" xs={12} sm={12} md={6} lg={6}>
         <div className="icon">
           <img
+            id="ufo"
             src={service_icon}
             className="animated infinite swing"
             alt="Our Services"

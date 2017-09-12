@@ -3,12 +3,17 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  margin: 0 30px 0 30px;
   padding: 18px;
   padding-bottom: 30px;
   animation: fadein 0.75s;
   -moz-animation: fadein 0.75s;
   -webkit-animation: fadein 0.75s;
   -o-animation: fadein 0.75s;
+}
+
+.place-holder {
+  height: 20px;
 }
 
 .MemberSocial>a>.social_icon_logo {

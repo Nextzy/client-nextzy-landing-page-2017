@@ -32,7 +32,7 @@ class MemberSocial extends React.Component {
           </a>
         ) : null}
         {!this.props.facebook && !this.props.github && !this.props.linkedin ? (
-          <div>Not provided.</div>
+          <div className="place-holder" />
         ) : null}
       </div>
     )

@@ -21,6 +21,10 @@
   letter-spacing: 0.4em;
 }
 
+#astronaut {
+  animation-duration: 6s;
+}
+
 @media screen and (min-width: 320px) {
   .Banner>.top-banner>.background-image {
     height: 400px;
