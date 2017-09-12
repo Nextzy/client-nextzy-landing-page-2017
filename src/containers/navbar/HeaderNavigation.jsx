@@ -1,9 +1,9 @@
 import React from 'react'
 import { Navbar, Nav } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
 import menus from '../../constants/menus'
 import { NavItem } from 'react-bootstrap'
 import './HeaderNavigation.css'
+import { smooth_scroll_to } from './scroll'
 import logo from '../../images/logo_nextzy_black.png'
 
 class HeaderNavigation extends React.Component {
@@ -15,11 +15,13 @@ class HeaderNavigation extends React.Component {
 
   handleSelect(eventKey) {
     if (menus[eventKey - 1].link.indexOf('#') !== -1) {
-      document.querySelector(`${menus[eventKey - 1].link}`).scrollIntoView({
-        behavior: 'smooth'
-      })
+      document
+        .getElementById(`${menus[eventKey - 1].link.substring(1)}`)
+        .scrollIntoView({
+          behavior: 'smooth'
+        })
     } else {
-      window.open(menus[eventKey - 1].link, '_self')
+      window.open(menus[eventKey - 1].link)
     }
   }
 
@@ -40,9 +42,9 @@ class HeaderNavigation extends React.Component {
       <Navbar className="HeaderNavigation" fixedTop fluid collapseOnSelect>
         <Navbar.Header>
           <Navbar.Brand>
-            <Link to="/">
+            <a href="#banner">
               <img src={logo} alt="Nextzy Technologies" />
-            </Link>
+            </a>
           </Navbar.Brand>
           <Navbar.Toggle />
         </Navbar.Header>
