@@ -32,8 +32,8 @@
   },
   "lint-staged": {
     "*.{js,jsx}": [
-      "eslint --fix",
       "prettier --single-quote --no-semi --space-before-function-paren --write",
+      "eslint --fix",
       "git add -A"
     ]
   },
