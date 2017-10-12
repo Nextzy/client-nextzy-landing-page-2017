@@ -1,11 +1,11 @@
 import React from 'react'
 import banner from '../../images/bg-head.png'
 import astronaut from '../../images/astronaut.png'
-import { Col } from 'react-bootstrap'
+import {Col} from 'react-bootstrap'
 import './Banner.css'
 
 class Banner extends React.Component {
-  render() {
+  render () {
     return (
       <section className="Banner" id="banner">
         <div className="top-banner">

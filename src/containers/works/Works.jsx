@@ -1,27 +1,25 @@
 import React from 'react'
-import { Col } from 'react-bootstrap'
+import {Col} from 'react-bootstrap'
 import WorkTitle from '../../components/work/WorkTitle'
 import Work from '../../components/work/Work'
-import { work_list } from '../../constants/works'
+import {work_list} from '../../constants/works'
 import './Works.css'
 
-class Works extends React.Component {
-  constructor(props) {
+export default class Works extends React.Component {
+  constructor (props) {
     super(props)
     this._renderWork = this._renderWork.bind(this)
   }
 
-  _renderWork(works) {
-    if (works) {
-      return works.map(work => (
-        <Col xs={12} sm={12} md={6} lg={6} key={work.title}>
-          <Work img={work.img} title={work.title} subtitle={work.subtitle} />
-        </Col>
-      ))
-    }
+  _renderWork (works) {
+    return works.map((work, index) => (
+      <Col xs={12} sm={12} md={6} lg={6} key={index}>
+        <Work img={work.img} title={work.title} subtitle={work.subtitle} />
+      </Col>
+    ))
   }
 
-  render() {
+  render () {
     return (
       <Col className="Works" id="works" xs={12} sm={12} md={12} lg={12}>
         <WorkTitle />
@@ -30,5 +28,3 @@ class Works extends React.Component {
     )
   }
 }
-
-export default Works

@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
-import { nextzy, tech, subtitle } from '../../constants/banner'
-import { Grid } from 'react-bootstrap'
+import React, {Component} from 'react'
+import {nextzy, tech, subtitle} from '../../constants/banner'
+import {Grid} from 'react-bootstrap'
 import HeaderNavigation from '../navbar/HeaderNavigation'
 import Banner from '../banner/Banner'
 import Practices from '../practices/Practices'
@@ -12,8 +12,8 @@ import Contact from '../contact/Contact'
 import Footer from '../footer/Footer'
 import './App.css'
 
-class App extends Component {
-  render() {
+export default class App extends Component {
+  render () {
     return (
       <div className="App">
         <HeaderNavigation />
@@ -31,5 +31,3 @@ class App extends Component {
     )
   }
 }
-
-export default App
