@@ -37,21 +37,23 @@ export default class HeaderNavigation extends React.Component {
 
   render () {
     return (
-      <Navbar className="HeaderNavigation" fixedTop fluid collapseOnSelect>
-        <Navbar.Header>
-          <Navbar.Brand>
-            <a href="#banner">
-              <img src={logo} alt="Nextzy Technologies" />
-            </a>
-          </Navbar.Brand>
-          <Navbar.Toggle />
-        </Navbar.Header>
-        <Navbar.Collapse>
-          <Nav pullRight onSelect={this.handleSelect}>
-            {this._renderMenu(menus)}
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar>
+      <div>
+        <Navbar className="HeaderNavigation" fixedTop fluid collapseOnSelect>
+          <Navbar.Header>
+            <Navbar.Brand>
+              <a href="#banner">
+                <img src={logo} alt="Nextzy Technologies" />
+              </a>
+            </Navbar.Brand>
+            <Navbar.Toggle />
+          </Navbar.Header>
+          <Navbar.Collapse>
+            <Nav pullRight onSelect={this.handleSelect}>
+              {this._renderMenu(menus)}
+            </Nav>
+          </Navbar.Collapse>
+        </Navbar>
+      </div>
     )
   }
 }
