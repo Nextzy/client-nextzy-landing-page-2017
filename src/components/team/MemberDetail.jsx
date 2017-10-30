@@ -1,8 +1,8 @@
 import React from 'react'
 import './MemberDetail.css'
 
-class MemberDetail extends React.Component {
-  render() {
+export default class MemberDetail extends React.Component {
+  render () {
     return (
       <div className="MemberDetail">
         <h5>
@@ -13,5 +13,3 @@ class MemberDetail extends React.Component {
     )
   }
 }
-
-export default MemberDetail

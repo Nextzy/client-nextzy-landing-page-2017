@@ -1,8 +1,8 @@
 import React from 'react'
 import './Work.css'
 
-class Work extends React.Component {
-  render() {
+export default class Work extends React.Component {
+  render () {
     return (
       <div className="Work">
         <div className="preview-image">
@@ -16,5 +16,3 @@ class Work extends React.Component {
     )
   }
 }
-
-export default Work
