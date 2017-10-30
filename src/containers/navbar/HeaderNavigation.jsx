@@ -34,9 +34,13 @@ export default class HeaderNavigation extends React.Component {
       <Navbar className="HeaderNavigation" fixedTop fluid collapseOnSelect>
         <Navbar.Header>
           <Navbar.Brand>
-            <a href="#banner">
+            <Scrollchor
+              to="#banner"
+              className="nav-link"
+              animate={{offset: -80, duration: 600}}
+            >
               <img src={logo} alt="Nextzy Technologies" />
-            </a>
+            </Scrollchor>
           </Navbar.Brand>
           <Navbar.Toggle />
         </Navbar.Header>
