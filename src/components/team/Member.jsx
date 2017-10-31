@@ -3,8 +3,8 @@ import MemberDetail from './MemberDetail'
 import MemberSocial from './MemberSocial'
 import './Member.css'
 
-class Member extends React.Component {
-  constructor(props) {
+export default class Member extends React.Component {
+  constructor (props) {
     super(props)
     this.onMouseEnter = this.onMouseEnter.bind(this)
     this.onMouseLeave = this.onMouseLeave.bind(this)
@@ -16,19 +16,19 @@ class Member extends React.Component {
     }
   }
 
-  onMouseEnter() {
+  onMouseEnter () {
     this.setState({
       hover: true
     })
   }
 
-  onMouseLeave() {
+  onMouseLeave () {
     this.setState({
       hover: false
     })
   }
 
-  render() {
+  render () {
     return (
       <div
         className="Member"
@@ -61,5 +61,3 @@ class Member extends React.Component {
     )
   }
 }
-
-export default Member

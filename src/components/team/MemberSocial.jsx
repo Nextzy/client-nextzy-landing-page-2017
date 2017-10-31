@@ -4,8 +4,8 @@ import github_logo from '../../images/icon_github_black.png'
 import linkedin_logo from '../../images/icon_linkedin_black.png'
 import './MemberSocial.css'
 
-class MemberSocial extends React.Component {
-  render() {
+export default class MemberSocial extends React.Component {
+  render () {
     return (
       <div className="MemberSocial">
         {this.props.facebook ? (
@@ -38,5 +38,3 @@ class MemberSocial extends React.Component {
     )
   }
 }
-
-export default MemberSocial

@@ -6,7 +6,7 @@ const settings = {
   pauseOnHover: true,
   responsive: [
     {
-      breakpoint: 100000,
+      breakpoint: 2561,
       settings: {
         slidesToShow: 5,
         slidesToScroll: 5,
@@ -41,4 +41,4 @@ const settings = {
   ]
 }
 
-export { settings }
+export {settings}

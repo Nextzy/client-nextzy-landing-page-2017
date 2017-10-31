@@ -23,15 +23,5 @@ module.exports = [
     key: 5,
     link: '#contact',
     name: 'Contact'
-  },
-  {
-    key: 6,
-    link: 'https://blog.nextzy.me/',
-    name: 'Blog'
-  },
-  {
-    key: 7,
-    link: 'http://nextzy.me/careers/',
-    name: 'Careers'
   }
 ]

@@ -27,7 +27,7 @@
 
 @media screen and (min-width: 320px) {
   .Banner>.top-banner>.background-image {
-    height: 400px;
+    min-height: 400px;
     width: 100%;
   }
   .Banner>.top-banner>.text-layer>.description>h1 {

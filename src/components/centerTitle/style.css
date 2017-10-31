@@ -1,50 +1,48 @@
-.TeamTitle {
+.CenterTitle {
   display: flex;
   justify-content: center;
-  padding: 60px;
+  align-items: center;
+  padding: 0px 60px 40px 60px;
 }
 
-.TeamTitle>h1 {
+.CenterTitle>h1 {
   font-weight: bold;
   letter-spacing: 0.4em;
   text-align: center;
 }
 
 @media screen and (min-width: 320px) {
-  .TeamTitle>h1 {
+  .CenterTitle>h1 {
     font-size: 22pt;
-  }
-  .TeamTitle {
-    padding: 0px;
   }
 }
 
 @media screen and (min-width: 425px) {
-  .TeamTitle>h1 {
+  .CenterTitle>h1 {
     font-size: 22pt;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .TeamTitle>h1 {
+  .CenterTitle>h1 {
     font-size: 32pt;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .TeamTitle>h1 {
+  .CenterTitle>h1 {
     font-size: 38pt;
   }
 }
 
 @media screen and (min-width: 1440px) {
-  .TeamTitle>h1 {
+  .CenterTitle>h1 {
     font-size: 46pt;
   }
 }
 
 @media screen and (min-width: 2560px) {
-  .TeamTitle>h1 {
+  .CenterTitle>h1 {
     font-size: 56pt;
   }
 }

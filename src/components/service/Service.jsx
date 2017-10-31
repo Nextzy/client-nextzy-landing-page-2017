@@ -1,9 +1,9 @@
 import React from 'react'
 import './Service.css'
-import { normalStyle, hoverStyle } from '../../constants/servicesStyle'
+import {normalStyle, hoverStyle} from '../../constants/servicesStyle'
 
-class Service extends React.Component {
-  constructor(props) {
+export default class Service extends React.Component {
+  constructor (props) {
     super(props)
     this.onMouseEnter = this.onMouseEnter.bind(this)
     this.onMouseLeave = this.onMouseLeave.bind(this)
@@ -13,21 +13,21 @@ class Service extends React.Component {
     }
   }
 
-  onMouseEnter() {
+  onMouseEnter () {
     this.setState({
       icon: this.props.icon.icon_hover,
       componentStyle: hoverStyle
     })
   }
 
-  onMouseLeave() {
+  onMouseLeave () {
     this.setState({
       icon: this.props.icon.icon_normal,
       componentStyle: normalStyle
     })
   }
 
-  render() {
+  render () {
     return (
       <div
         className="Service"
@@ -48,5 +48,3 @@ class Service extends React.Component {
     )
   }
 }
-
-export default Service
