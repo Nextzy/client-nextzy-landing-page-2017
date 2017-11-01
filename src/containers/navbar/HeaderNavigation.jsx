@@ -38,52 +38,56 @@ export default class HeaderNavigation extends React.Component {
 
   render () {
     return (
-      <nav className="navbar HeaderNavigation" aria-label="main navigation">
-        <div className="navbar-brand">
-          <a className="navbar-item" href="#">
-            <img id="nextzy-logo" src={logo} alt="Nextzy Technologies" />
-          </a>
-        </div>
+      <div className="hero-head">
+        <nav className="navbar" aria-label="main navigation">
+          <div className="container">
+            <div className="navbar-brand">
+              <a className="navbar-item" href="#">
+                <img id="nextzy-logo" src={logo} alt="Nextzy Technologies" />
+              </a>
+            </div>
 
-        <div
-          className={`burger navbar-burger ${this.state.isBurgerClick
-            ? 'is-active'
-            : ''}`}
-          data-target="menuItem"
-          onClick={this.onBurgerClick}
-        >
-          <span />
-          <span />
-          <span />
-        </div>
+            <div
+              className={`burger navbar-burger ${this.state.isBurgerClick
+                ? 'is-active'
+                : ''}`}
+              data-target="menuItem"
+              onClick={this.onBurgerClick}
+            >
+              <span />
+              <span />
+              <span />
+            </div>
 
-        <div
-          id="menuItem"
-          className={`navbar-menu ${this.state.isBurgerClick
-            ? 'is-active'
-            : ''}`}
-        >
-          <div className="navbar-end">
-            {this._renderMenu(menus)}
-            <a
-              className="navbar-item"
-              href="https://blog.nextzy.me/"
-              rel="noopener noreferrer"
-              target="_blank"
+            <div
+              id="menuItem"
+              className={`navbar-menu ${this.state.isBurgerClick
+                ? 'is-active'
+                : ''}`}
             >
-              Blog
-            </a>
-            <a
-              className="navbar-item"
-              href="http://nextzy.me/careers/"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              Careers
-            </a>
+              <div className="navbar-end">
+                {this._renderMenu(menus)}
+                <a
+                  className="navbar-item"
+                  href="https://blog.nextzy.me/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Blog
+                </a>
+                <a
+                  className="navbar-item"
+                  href="http://nextzy.me/careers/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Careers
+                </a>
+              </div>
+            </div>
           </div>
-        </div>
-      </nav>
+        </nav>
+      </div>
     )
   }
 }

@@ -15,9 +15,9 @@ import './App.css'
 export default class App extends Component {
   render () {
     return (
-      <div className="App">
+      <section className="hero">
         <HeaderNavigation />
-        <div className="containers">
+        <div className="container">
           <Banner nextzy={nextzy} tech={tech} subtitle={subtitle} />
           <Practices />
           <Services />
@@ -27,7 +27,7 @@ export default class App extends Component {
           <Contact />
           <Footer />
         </div>
-      </div>
+      </section>
     )
   }
 }
