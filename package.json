@@ -4,9 +4,9 @@
   "private": true,
   "dependencies": {
     "animate.css": "^3.5.2",
-    "aos": "^2.2.0",
+    "bulma": "^0.6.0",
     "canvas-particle-network": "^1.5.0",
-    "generate-password": "^1.3.0",
+    "jquery": "^3.2.1",
     "react": "^16.0.0",
     "react-animations": "^0.1.0",
     "react-bootstrap": "^0.31.3",

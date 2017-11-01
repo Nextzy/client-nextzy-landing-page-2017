@@ -1,18 +1,3 @@
-.navbar {
-  min-height: 80px;
-}
-
-a {
-  color: #777;
-}
-
-a:hover,a:link, a:active, a:visited {
-  text-decoration: none;
-}
-
-.navbar-brand>img {
-  max-height: 50px;
-}
 
 .navbar-brand {
   display: flex;

@@ -35,7 +35,7 @@ export default class Service extends React.Component {
         onMouseLeave={this.onMouseLeave}
         style={this.state.componentStyle}
       >
-        <div className="icon">
+        <div className="iconImage">
           <img src={this.state.icon} alt={this.props.name} />
         </div>
         <div className="name">

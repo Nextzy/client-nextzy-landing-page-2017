@@ -1,67 +1,95 @@
 import React from 'react'
-import {Navbar, Nav} from 'react-bootstrap'
 import menus from '../../constants/menus'
-import {NavItem} from 'react-bootstrap'
 import './HeaderNavigation.css'
 import logo from '../../images/logo_nextzy_black.png'
 import Scrollchor from 'react-scrollchor'
+import 'bulma/css/bulma.css'
 
 export default class HeaderNavigation extends React.Component {
   constructor (props) {
     super(props)
+    this.state = {
+      isBurgerClick: false
+    }
     this._renderMenu = this._renderMenu.bind(this)
+    this.onBurgerClick = this.onBurgerClick.bind(this)
   }
 
   _renderMenu (data) {
     return (
       data &&
       data.map(menu => (
-        <NavItem key={menu.key} eventKey={menu.key}>
-          <Scrollchor
-            to={menu.link}
-            className="nav-link"
-            animate={{offset: -80, duration: 600}}
-          >
-            {menu.name}
-          </Scrollchor>
-        </NavItem>
+        <Scrollchor
+          key={menu.key}
+          to={menu.link}
+          className="navbar-item is-hidden-desktop-only"
+          animate={{offset: -80, duration: 600}}
+        >
+          {menu.name}
+        </Scrollchor>
       ))
     )
   }
 
+  onBurgerClick () {
+    this.setState({
+      isBurgerClick: !this.state.isBurgerClick
+    })
+  }
+
   render () {
     return (
-      <Navbar className="HeaderNavigation" fixedTop fluid collapseOnSelect>
-        <Navbar.Header>
-          <Navbar.Brand>
-            <Scrollchor
-              to="#banner"
-              className="nav-link"
-              animate={{offset: -80, duration: 600}}
-            >
-              <img src={logo} alt="Nextzy Technologies" />
-            </Scrollchor>
-          </Navbar.Brand>
-          <Navbar.Toggle />
-        </Navbar.Header>
-        <Navbar.Collapse>
-          <Nav pullRight>
+      <nav className="navbar HeaderNavigation" aria-label="main navigation">
+        <div className="navbar-brand">
+          <a className="navbar-item" href="#">
+            <img
+              id="nextzy-logo"
+              src={logo}
+              alt="Nextzy Technologies"
+              height="200"
+            />
+          </a>
+        </div>
+
+        <div
+          className={`burger navbar-burger ${this.state.isBurgerClick
+            ? 'is-active'
+            : ''}`}
+          data-target="menuItem"
+          onClick={this.onBurgerClick}
+        >
+          <span />
+          <span />
+          <span />
+        </div>
+
+        <div
+          id="menuItem"
+          className={`navbar-menu ${this.state.isBurgerClick
+            ? 'is-active'
+            : ''}`}
+        >
+          <div className="navbar-end">
             {this._renderMenu(menus)}
-            <NavItem
-              to="https://blog.nextzy.me/"
-              onClick={() => window.open('https://blog.nextzy.me/')}
+            <a
+              className="navbar-item"
+              href="https://blog.nextzy.me/"
+              rel="noopener noreferrer"
+              target="_blank"
             >
               Blog
-            </NavItem>
-            <NavItem
-              onClick={() => window.open('http://nextzy.me/careers/')}
-              to="http://nextzy.me/careers/"
+            </a>
+            <a
+              className="navbar-item"
+              href="http://nextzy.me/careers/"
+              rel="noopener noreferrer"
+              target="_blank"
             >
               Careers
-            </NavItem>
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar>
+            </a>
+          </div>
+        </div>
+      </nav>
     )
   }
 }
