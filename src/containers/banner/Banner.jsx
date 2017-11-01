@@ -1,14 +1,18 @@
 import React from 'react'
 import banner from '../../images/bg-head.png'
 import astronaut from '../../images/astronaut.png'
-import './Banner.css'
+import './style.css'
 
 export default class Banner extends React.Component {
   render () {
     return (
-      <section className="Banner" id="banner">
+      <div
+        className="container"
+        id="banner"
+        style={{backgroundImage: `url(${banner})`}}
+      >
         <div className="top-banner">
-          <img className="background-image" src={banner} alt="Nextzy" />
+          {/* <img className="background-image" src={banner} alt="Nextzy" /> */}
           <div className="text-layer">
             <div className="iconImage">
               <img
@@ -25,7 +29,7 @@ export default class Banner extends React.Component {
             </div>
           </div>
         </div>
-      </section>
+      </div>
     )
   }
 }

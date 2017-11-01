@@ -1,6 +1,5 @@
 import React from 'react'
 import menus from '../../constants/menus'
-import './HeaderNavigation.css'
 import logo from '../../images/logo_nextzy_black.png'
 import Scrollchor from 'react-scrollchor'
 
@@ -18,14 +17,16 @@ export default class HeaderNavigation extends React.Component {
     return (
       data &&
       data.map(menu => (
-        <Scrollchor
-          key={menu.key}
-          to={menu.link}
-          className="navbar-item"
-          animate={{offset: -80, duration: 600}}
-        >
-          {menu.name}
-        </Scrollchor>
+        <div onClick={this.onBurgerClick}>
+          <Scrollchor
+            key={menu.key}
+            to={menu.link}
+            className="navbar-item"
+            animate={{duration: 600}}
+          >
+            {menu.name}
+          </Scrollchor>
+        </div>
       ))
     )
   }
@@ -38,14 +39,12 @@ export default class HeaderNavigation extends React.Component {
 
   render () {
     return (
-      <div className="hero-head">
+      <div style={{position: 'fixed', width: '100%', zIndex: 1}}>
         <nav className="navbar" aria-label="main navigation">
-          <div className="container">
-            <div className="navbar-brand">
-              <a className="navbar-item" href="#">
-                <img id="nextzy-logo" src={logo} alt="Nextzy Technologies" />
-              </a>
-            </div>
+          <div className="navbar-brand">
+            <a className="navbar-item" href="#">
+              <img id="nextzy-logo" src={logo} alt="Nextzy Technologies" />
+            </a>
 
             <div
               className={`burger navbar-burger ${this.state.isBurgerClick
@@ -58,32 +57,34 @@ export default class HeaderNavigation extends React.Component {
               <span />
               <span />
             </div>
+          </div>
 
-            <div
-              id="menuItem"
-              className={`navbar-menu ${this.state.isBurgerClick
-                ? 'is-active'
-                : ''}`}
-            >
-              <div className="navbar-end">
-                {this._renderMenu(menus)}
-                <a
-                  className="navbar-item"
-                  href="https://blog.nextzy.me/"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  Blog
-                </a>
-                <a
-                  className="navbar-item"
-                  href="http://nextzy.me/careers/"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  Careers
-                </a>
-              </div>
+          <div
+            id="menuItem"
+            className={`navbar-menu ${this.state.isBurgerClick
+              ? 'is-active'
+              : ''}`}
+          >
+            <div className="navbar-end">
+              {this._renderMenu(menus)}
+              <a
+                className="navbar-item"
+                href="https://blog.nextzy.me/"
+                rel="noopener noreferrer"
+                target="_blank"
+                onClick={this.onBurgerClick}
+              >
+                Blog
+              </a>
+              <a
+                className="navbar-item"
+                href="http://nextzy.me/careers/"
+                rel="noopener noreferrer"
+                target="_blank"
+                onClick={this.onBurgerClick}
+              >
+                Careers
+              </a>
             </div>
           </div>
         </nav>

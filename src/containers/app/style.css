@@ -1,15 +1,15 @@
 * {
-  font-family: 'Montserrat', 'sans-serif';
+  font-family: 'Montserrat';
 }
 
-.App {
+/* .App {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
-}
+} */
 
-.App>.containers {
-  /* margin-top: 80px; */
+/* .App>.containers {
+  margin-top: 80px;
   padding: 0;
   width: 100%;
-}
+} */

@@ -10,24 +10,26 @@ import Team from '../team/Team'
 import Contact from '../contact/Contact'
 import Footer from '../footer/Footer'
 import 'bulma/css/bulma.css'
-import './App.css'
+import './style.css'
 
 export default class App extends Component {
   render () {
     return (
-      <section className="hero">
+      <div className="App">
         <HeaderNavigation />
-        <div className="container">
-          <Banner nextzy={nextzy} tech={tech} subtitle={subtitle} />
-          <Practices />
-          <Services />
-          <Works />
-          <Clients />
-          <Team />
-          <Contact />
-          <Footer />
-        </div>
-      </section>
+        <section className="hero">
+          <section className="hero-body">
+            <Banner nextzy={nextzy} tech={tech} subtitle={subtitle} />
+            <Practices />
+            <Services />
+            <Works />
+            <Clients />
+            <Team />
+            <Contact />
+            <Footer />
+          </section>
+        </section>
+      </div>
     )
   }
 }
