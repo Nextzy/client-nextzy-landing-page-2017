@@ -9,8 +9,11 @@ import Clients from '../clients/Clients'
 import Team from '../team/Team'
 import Contact from '../contact/Contact'
 import Footer from '../footer/Footer'
+import Scroll from 'react-scroll'
 import 'bulma/css/bulma.css'
 import './style.css'
+
+const Element = Scroll.Element
 
 export default class App extends Component {
   render () {
@@ -19,13 +22,23 @@ export default class App extends Component {
         <HeaderNavigation />
         <section className="hero">
           <section className="hero-body">
-            <Banner nextzy={nextzy} tech={tech} subtitle={subtitle} />
+            <Element name="banner">
+              <Banner nextzy={nextzy} tech={tech} subtitle={subtitle} />
+            </Element>
             <Practices />
-            <Services />
-            <Works />
+            <Element name="services">
+              <Services />
+            </Element>
+            <Element name="works">
+              <Works />
+            </Element>
+            <Element name="team">
+              <Team />
+            </Element>
             <Clients />
-            <Team />
-            <Contact />
+            <Element name="contact">
+              <Contact />
+            </Element>
             <Footer />
           </section>
         </section>

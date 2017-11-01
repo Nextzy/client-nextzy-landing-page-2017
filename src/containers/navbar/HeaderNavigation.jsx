@@ -1,7 +1,11 @@
 import React from 'react'
 import menus from '../../constants/menus'
 import logo from '../../images/logo_nextzy_black.png'
-import Scrollchor from 'react-scrollchor'
+import Scroll from 'react-scroll'
+
+const Link = Scroll.Link
+const Events = Scroll.Events
+const scrollSpy = Scroll.scrollSpy
 
 export default class HeaderNavigation extends React.Component {
   constructor (props) {
@@ -13,20 +17,28 @@ export default class HeaderNavigation extends React.Component {
     this.onBurgerClick = this.onBurgerClick.bind(this)
   }
 
+  componentDidMount () {
+    Events.scrollEvent.register('begin', () => {})
+    Events.scrollEvent.register('end', () => {})
+    scrollSpy.update()
+  }
+
   _renderMenu (data) {
     return (
       data &&
       data.map(menu => (
-        <div onClick={this.onBurgerClick}>
-          <Scrollchor
-            key={menu.key}
-            to={menu.link}
-            className="navbar-item"
-            animate={{duration: 600}}
-          >
-            {menu.name}
-          </Scrollchor>
-        </div>
+        <Link
+          key={menu.key}
+          to={menu.link}
+          activeClass="active"
+          className="navbar-item"
+          spy={true}
+          smooth={true}
+          duration={500}
+          onClick={this.onBurgerClick}
+        >
+          {menu.name}
+        </Link>
       ))
     )
   }
@@ -42,9 +54,18 @@ export default class HeaderNavigation extends React.Component {
       <div style={{position: 'fixed', width: '100%', zIndex: 1}}>
         <nav className="navbar" aria-label="main navigation">
           <div className="navbar-brand">
-            <a className="navbar-item" href="#">
+            <Link
+              key="brand"
+              to="banner"
+              activeClass="active"
+              className="navbar-item"
+              spy={true}
+              smooth={true}
+              duration={500}
+              onClick={this.onBurgerClick}
+            >
               <img id="nextzy-logo" src={logo} alt="Nextzy Technologies" />
-            </a>
+            </Link>
 
             <div
               className={`burger navbar-burger ${this.state.isBurgerClick
