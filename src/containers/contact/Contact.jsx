@@ -1,5 +1,4 @@
 import React from 'react'
-import {Col} from 'react-bootstrap'
 import ContactDetail from '../../components/contact/ContactDetail'
 import NextzyMap from '../../components/contact/NextzyMap'
 import './Contact.css'
@@ -7,14 +6,14 @@ import './Contact.css'
 export default class Contact extends React.Component {
   render () {
     return (
-      <Col className="Contact" id="contact" xs={12} sm={12} md={12} lg={12}>
-        <Col className="map" xs={12} sm={12} md={6} lg={6}>
+      <div className="Contact" id="contact">
+        <div className="map">
           <NextzyMap />
-        </Col>
-        <Col className="detail" xs={12} sm={12} md={6} lg={6}>
+        </div>
+        <div className="detail">
           <ContactDetail />
-        </Col>
-      </Col>
+        </div>
+      </div>
     )
   }
 }

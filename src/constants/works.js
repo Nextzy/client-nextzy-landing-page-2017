@@ -1,6 +1,6 @@
 import pic from '../images/product_sample.png'
 
-const work_list = [
+export const workList = [
   {
     img: pic,
     title: 'AIS App',
@@ -22,5 +22,3 @@ const work_list = [
     subtitle: 'Web Application'
   }
 ]
-
-export { work_list }

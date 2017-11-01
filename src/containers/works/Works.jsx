@@ -1,8 +1,7 @@
 import React from 'react'
-import {Col} from 'react-bootstrap'
 import CenterTitle from '../../components/centerTitle'
 import Work from '../../components/work/Work'
-import {work_list} from '../../constants/works'
+import {workList} from '../../constants/works'
 import './Works.css'
 
 export default class Works extends React.Component {
@@ -13,18 +12,18 @@ export default class Works extends React.Component {
 
   _renderWork (works) {
     return works.map((work, index) => (
-      <Col xs={12} sm={12} md={6} lg={6} key={index}>
+      <div key={index}>
         <Work img={work.img} title={work.title} subtitle={work.subtitle} />
-      </Col>
+      </div>
     ))
   }
 
   render () {
     return (
-      <Col className="Works" id="works" xs={12} sm={12} md={12} lg={12}>
+      <div className="Works" id="works">
         <CenterTitle>OUR WORKS</CenterTitle>
-        {this._renderWork(work_list)}
-      </Col>
+        {this._renderWork(workList)}
+      </div>
     )
   }
 }

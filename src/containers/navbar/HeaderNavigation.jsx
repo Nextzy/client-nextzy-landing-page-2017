@@ -3,7 +3,6 @@ import menus from '../../constants/menus'
 import './HeaderNavigation.css'
 import logo from '../../images/logo_nextzy_black.png'
 import Scrollchor from 'react-scrollchor'
-import 'bulma/css/bulma.css'
 
 export default class HeaderNavigation extends React.Component {
   constructor (props) {
@@ -22,7 +21,7 @@ export default class HeaderNavigation extends React.Component {
         <Scrollchor
           key={menu.key}
           to={menu.link}
-          className="navbar-item is-hidden-desktop-only"
+          className="navbar-item"
           animate={{offset: -80, duration: 600}}
         >
           {menu.name}
@@ -42,12 +41,7 @@ export default class HeaderNavigation extends React.Component {
       <nav className="navbar HeaderNavigation" aria-label="main navigation">
         <div className="navbar-brand">
           <a className="navbar-item" href="#">
-            <img
-              id="nextzy-logo"
-              src={logo}
-              alt="Nextzy Technologies"
-              height="200"
-            />
+            <img id="nextzy-logo" src={logo} alt="Nextzy Technologies" />
           </a>
         </div>
 

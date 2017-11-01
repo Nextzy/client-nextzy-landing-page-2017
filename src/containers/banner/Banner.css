@@ -39,12 +39,12 @@
   .Banner>.top-banner>.text-layer>.description {
     text-align: center;
   }
-  .top-banner>.text-layer>.iconImage1 {
+  .top-banner>.text-layer>.iconImage {
     display: flex;
     justify-content: center;
     align-content: center;
   }
-  .top-banner>.text-layer>.iconImage1 > #astronaut {
+  .top-banner>.text-layer>.iconImage > #astronaut {
     height: 160px;
   }
 }

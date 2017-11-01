@@ -9,6 +9,7 @@ import Clients from '../clients/Clients'
 import Team from '../team/Team'
 import Contact from '../contact/Contact'
 import Footer from '../footer/Footer'
+import 'bulma/css/bulma.css'
 import './App.css'
 
 export default class App extends Component {
