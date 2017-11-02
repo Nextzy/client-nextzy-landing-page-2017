@@ -15,12 +15,18 @@ export default class HeaderNavigation extends React.Component {
     }
     this._renderMenu = this._renderMenu.bind(this)
     this.onBurgerClick = this.onBurgerClick.bind(this)
+    this.onLinkClick = this.onLinkClick.bind(this)
   }
 
   componentDidMount () {
     Events.scrollEvent.register('begin', () => {})
     Events.scrollEvent.register('end', () => {})
     scrollSpy.update()
+  }
+
+  componenetWillUnmount () {
+    Events.scrollEvent.remove('begin')
+    Events.scrollEvent.remove('end')
   }
 
   _renderMenu (data) {
@@ -35,7 +41,7 @@ export default class HeaderNavigation extends React.Component {
           spy={true}
           smooth={true}
           duration={500}
-          onClick={this.onBurgerClick}
+          onClick={this.onLinkClick}
         >
           {menu.name}
         </Link>
@@ -49,6 +55,12 @@ export default class HeaderNavigation extends React.Component {
     })
   }
 
+  onLinkClick () {
+    this.setState({
+      isBurgerClick: false
+    })
+  }
+
   render () {
     return (
       <div style={{position: 'fixed', width: '100%', zIndex: 1}}>
@@ -57,12 +69,12 @@ export default class HeaderNavigation extends React.Component {
             <Link
               key="brand"
               to="banner"
+              isDynamic={true}
               activeClass="active"
               className="navbar-item"
               spy={true}
               smooth={true}
               duration={500}
-              onClick={this.onBurgerClick}
             >
               <img id="nextzy-logo" src={logo} alt="Nextzy Technologies" />
             </Link>
@@ -93,7 +105,7 @@ export default class HeaderNavigation extends React.Component {
                 href="https://blog.nextzy.me/"
                 rel="noopener noreferrer"
                 target="_blank"
-                onClick={this.onBurgerClick}
+                onClick={this.onLinkClick}
               >
                 Blog
               </a>
@@ -102,7 +114,7 @@ export default class HeaderNavigation extends React.Component {
                 href="http://nextzy.me/careers/"
                 rel="noopener noreferrer"
                 target="_blank"
-                onClick={this.onBurgerClick}
+                onClick={this.onLinkClick}
               >
                 Careers
               </a>

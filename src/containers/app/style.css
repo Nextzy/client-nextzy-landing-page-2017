@@ -2,6 +2,14 @@
   font-family: 'Montserrat';
 }
 
+.App-content {
+  padding: 0;
+}
+
+.App-element {
+  padding-top: 50px;
+}
+
 /* .App {
   background-position: center center;
   background-repeat: no-repeat;

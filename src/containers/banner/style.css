@@ -1,7 +1,7 @@
-/* .top-banner {
+.top-banner {
   position: relative;
   display: inline-block;
-} */
+}
 
 .top-banner>.text-layer {
   position: absolute;

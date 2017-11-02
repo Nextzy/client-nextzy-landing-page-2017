@@ -21,22 +21,22 @@ export default class App extends Component {
       <div className="App">
         <HeaderNavigation />
         <section className="hero">
-          <section className="hero-body">
-            <Element name="banner">
+          <section className="hero-body App-content">
+            <Element name="banner" className="App-element">
               <Banner nextzy={nextzy} tech={tech} subtitle={subtitle} />
             </Element>
             <Practices />
-            <Element name="services">
+            <Element name="services" className="App-element">
               <Services />
             </Element>
-            <Element name="works">
+            <Element name="works" className="App-element">
               <Works />
             </Element>
-            <Element name="team">
+            <Element name="team" className="App-element">
               <Team />
             </Element>
             <Clients />
-            <Element name="contact">
+            <Element name="contact" className="App-element">
               <Contact />
             </Element>
             <Footer />
