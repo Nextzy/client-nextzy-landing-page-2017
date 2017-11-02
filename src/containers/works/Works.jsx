@@ -1,5 +1,5 @@
 import React from 'react'
-import CenterTitle from '../../components/centerTitle'
+import Title from '../../components/title'
 import Work from '../../components/work/Work'
 import {workList} from '../../constants/works'
 import './Works.css'
@@ -21,7 +21,7 @@ export default class Works extends React.Component {
   render () {
     return (
       <div className="Works" id="works">
-        <CenterTitle>OUR WORKS</CenterTitle>
+        <Title>OUR WORKS</Title>
         {this._renderWork(workList)}
       </div>
     )

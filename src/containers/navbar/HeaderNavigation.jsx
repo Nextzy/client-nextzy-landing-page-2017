@@ -63,7 +63,7 @@ export default class HeaderNavigation extends React.Component {
 
   render () {
     return (
-      <div style={{position: 'fixed', width: '100%', zIndex: 1}}>
+      <div style={{position: 'fixed', width: '100%', zIndex: 100}}>
         <nav className="navbar" aria-label="main navigation">
           <div className="navbar-brand">
             <Link

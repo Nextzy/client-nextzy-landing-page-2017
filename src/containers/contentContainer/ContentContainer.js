@@ -4,24 +4,16 @@ export default class ContentContainer extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      leftRightPanel: false,
-      reverse: false,
       style: {
         display: 'flex',
-        flexWrap: 'nowrap'
+        flexWrap: this.props.wrap || 'nowrap',
+        justifyContent: this.props.justifyContent || 'center',
+        alignItems: 'center',
+        flexDirection: this.props.direction || 'row',
+        height: 'auto',
+        width: '100%',
+        ...this.props.background
       }
-    }
-  }
-
-  componentWillMount () {
-    if (this.state.leftRightPanel) {
-      const flexWrap = this.state.reverse ? 'wrap' : 'wrap-reverse'
-      this.setState(({style}) => ({
-        style: {
-          ...style,
-          flexWrap: flexWrap
-        }
-      }))
     }
   }
 

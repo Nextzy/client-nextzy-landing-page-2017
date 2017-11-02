@@ -16,7 +16,7 @@
   text-align: justify;
 }
 
-.Banner>.top-banner>.text-layer>.description>h1 {
+.title {
   font-weight: bold;
   letter-spacing: 0.4em;
 }

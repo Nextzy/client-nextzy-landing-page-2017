@@ -1,5 +1,5 @@
 import React from 'react'
-import CenterTitle from '../../components/centerTitle'
+import Title from '../../components/title'
 import Slider from 'react-slick'
 import Client from '../../components/clients/Client'
 import {clients} from '../../constants/clients'
@@ -24,7 +24,7 @@ export default class Clients extends React.Component {
   render () {
     return (
       <div className="Clients">
-        <CenterTitle textColor="#EEEEEE">OUR CLIENTS</CenterTitle>
+        <Title textColor="#EEEEEE">OUR CLIENTS</Title>
         <div className="clients-slider-wrapper">
           <Slider className="clients-slider" {...settings}>
             {this._renderClient(clients).map((slide, index) => (

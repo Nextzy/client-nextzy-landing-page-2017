@@ -2,7 +2,7 @@ import React from 'react'
 import Member from '../../components/team/Member'
 import Slider from 'react-slick'
 import {members} from '../../constants/members'
-import CenterTitle from '../../components/centerTitle'
+import Title from '../../components/title'
 import {settings} from './sliderSetting'
 import './Team.css'
 
@@ -33,7 +33,7 @@ export default class Team extends React.Component {
   render () {
     return (
       <div className="Team" id="team">
-        <CenterTitle>OUR TEAM</CenterTitle>
+        <Title>OUR TEAM</Title>
         <Slider className="member-slider" {...settings}>
           {this._renderTeamMember(members).map((slide, index) => (
             <div key={index}>{slide}</div>
