@@ -6,7 +6,7 @@ export default class Title extends React.Component {
     this.state = {
       textStyle: {
         color: this.props.textColor || '#333333',
-        letterSpacing: '0.4em',
+        letterSpacing: '0.2em',
         textAlign: this.props.textAlign || 'center'
       }
     }
