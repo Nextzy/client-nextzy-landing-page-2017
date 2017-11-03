@@ -8,21 +8,21 @@ export default class Service extends React.Component {
     this.onMouseEnter = this.onMouseEnter.bind(this)
     this.onMouseLeave = this.onMouseLeave.bind(this)
     this.state = {
-      icon: this.props.icon.icon_normal,
+      icon: this.props.icon.iconNormal,
       componentStyle: normalStyle
     }
   }
 
   onMouseEnter () {
     this.setState({
-      icon: this.props.icon.icon_hover,
+      icon: this.props.icon.iconHover,
       componentStyle: hoverStyle
     })
   }
 
   onMouseLeave () {
     this.setState({
-      icon: this.props.icon.icon_normal,
+      icon: this.props.icon.iconNormal,
       componentStyle: normalStyle
     })
   }

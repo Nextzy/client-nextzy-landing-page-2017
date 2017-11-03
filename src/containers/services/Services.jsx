@@ -2,7 +2,8 @@ import React from 'react'
 import Service from '../../components/service/Service'
 import ServiceTitle from '../../components/service/ServiceTitle'
 import {services} from '../../constants/services'
-import './Services.css'
+import ContentContainer from '../contentContainer'
+// import './Services.css'
 
 export default class Services extends React.Component {
   constructor (props) {
@@ -26,10 +27,12 @@ export default class Services extends React.Component {
 
   render () {
     return (
-      <div className="Services" id="services">
-        <div className="service-items">{this._renderServices(services)}</div>
-        <ServiceTitle />
-      </div>
+      <ContentContainer leftRightPanel={true} reverse={true} padding="0 0 0 0">
+        <div style={{flex: 1}}>{this._renderServices(services)}</div>
+        <div style={{flex: 1, height: '100%'}}>
+          <ServiceTitle />
+        </div>
+      </ContentContainer>
     )
   }
 }

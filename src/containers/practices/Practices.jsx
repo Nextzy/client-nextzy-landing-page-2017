@@ -26,11 +26,11 @@ export default class Practices extends React.Component {
 
   render () {
     return (
-      <ContentContainer leftRightPanel={true} justifyContent="space-around">
+      <ContentContainer leftRightPanel={true}>
         <div
           style={{
             display: 'flex',
-            flexGrow: 1,
+            flex: 1,
             alignContent: 'center',
             justifyContent: 'center'
           }}
@@ -42,7 +42,7 @@ export default class Practices extends React.Component {
         </div>
         <div
           style={{
-            flexGrow: 1,
+            flex: 1,
             display: 'flex',
             justifyContent: 'center',
             alignContent: 'center'

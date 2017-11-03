@@ -15,13 +15,14 @@ export default class ContentContainer extends React.Component {
         justifyContent: this.props.justifyContent || 'center',
         alignItems: 'center',
         flexDirection: direction
-      }
+      },
+      padding: this.props.padding || '24px'
     }
   }
 
   render () {
     return (
-      <div className="container is-fluid" style={{padding: '24px'}}>
+      <div className="contentContainer" style={{padding: this.state.padding}}>
         {this.props.title ? <Title>{this.props.title}</Title> : null}
         <div style={this.state.style}>{this.props.children}</div>
       </div>

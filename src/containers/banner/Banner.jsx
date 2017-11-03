@@ -34,7 +34,9 @@ export default class Banner extends React.Component {
               <br />
               {this.props.tech}
             </Title>
-            <h2 className="subtitle">{this.props.subtitle}</h2>
+            <h2 className="subtitle" style={{color: '#EEEEEE'}}>
+              {this.props.subtitle}
+            </h2>
           </div>
         </ContentContainer>
       </div>
