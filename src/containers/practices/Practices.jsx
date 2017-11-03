@@ -1,7 +1,8 @@
 import React from 'react'
 import Practice from '../../components/practice/Practice'
 import {practices} from '../../constants/practices'
-import './Practices.css'
+import ContentContainer from '../../containers/contentContainer'
+import Title from '../../components/title'
 
 export default class Practices extends React.Component {
   constructor (props) {
@@ -13,22 +14,51 @@ export default class Practices extends React.Component {
     return (
       data &&
       data.map((practice, index) => (
-        <Practice icon={practice.icon} text={practice.text} key={index} />
+        <Practice
+          style={{flexGrow: 1}}
+          icon={practice.icon}
+          text={practice.text}
+          key={index}
+        />
       ))
     )
   }
 
   render () {
     return (
-      <div className="Practices" id="practices">
-        <div className="title">
-          <div className="text">
-            <h1>OUR</h1>
-            <h1>PRACTICES</h1>
+      <ContentContainer leftRightPanel={true} justifyContent="space-around">
+        <div
+          style={{
+            display: 'flex',
+            flexGrow: 1,
+            alignContent: 'center',
+            justifyContent: 'center'
+          }}
+        >
+          <Title textAlign="start">
+            OUR<br />
+            PRACTICES
+          </Title>
+        </div>
+        <div
+          style={{
+            flexGrow: 1,
+            display: 'flex',
+            justifyContent: 'center',
+            alignContent: 'center'
+          }}
+        >
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'flex-start'
+            }}
+          >
+            {this._renderPractices(practices)}
           </div>
         </div>
-        <div className="description">{this._renderPractices(practices)}</div>
-      </div>
+      </ContentContainer>
     )
   }
 }

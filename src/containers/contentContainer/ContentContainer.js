@@ -12,7 +12,7 @@ export default class ContentContainer extends React.Component {
       style: {
         display: 'flex',
         flexWrap: wrap || 'nowrap',
-        justifyContent: 'center',
+        justifyContent: this.props.justifyContent || 'center',
         alignItems: 'center',
         flexDirection: direction
       }
