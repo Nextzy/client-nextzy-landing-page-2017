@@ -1,11 +1,12 @@
 import React from 'react'
+import Title from '../title'
 import './ContactDetail.css'
 
-class ContactDetail extends React.Component {
-  render() {
+export default class ContactDetail extends React.Component {
+  render () {
     return (
       <div className="ContactDetail">
-        <h1>CONTACT US</h1>
+        <Title textColor="#EEEEEE">CONTACT US</Title>
         <h3>Address</h3>
         <h5>
           Nextzy Technologies Co., Ltd.<br />
@@ -28,5 +29,3 @@ class ContactDetail extends React.Component {
     )
   }
 }
-
-export default ContactDetail

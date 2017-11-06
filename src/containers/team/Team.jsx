@@ -33,7 +33,7 @@ export default class Team extends React.Component {
   render () {
     return (
       <div className="Team">
-        <div style={{marginBottom: '50px'}}>
+        <div style={{paddingBottom: '50px'}}>
           <Title>OUR TEAM</Title>
         </div>
         <div style={{padding: '0px 20px 20px 20px'}}>

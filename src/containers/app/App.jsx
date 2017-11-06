@@ -32,10 +32,10 @@ export default class App extends Component {
             <Element name="works" className="App-element">
               <Works />
             </Element>
+            <Clients />
             <Element name="team" className="App-element">
               <Team />
             </Element>
-            <Clients />
             <Element name="contact" className="App-element">
               <Contact />
             </Element>

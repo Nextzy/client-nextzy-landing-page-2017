@@ -1,19 +1,20 @@
 import React from 'react'
 import ContactDetail from '../../components/contact/ContactDetail'
 import NextzyMap from '../../components/contact/NextzyMap'
+import ContentContainer from '../contentContainer'
 import './Contact.css'
 
 export default class Contact extends React.Component {
   render () {
     return (
-      <div className="Contact" id="contact">
+      <ContentContainer leftRightPanel={true}>
         <div className="map">
           <NextzyMap />
         </div>
-        <div className="detail">
+        <div style={{background: 'linear-gradient(45deg, #181A41, #03375F)'}}>
           <ContactDetail />
         </div>
-      </div>
+      </ContentContainer>
     )
   }
 }
