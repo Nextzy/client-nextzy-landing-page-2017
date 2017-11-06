@@ -19,7 +19,9 @@ export default class Banner extends React.Component {
         }}
       >
         <ContentContainer leftRightPanel="true">
-          <div style={{padding: '20px'}}>
+          <div
+            style={{padding: '20px', display: 'flex', justifyContent: 'center'}}
+          >
             <img
               id="astronaut"
               className="animated infinite pulse"

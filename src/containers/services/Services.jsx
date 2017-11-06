@@ -2,8 +2,7 @@ import React from 'react'
 import Service from '../../components/service/Service'
 import ServiceTitle from '../../components/service/ServiceTitle'
 import {services} from '../../constants/services'
-import ContentContainer from '../contentContainer'
-// import './Services.css'
+import './Services.css'
 
 export default class Services extends React.Component {
   constructor (props) {
@@ -27,12 +26,12 @@ export default class Services extends React.Component {
 
   render () {
     return (
-      <ContentContainer leftRightPanel={true} reverse={true} padding="0 0 0 0">
+      <div className="columns is-desktop is-gapless is-mobile-reverse">
         <div className="column is-half">{this._renderServices(services)}</div>
         <div className="column is-half">
           <ServiceTitle />
         </div>
-      </ContentContainer>
+      </div>
     )
   }
 }
