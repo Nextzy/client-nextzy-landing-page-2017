@@ -1,7 +1,7 @@
 import React from 'react'
-import Title from '../../components/title'
 import Work from '../../components/work/Work'
 import {workList} from '../../constants/works'
+import ContentContainer from '../contentContainer'
 import './Works.css'
 
 export default class Works extends React.Component {
@@ -20,10 +20,14 @@ export default class Works extends React.Component {
 
   render () {
     return (
-      <div className="Works" id="works">
-        <Title>OUR WORKS</Title>
+      <ContentContainer
+        title="OUR WORKS"
+        alignItems="flex-start"
+        padding="0px"
+        leftRightPanel={true}
+      >
         {this._renderWork(workList)}
-      </div>
+      </ContentContainer>
     )
   }
 }

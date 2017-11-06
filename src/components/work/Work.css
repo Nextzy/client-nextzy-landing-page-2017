@@ -2,7 +2,18 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  padding-bottom: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  .Work {
+    border-bottom: 1px solid #e2e2e2;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .Work {
+    margin: 16px;
+  }
 }
 
 .Work>.preview-image {
@@ -27,11 +38,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-justify: auto;
-  background: #eee;
+  text-align: center;
+  background: #EEEEEE;
 }
 
-.Work>.detail>h2 {
+/* .Work>.detail>h2 {
   font-weight: bold;
   text-align: center;
   word-wrap: break-word;
@@ -47,4 +58,4 @@
   .Work>.detail>h3 {
     text-align: start;
   }
-}
+} */

@@ -8,8 +8,9 @@ export default class ContentContainer extends React.Component {
     this.state = {
       style: {
         justifyContent: this.props.justifyContent || 'center',
-        alignItems: 'center',
-        alignContent: 'center',
+        alignItems: this.props.alignItems || 'center',
+        alignContent: this.props.alignContent || 'center',
+        flexWrap: 'wrap',
         flexDirection: direction
       },
       padding: this.props.padding || '24px'
