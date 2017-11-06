@@ -28,8 +28,8 @@ export default class Services extends React.Component {
   render () {
     return (
       <ContentContainer leftRightPanel={true} reverse={true} padding="0 0 0 0">
-        <div style={{flex: 1}}>{this._renderServices(services)}</div>
-        <div style={{flex: 1, height: '100%'}}>
+        <div className="column is-half">{this._renderServices(services)}</div>
+        <div className="column is-half">
           <ServiceTitle />
         </div>
       </ContentContainer>

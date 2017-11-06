@@ -24,7 +24,9 @@ export default class ContentContainer extends React.Component {
     return (
       <div className="contentContainer" style={{padding: this.state.padding}}>
         {this.props.title ? <Title>{this.props.title}</Title> : null}
-        <div style={this.state.style}>{this.props.children}</div>
+        <div className="columns is-gapless is-desktop">
+          {this.props.children}
+        </div>
       </div>
     )
   }

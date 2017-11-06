@@ -20,7 +20,7 @@ export default class App extends Component {
     return (
       <div className="App">
         <HeaderNavigation />
-        <section className="hero">
+        <section className="hero" style={{}}>
           <section className="hero-body App-content">
             <Element name="banner" className="App-element">
               <Banner nextzy={nextzy} tech={tech} subtitle={subtitle} />

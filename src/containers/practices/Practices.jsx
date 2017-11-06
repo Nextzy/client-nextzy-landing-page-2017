@@ -28,10 +28,10 @@ export default class Practices extends React.Component {
     return (
       <ContentContainer leftRightPanel={true}>
         <div
+          className="column is-half"
           style={{
             display: 'flex',
-            flex: 1,
-            alignContent: 'center',
+            alignItems: 'center',
             justifyContent: 'center'
           }}
         >
@@ -41,8 +41,8 @@ export default class Practices extends React.Component {
           </Title>
         </div>
         <div
+          className="column is-half"
           style={{
-            flex: 1,
             display: 'flex',
             justifyContent: 'center',
             alignContent: 'center'
