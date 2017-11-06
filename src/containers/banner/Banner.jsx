@@ -28,7 +28,15 @@ export default class Banner extends React.Component {
               style={{height: '160px'}}
             />
           </div>
-          <div className="companyDescription">
+          <div
+            className="companyDescription"
+            style={{
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'flex-start',
+              flexDirection: 'column'
+            }}
+          >
             <Title textColor="#EEEEEE" textAlign="start">
               {this.props.nextzy}
               <br />
