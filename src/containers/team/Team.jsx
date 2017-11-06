@@ -32,13 +32,17 @@ export default class Team extends React.Component {
 
   render () {
     return (
-      <div className="Team" id="team">
-        <Title>OUR TEAM</Title>
-        <Slider className="member-slider" {...settings}>
-          {this._renderTeamMember(members).map((slide, index) => (
-            <div key={index}>{slide}</div>
-          ))}
-        </Slider>
+      <div className="Team">
+        <div style={{marginBottom: '50px'}}>
+          <Title>OUR TEAM</Title>
+        </div>
+        <div style={{padding: '0px 20px 20px 20px'}}>
+          <Slider className="memberSlider" {...settings}>
+            {this._renderTeamMember(members).map((slide, index) => (
+              <div key={index}>{slide}</div>
+            ))}
+          </Slider>
+        </div>
       </div>
     )
   }
