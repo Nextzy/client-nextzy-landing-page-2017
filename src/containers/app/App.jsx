@@ -6,7 +6,7 @@ import Practices from '../practices/Practices'
 import Services from '../services/Services'
 import Works from '../works/Works'
 import Clients from '../clients/Clients'
-import Team from '../team/Team'
+// import Team from '../team/Team'
 import Contact from '../contact/Contact'
 import Footer from '../footer/Footer'
 import Scroll from 'react-scroll'
@@ -20,7 +20,7 @@ export default class App extends Component {
     return (
       <div className="App">
         <HeaderNavigation />
-        <section className="hero" style={{}}>
+        <section className="hero">
           <section className="hero-body App-content">
             <Element name="banner" className="App-element">
               <Banner nextzy={nextzy} tech={tech} subtitle={subtitle} />
@@ -33,9 +33,9 @@ export default class App extends Component {
               <Works />
             </Element>
             <Clients />
-            <Element name="team" className="App-element">
+            {/* <Element name="team" className="App-element">
               <Team />
-            </Element>
+            </Element> */}
             <Element name="contact" className="App-element">
               <Contact />
             </Element>

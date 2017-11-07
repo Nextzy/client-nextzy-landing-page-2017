@@ -1,20 +1,21 @@
 import React from 'react'
 import ContactDetail from '../../components/contact/ContactDetail'
 import NextzyMap from '../../components/contact/NextzyMap'
-import ContentContainer from '../contentContainer'
-import './Contact.css'
 
 export default class Contact extends React.Component {
   render () {
     return (
-      <ContentContainer leftRightPanel={true}>
-        <div className="map">
+      <div className="columns is-desktop is-gapless is-mobile-reverse">
+        <div className="column is-half" style={{height: '100vh'}}>
           <NextzyMap />
         </div>
-        <div style={{background: 'linear-gradient(45deg, #181A41, #03375F)'}}>
+        <div
+          className="column is-half"
+          style={{background: 'linear-gradient(45deg, #181A41, #03375F)'}}
+        >
           <ContactDetail />
         </div>
-      </ContentContainer>
+      </div>
     )
   }
 }

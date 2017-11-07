@@ -18,7 +18,7 @@ export default class Banner extends React.Component {
           justifyContent: 'center'
         }}
       >
-        <ContentContainer leftRightPanel="true">
+        <ContentContainer leftRightPanel="true" padding="8px">
           <div
             style={{padding: '20px', display: 'flex', justifyContent: 'center'}}
           >
