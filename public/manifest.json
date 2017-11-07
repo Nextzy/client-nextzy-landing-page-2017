@@ -1,7 +1,7 @@
 {
   "short_name": "Nextzy",
   "name": "Nextzy Technologies Co., Ltd.",
-  "description": "Nextzy Technology home page.",
+  "description": "Nextzy Technologies home page.",
   "orientation": "portrait",
   "icons": [
     {
@@ -40,7 +40,7 @@
       "type": "image/png"
     }
   ],
-  "start_url": "./index.html",
+  "start_url": "./",
   "display": "standalone",
   "theme_color": "#03375F",
   "background_color": "#181A41"

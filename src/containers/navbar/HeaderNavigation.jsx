@@ -1,67 +1,127 @@
 import React from 'react'
-import {Navbar, Nav} from 'react-bootstrap'
 import menus from '../../constants/menus'
-import {NavItem} from 'react-bootstrap'
-import './HeaderNavigation.css'
 import logo from '../../images/logo_nextzy_black.png'
-import Scrollchor from 'react-scrollchor'
+import Scroll from 'react-scroll'
+
+const Link = Scroll.Link
+const Events = Scroll.Events
+const scrollSpy = Scroll.scrollSpy
 
 export default class HeaderNavigation extends React.Component {
   constructor (props) {
     super(props)
+    this.state = {
+      isBurgerClick: false
+    }
     this._renderMenu = this._renderMenu.bind(this)
+    this.onBurgerClick = this.onBurgerClick.bind(this)
+    this.onLinkClick = this.onLinkClick.bind(this)
+  }
+
+  componentDidMount () {
+    Events.scrollEvent.register('begin', () => {})
+    Events.scrollEvent.register('end', () => {})
+    scrollSpy.update()
+  }
+
+  componenetWillUnmount () {
+    Events.scrollEvent.remove('begin')
+    Events.scrollEvent.remove('end')
   }
 
   _renderMenu (data) {
     return (
       data &&
       data.map(menu => (
-        <NavItem key={menu.key} eventKey={menu.key}>
-          <Scrollchor
-            to={menu.link}
-            className="nav-link"
-            animate={{offset: -80, duration: 600}}
-          >
-            {menu.name}
-          </Scrollchor>
-        </NavItem>
+        <Link
+          key={menu.key}
+          to={menu.link}
+          activeClass="active"
+          className="navbar-item"
+          spy={true}
+          smooth={true}
+          duration={500}
+          onClick={this.onLinkClick}
+        >
+          {menu.name}
+        </Link>
       ))
     )
   }
 
+  onBurgerClick () {
+    this.setState({
+      isBurgerClick: !this.state.isBurgerClick
+    })
+  }
+
+  onLinkClick () {
+    this.setState({
+      isBurgerClick: false
+    })
+  }
+
   render () {
     return (
-      <Navbar className="HeaderNavigation" fixedTop fluid collapseOnSelect>
-        <Navbar.Header>
-          <Navbar.Brand>
-            <Scrollchor
-              to="#banner"
-              className="nav-link"
-              animate={{offset: -80, duration: 600}}
+      <div style={{position: 'fixed', width: '100%', zIndex: 100}}>
+        <nav className="navbar" aria-label="main navigation">
+          <div className="navbar-brand">
+            <Link
+              key="brand"
+              to="banner"
+              isDynamic={true}
+              activeClass="active"
+              className="navbar-item"
+              spy={true}
+              smooth={true}
+              duration={500}
             >
-              <img src={logo} alt="Nextzy Technologies" />
-            </Scrollchor>
-          </Navbar.Brand>
-          <Navbar.Toggle />
-        </Navbar.Header>
-        <Navbar.Collapse>
-          <Nav pullRight>
-            {this._renderMenu(menus)}
-            <NavItem
-              to="https://blog.nextzy.me/"
-              onClick={() => window.open('https://blog.nextzy.me/')}
+              <img id="nextzy-logo" src={logo} alt="Nextzy Technologies" />
+            </Link>
+
+            <div
+              className={`burger navbar-burger ${this.state.isBurgerClick
+                ? 'is-active'
+                : ''}`}
+              data-target="menuItem"
+              onClick={this.onBurgerClick}
             >
-              Blog
-            </NavItem>
-            <NavItem
-              onClick={() => window.open('http://nextzy.me/careers/')}
-              to="http://nextzy.me/careers/"
-            >
-              Careers
-            </NavItem>
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar>
+              <span />
+              <span />
+              <span />
+            </div>
+          </div>
+
+          <div
+            id="menuItem"
+            className={`navbar-menu ${this.state.isBurgerClick
+              ? 'is-active'
+              : ''}`}
+          >
+            <div className="navbar-end">
+              {this._renderMenu(menus)}
+              <a
+                className="navbar-item"
+                href="https://blog.nextzy.me/"
+                rel="noopener noreferrer"
+                target="_blank"
+                onClick={this.onLinkClick}
+              >
+                Blog
+              </a>
+              <a
+                className="navbar-item"
+                href="http://nextzy.me/careers/"
+                rel="noopener noreferrer"
+                target="_blank"
+                onClick={this.onLinkClick}
+              >
+                Careers
+              </a>
+            </div>
+          </div>
+        </nav>
+      </div>
     )
   }
 }

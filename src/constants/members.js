@@ -1,7 +1,7 @@
-import coming_soon_normal from '../images/person_coming_soon_normal.png'
-import coming_soon_hover from '../images/person_coming_soon_hover.png'
+import comingSoonNormal from '../images/person_coming_soon_normal.png'
+import comingSoonHover from '../images/person_coming_soon_hover.png'
 
-const members = [
+export const members = [
   {
     first_name: 'Palakorn',
     last_name: 'Nakpong',
@@ -80,8 +80,8 @@ const members = [
     last_name: 'Decha',
     position: 'Web Developer',
     image: {
-      normal: coming_soon_normal,
-      hover: coming_soon_hover
+      normal: comingSoonNormal,
+      hover: comingSoonHover
     },
     facebook: null,
     github: null,
@@ -92,8 +92,8 @@ const members = [
     last_name: 'Khamkaew',
     position: 'Software Tester',
     image: {
-      normal: coming_soon_normal,
-      hover: coming_soon_hover
+      normal: comingSoonNormal,
+      hover: comingSoonHover
     },
     facebook: null,
     github: null,
@@ -116,8 +116,8 @@ const members = [
     last_name: 'Roungkome',
     position: 'Web Developer',
     image: {
-      normal: coming_soon_normal,
-      hover: coming_soon_hover
+      normal: comingSoonNormal,
+      hover: comingSoonHover
     },
     facebook: null,
     github: null,
@@ -152,8 +152,8 @@ const members = [
     last_name: 'Loymee',
     position: 'Automated Test',
     image: {
-      normal: coming_soon_normal,
-      hover: coming_soon_hover
+      normal: comingSoonNormal,
+      hover: comingSoonHover
     },
     facebook: null,
     github: null,
@@ -188,8 +188,8 @@ const members = [
     last_name: 'Koonlert',
     position: 'Android Developer',
     image: {
-      normal: coming_soon_normal,
-      hover: coming_soon_hover
+      normal: comingSoonNormal,
+      hover: comingSoonHover
     },
     facebook: 'roylelittlemonkeys',
     github: null,
@@ -248,8 +248,8 @@ const members = [
     last_name: 'Auttamo',
     position: 'Software Tester',
     image: {
-      normal: coming_soon_normal,
-      hover: coming_soon_hover
+      normal: comingSoonNormal,
+      hover: comingSoonHover
     },
     facebook: null,
     github: null,
@@ -260,8 +260,8 @@ const members = [
     last_name: 'Boonfuang',
     position: 'iOS Developer',
     image: {
-      normal: coming_soon_normal,
-      hover: coming_soon_hover
+      normal: comingSoonNormal,
+      hover: comingSoonHover
     },
     facebook: null,
     github: null,
@@ -284,8 +284,8 @@ const members = [
     last_name: 'Wongsansee',
     position: 'Automated Tester',
     image: {
-      normal: coming_soon_normal,
-      hover: coming_soon_hover
+      normal: comingSoonNormal,
+      hover: comingSoonHover
     },
     facebook: null,
     github: null,
@@ -316,5 +316,3 @@ const members = [
     linkedin: null
   }
 ]
-
-export { members }

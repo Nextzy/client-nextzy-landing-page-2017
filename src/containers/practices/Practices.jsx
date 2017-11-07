@@ -1,8 +1,8 @@
 import React from 'react'
 import Practice from '../../components/practice/Practice'
 import {practices} from '../../constants/practices'
-import {Col} from 'react-bootstrap'
-import './Practices.css'
+import ContentContainer from '../../containers/contentContainer'
+import Title from '../../components/title'
 
 export default class Practices extends React.Component {
   constructor (props) {
@@ -14,24 +14,51 @@ export default class Practices extends React.Component {
     return (
       data &&
       data.map((practice, index) => (
-        <Practice icon={practice.icon} text={practice.text} key={index} />
+        <Practice
+          style={{flexGrow: 1}}
+          icon={practice.icon}
+          text={practice.text}
+          key={index}
+        />
       ))
     )
   }
 
   render () {
     return (
-      <Col className="Practices" id="practices" xs={12} sm={12} md={12} lg={12}>
-        <Col className="title" xs={12} sm={6} md={6} lg={6}>
-          <div className="text">
-            <h1>OUR</h1>
-            <h1>PRACTICES</h1>
+      <ContentContainer leftRightPanel={true}>
+        <div
+          className="column is-half"
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center'
+          }}
+        >
+          <Title textAlign="start">
+            OUR<br />
+            PRACTICES
+          </Title>
+        </div>
+        <div
+          className="column is-half"
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignContent: 'center'
+          }}
+        >
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'flex-start'
+            }}
+          >
+            {this._renderPractices(practices)}
           </div>
-        </Col>
-        <Col className="description" xs={12} sm={6} md={6} lg={6}>
-          {this._renderPractices(practices)}
-        </Col>
-      </Col>
+        </div>
+      </ContentContainer>
     )
   }
 }

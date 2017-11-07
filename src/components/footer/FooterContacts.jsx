@@ -1,38 +1,27 @@
 import React from 'react'
-import { Col } from 'react-bootstrap'
-import facebook_icon from '../../images/icon_facebook_outline_white.png'
-import linkedin_icon from '../../images/icon_linkedin_outline_white.png'
-import github_icon from '../../images/icon_github_outline_white.png'
-import email_icon from '../../images/icon_email_outline_white.png'
+import facebookIcon from '../../images/icon_facebook_outline_white.png'
+import linkedinIcon from '../../images/icon_linkedin_outline_white.png'
+import githubIcon from '../../images/icon_github_outline_white.png'
+import emailIcon from '../../images/icon_email_outline_white.png'
 import './FooterContacts.css'
 
-class FooterContacts extends React.Component {
-  render() {
+export default class FooterContacts extends React.Component {
+  render () {
     return (
-      <Col
-        xs={12}
-        sm={12}
-        mdOffset={3}
-        md={3}
-        lgOffset={3}
-        lg={3}
-        className="FooterContacts"
-      >
+      <div className="FooterContacts">
         <a href="https://www.facebook.com/nextzy">
-          <img src={facebook_icon} alt="Facebook" />
+          <img src={facebookIcon} alt="Facebook" />
         </a>
         <a href="https://www.linkedin.com/company/3755640/">
-          <img src={linkedin_icon} alt="Linkedin" />
+          <img src={linkedinIcon} alt="Linkedin" />
         </a>
         <a href="https://github.com/Nextzy">
-          <img src={github_icon} alt="Github" />
+          <img src={githubIcon} alt="Github" />
         </a>
         <a href="mailto:contact@nextzy.com">
-          <img src={email_icon} alt="E-mail" />
+          <img src={emailIcon} alt="E-mail" />
         </a>
-      </Col>
+      </div>
     )
   }
 }
-
-export default FooterContacts

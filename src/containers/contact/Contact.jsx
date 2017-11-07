@@ -1,20 +1,18 @@
 import React from 'react'
-import {Col} from 'react-bootstrap'
 import ContactDetail from '../../components/contact/ContactDetail'
 import NextzyMap from '../../components/contact/NextzyMap'
-import './Contact.css'
 
 export default class Contact extends React.Component {
   render () {
     return (
-      <Col className="Contact" id="contact" xs={12} sm={12} md={12} lg={12}>
-        <Col className="map" xs={12} sm={12} md={6} lg={6}>
+      <div className="columns is-desktop is-gapless is-mobile-reverse">
+        <div className="column is-half" style={{height: '100vh'}}>
           <NextzyMap />
-        </Col>
-        <Col className="detail" xs={12} sm={12} md={6} lg={6}>
+        </div>
+        <div className="column is-half">
           <ContactDetail />
-        </Col>
-      </Col>
+        </div>
+      </div>
     )
   }
 }

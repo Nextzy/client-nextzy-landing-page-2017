@@ -58,7 +58,7 @@
 }
 
 @media screen and (min-width: 320px) {
-  .Service>.icon>img {
+  .Service>.iconImage>img {
     height: 80px;
   }
   .Service>.name>h3 {
@@ -70,13 +70,13 @@
 }
 
 @media screen and (min-width: 425px) {
-  .Service>.icon>img {
+  .Service>.iconImage>img {
     height: 80px;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .Service>.icon>img {
+  .Service>.iconImage>img {
     height: 90px;
   }
   .Service>.name>h3 {
@@ -89,19 +89,19 @@
 }
 
 @media screen and (min-width: 1024px) {
-  .Service>.icon>img {
+  .Service>.iconImage>img {
     height: 90px;
   }
 }
 
 @media screen and (min-width: 1440px) {
-  .Service>.icon>img {
+  .Service>.iconImage>img {
     height: 110px;
   }
 }
 
 @media screen and (min-width: 2560px) {
-  .Service>.icon>img {
+  .Service>.iconImage>img {
     height: 130px;
   }
   .Service>.name>h3 {

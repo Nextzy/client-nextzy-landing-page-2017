@@ -1,34 +1,55 @@
 import React from 'react'
+import ContentContainer from '../contentContainer'
+import Title from '../../components/title'
 import banner from '../../images/bg-head.png'
 import astronaut from '../../images/astronaut.png'
-import {Col} from 'react-bootstrap'
-import './Banner.css'
 
-class Banner extends React.Component {
+export default class Banner extends React.Component {
   render () {
     return (
-      <section className="Banner" id="banner">
-        <div className="top-banner">
-          <img className="background-image" src={banner} alt="Nextzy" />
-          <div className="text-layer">
-            <Col className="icon" xs={12} sm={12} md={4} lg={4}>
-              <img
-                id="astronaut"
-                className="animated infinite pulse"
-                src={astronaut}
-                alt="Astronaut"
-              />
-            </Col>
-            <Col className="description" xs={12} sm={12} md={8} lg={8}>
-              <h1 className="text-title">{this.props.nextzy}</h1>
-              <h1 className="text-title">{this.props.tech}</h1>
-              <h6 className="text-subtitle">{this.props.subtitle}</h6>
-            </Col>
+      <div
+        style={{
+          backgroundImage: `url(${banner})`,
+          backgroundRepeat: 'norepeat',
+          backgroundSize: 'cover',
+          minHeight: '100vh',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center'
+        }}
+      >
+        <ContentContainer leftRightPanel="true" padding="8px">
+          <div
+            style={{padding: '20px', display: 'flex', justifyContent: 'center'}}
+          >
+            <img
+              id="astronaut"
+              className="animated infinite pulse"
+              src={astronaut}
+              alt="Astronaut"
+              style={{height: '160px'}}
+            />
           </div>
-        </div>
-      </section>
+          <div
+            className="companyDescription"
+            style={{
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'flex-start',
+              flexDirection: 'column'
+            }}
+          >
+            <Title textColor="#EEEEEE" textAlign="start">
+              {this.props.nextzy}
+              <br />
+              {this.props.tech}
+            </Title>
+            <h2 className="subtitle" style={{color: '#EEEEEE'}}>
+              {this.props.subtitle}
+            </h2>
+          </div>
+        </ContentContainer>
+      </div>
     )
   }
 }
-
-export default Banner

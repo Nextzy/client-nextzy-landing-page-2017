@@ -1,6 +1,15 @@
 .FooterContacts {
   display: flex;
+  flex: 1;
   justify-content: space-around;
+}
+
+@media only screen and (max-width: 425px) {
+  .FooterContacts {
+    flex : 0 0 100%;
+    display: flex;
+    justify-content: space-around;
+  }
 }
 
 .FooterContacts>a>img {

@@ -1,5 +1,4 @@
 import React from 'react'
-import {Col} from 'react-bootstrap'
 import Service from '../../components/service/Service'
 import ServiceTitle from '../../components/service/ServiceTitle'
 import {services} from '../../constants/services'
@@ -27,12 +26,12 @@ export default class Services extends React.Component {
 
   render () {
     return (
-      <Col className="Services" id="services" xs={12} sm={12} md={12} lg={12}>
-        <Col className="service-items" xs={12} sm={12} md={6} lg={6}>
-          {this._renderServices(services)}
-        </Col>
-        <ServiceTitle />
-      </Col>
+      <div className="columns is-desktop is-gapless is-mobile-reverse">
+        <div className="column is-half">{this._renderServices(services)}</div>
+        <div className="column is-half">
+          <ServiceTitle />
+        </div>
+      </div>
     )
   }
 }

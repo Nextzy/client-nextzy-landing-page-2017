@@ -2,20 +2,19 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap-reverse;
-  margin-top: 40px;
   padding: 0 0 0 0;
 }
 
-.Contact > .map {
+/* .Contact > .map {
   padding: 0px;
-}
+} */
 
 .Contact>.detail {
   color: #EEE;
   background: linear-gradient(45deg, #181A41, #03375F);
 }
 
-@media screen and (min-width: 320px) {
+/* @media screen and (min-width: 320px) {
   .Contact>.detail {
     display: flex;
     align-items: center;
@@ -37,4 +36,4 @@
   .map {
     height: 600px;
   }
-}
+} */

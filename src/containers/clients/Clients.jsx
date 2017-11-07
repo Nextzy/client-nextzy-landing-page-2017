@@ -1,6 +1,5 @@
 import React from 'react'
-import {Col} from 'react-bootstrap'
-import CenterTitle from '../../components/centerTitle'
+import Title from '../../components/title'
 import Slider from 'react-slick'
 import Client from '../../components/clients/Client'
 import {clients} from '../../constants/clients'
@@ -24,16 +23,16 @@ export default class Clients extends React.Component {
 
   render () {
     return (
-      <Col className="Clients" xs={12} sm={12} md={12} lg={12}>
-        <CenterTitle textColor="#EEEEEE">OUR CLIENTS</CenterTitle>
-        <Col className="clients-slider-wrapper" xs={12} sm={12} md={12} lg={12}>
+      <div className="Clients">
+        <Title textColor="#EEEEEE">OUR CLIENTS</Title>
+        <div className="clients-slider-wrapper">
           <Slider className="clients-slider" {...settings}>
             {this._renderClient(clients).map((slide, index) => (
               <div key={index}>{slide}</div>
             ))}
           </Slider>
-        </Col>
-      </Col>
+        </div>
+      </div>
     )
   }
 }

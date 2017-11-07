@@ -9,8 +9,8 @@ export default class Work extends React.Component {
           <img src={this.props.img} alt={this.props.title} />
         </div>
         <div className="detail">
-          <h2>{this.props.title}</h2>
-          <h3>{this.props.subtitle}</h3>
+          <h2 className="title">{this.props.title}</h2>
+          <h3 className="subtitle">{this.props.subtitle}</h3>
         </div>
       </div>
     )

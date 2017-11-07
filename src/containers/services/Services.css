@@ -1,12 +1,6 @@
-.Services {
-  display: flex;
-  flex-wrap: wrap-reverse;
-  background: #eee;
-  padding-left: 0;
-  padding-right: 0;
-}
-
-.Services>.service-items {
-  padding-left: 0;
-  padding-right: 0;
+@media only screen and (max-width: 768px) {
+  .columns.is-desktop.is-gapless.is-mobile-reverse {
+    display: flex;
+    flex-direction: column-reverse;
+  }
 }

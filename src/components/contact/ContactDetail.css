@@ -1,3 +1,7 @@
+.ContactDetail {
+  color: #EEEEEE;
+}
+
 .ContactDetail>h1 {
   letter-spacing: 0.4em;
   font-weight: bold;

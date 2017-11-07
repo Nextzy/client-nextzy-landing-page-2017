@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
 import {nextzy, tech, subtitle} from '../../constants/banner'
-import {Grid} from 'react-bootstrap'
 import HeaderNavigation from '../navbar/HeaderNavigation'
 import Banner from '../banner/Banner'
 import Practices from '../practices/Practices'
@@ -10,23 +9,39 @@ import Clients from '../clients/Clients'
 import Team from '../team/Team'
 import Contact from '../contact/Contact'
 import Footer from '../footer/Footer'
-import './App.css'
+import Scroll from 'react-scroll'
+import 'bulma/css/bulma.css'
+import './style.css'
+
+const Element = Scroll.Element
 
 export default class App extends Component {
   render () {
     return (
       <div className="App">
         <HeaderNavigation />
-        <Grid className="containers">
-          <Banner nextzy={nextzy} tech={tech} subtitle={subtitle} />
-          <Practices />
-          <Services />
-          <Works />
-          <Clients />
-          <Team />
-          <Contact />
-          <Footer />
-        </Grid>
+        <section className="hero">
+          <section className="hero-body App-content">
+            <Element name="banner" className="App-element">
+              <Banner nextzy={nextzy} tech={tech} subtitle={subtitle} />
+            </Element>
+            <Practices />
+            <Element name="services" className="App-element">
+              <Services />
+            </Element>
+            <Element name="works" className="App-element">
+              <Works />
+            </Element>
+            <Clients />
+            <Element name="team" className="App-element">
+              <Team />
+            </Element>
+            <Element name="contact" className="App-element">
+              <Contact />
+            </Element>
+            <Footer />
+          </section>
+        </section>
       </div>
     )
   }
