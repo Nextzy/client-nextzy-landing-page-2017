@@ -9,10 +9,7 @@ export default class Contact extends React.Component {
         <div className="column is-half" style={{height: '100vh'}}>
           <NextzyMap />
         </div>
-        <div
-          className="column is-half"
-          style={{background: 'linear-gradient(45deg, #181A41, #03375F)'}}
-        >
+        <div className="column is-half">
           <ContactDetail />
         </div>
       </div>
