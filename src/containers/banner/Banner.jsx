@@ -27,7 +27,7 @@ export default class Banner extends React.Component {
               className="animated infinite pulse"
               src={astronaut}
               alt="Astronaut"
-              style={{height: '160px'}}
+              style={{height: '160px', animationDuration: '4s'}}
             />
           </div>
           <div
