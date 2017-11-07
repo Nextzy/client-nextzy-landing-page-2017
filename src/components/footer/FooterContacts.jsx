@@ -8,10 +8,7 @@ import './FooterContacts.css'
 export default class FooterContacts extends React.Component {
   render () {
     return (
-      <div
-        className="FooterContacts"
-        style={{display: 'flex', flex: 1, justifyContent: 'space-around'}}
-      >
+      <div className="FooterContacts">
         <a href="https://www.facebook.com/nextzy">
           <img src={facebookIcon} alt="Facebook" />
         </a>
