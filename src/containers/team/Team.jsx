@@ -36,7 +36,7 @@ export default class Team extends React.Component {
         <div style={{paddingBottom: '50px'}}>
           <Title>OUR TEAM</Title>
         </div>
-        <div style={{padding: '0px 20px 20px 20px'}}>
+        <div style={{padding: '0px 26px 20px 26px'}}>
           <Slider className="memberSlider" {...settings}>
             {this._renderTeamMember(members).map((slide, index) => (
               <div key={index}>{slide}</div>
