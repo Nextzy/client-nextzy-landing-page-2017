@@ -6,7 +6,17 @@ import './Footer.css'
 export default class Footer extends React.Component {
   render () {
     return (
-      <div className="Footer">
+      <div
+        style={{
+          display: 'flex',
+          padding: '30px',
+          background: '#000000',
+          justifyContent: 'space-between',
+          flexDirection: 'row',
+          flexWrap: 'wrap-reverse',
+          alignContent: 'center'
+        }}
+      >
         <CompanyName />
         <FooterContacts />
       </div>

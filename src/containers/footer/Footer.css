@@ -1,8 +1,6 @@
 .Footer {
   display: flex;
-  align-items: center;
-  flex-wrap: wrap-reverse;
   padding: 30px;
   background: rgb(0, 0, 0);
-  color: #EEE;
+  color: #EEEEEE;
 }

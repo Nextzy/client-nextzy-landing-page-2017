@@ -5,10 +5,13 @@ import githubIcon from '../../images/icon_github_outline_white.png'
 import emailIcon from '../../images/icon_email_outline_white.png'
 import './FooterContacts.css'
 
-class FooterContacts extends React.Component {
+export default class FooterContacts extends React.Component {
   render () {
     return (
-      <div className="FooterContacts">
+      <div
+        className="FooterContacts"
+        style={{display: 'flex', flex: 1, justifyContent: 'space-around'}}
+      >
         <a href="https://www.facebook.com/nextzy">
           <img src={facebookIcon} alt="Facebook" />
         </a>
@@ -25,5 +28,3 @@ class FooterContacts extends React.Component {
     )
   }
 }
-
-export default FooterContacts
