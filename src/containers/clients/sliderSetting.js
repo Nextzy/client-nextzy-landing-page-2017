@@ -22,7 +22,7 @@ const settings = {
       }
     },
     {
-      breakpoint: 425,
+      breakpoint: 767,
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1
@@ -31,4 +31,4 @@ const settings = {
   ]
 }
 
-export { settings }
+export {settings}

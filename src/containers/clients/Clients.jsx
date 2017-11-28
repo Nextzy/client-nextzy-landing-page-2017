@@ -34,8 +34,8 @@ export default class Clients extends React.Component {
     return (
       <ClientsContainer>
         <Title textColor="#EEEEEE">OUR CLIENTS</Title>
-        <div className="clients-slider-wrapper">
-          <Slider className="clients-slider" {...settings}>
+        <div>
+          <Slider {...settings}>
             {this._renderClient(clients).map((slide, index) => (
               <div key={index}>{slide}</div>
             ))}

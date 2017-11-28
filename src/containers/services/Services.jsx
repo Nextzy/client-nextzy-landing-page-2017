@@ -33,7 +33,7 @@ export default class Services extends React.Component {
 
   render () {
     return (
-      <ServicesContainer className="columns is-desktop is-gapless is-mobile-reverse">
+      <ServicesContainer className="columns is-desktop is-gapless">
         <div className="column is-half">{this._renderServices(services)}</div>
         <div className="column is-half">
           <ServiceTitle />

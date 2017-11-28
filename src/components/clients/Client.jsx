@@ -32,7 +32,7 @@ const ImageWrapper = styled.div`
   box-shadow: 0 0 0 6px #fff;
 `
 
-class Client extends React.Component {
+export default class Client extends React.Component {
   render () {
     return (
       <ClientContainer>
@@ -49,5 +49,3 @@ class Client extends React.Component {
     )
   }
 }
-
-export default Client

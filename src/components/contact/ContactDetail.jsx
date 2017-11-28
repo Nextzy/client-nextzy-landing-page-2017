@@ -1,28 +1,40 @@
 import React from 'react'
 import Title from '../title'
-import './ContactDetail.css'
+import styled from 'styled-components'
+
+const ContactContainer = styled.div`
+  color: #eeeeee;
+  padding: 12px;
+  background: linear-gradient(45deg, #181a41, #03375f);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+`
+
+const ContactTitle = styled.h3`
+  font-weight: bold !important;
+  @media screen and (min-width: 425px) {
+    font-size: 18pt;
+  }
+  @media screen and (min-width: 768px) {
+    font-size: 26pt;
+  }
+  @media screen and (min-width: 1024px) {
+    font-size: 22pt;
+  }
+`
 
 export default class ContactDetail extends React.Component {
   render () {
     return (
-      <div
-        className="content"
-        style={{
-          color: '#EEEEEE',
-          padding: '12px',
-          background: 'linear-gradient(45deg, #181A41, #03375F)',
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'center',
-          height: '100%'
-        }}
-      >
+      <ContactContainer className="content">
         <Title textColor="#EEEEEE">
           <b>CONTACT US</b>
         </Title>
         <div>
-          <h3 className="title has-text-light">Address</h3>
+          <ContactTitle className="title has-text-light">Address</ContactTitle>
           <p>
             Nextzy Technologies Co., Ltd.<br />
             219/22 Asoke Towers 7<sup>th</sup>
@@ -30,18 +42,18 @@ export default class ContactDetail extends React.Component {
             Soi Sukhumvit 21 Rd., Klongtoey Nua,<br />
             Wattana, Bangkok 10110, Thailand.
           </p>
-          <h3 className="title has-text-light">Phones</h3>
+          <ContactTitle className="title has-text-light">Phones</ContactTitle>
           <p>
             02-664-3364<br />
             Fax 02-664-0886<br />
           </p>
-          <h3 className="title has-text-light">E-mail</h3>
+          <ContactTitle className="title has-text-light">E-mail</ContactTitle>
           <p>
             contact@nextzy.com<br />
             geek@nextzy.com<br />
           </p>
         </div>
-      </div>
+      </ContactContainer>
     )
   }
 }
