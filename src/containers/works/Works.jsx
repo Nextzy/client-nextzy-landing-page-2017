@@ -2,7 +2,6 @@ import React from 'react'
 import Work from '../../components/work/Work'
 import {workList} from '../../constants/works'
 import ContentContainer from '../contentContainer'
-import './Works.css'
 
 export default class Works extends React.Component {
   constructor (props) {
