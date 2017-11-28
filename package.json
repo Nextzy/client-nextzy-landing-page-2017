@@ -19,7 +19,8 @@
     "react-scrollchor": "^4.0.0",
     "react-slick": "^0.15.4",
     "react-transition-group": "^2.2.1",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "styled-components": "^2.2.3"
   },
   "scripts": {
     "precommit": "lint-staged",
