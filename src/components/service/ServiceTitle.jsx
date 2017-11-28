@@ -1,31 +1,36 @@
 import React from 'react'
 import serviceIcon from '../../images/icon_our_service.png'
 import Title from '../title'
+import styled from 'styled-components'
+
+const ServiceTitleContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fafafa;
+  background: radial-gradient(circle at center, #03375f 0%, #181a41 100%);
+  padding: 60px;
+  height: 100%;
+`
+
+const ImageIcon = styled.img`
+  animation-duration: 4s !important;
+  height: 200px;
+`
 
 export default class ServiceTitle extends React.Component {
   render () {
     return (
-      <div
-        className="ServiceTitle"
-        style={{
-          background:
-            'radial-gradient(circle at center, #03375F 0%, #181A41 100%)',
-          display: 'flex',
-          height: '100%',
-          justifyContent: 'center',
-          alignItems: 'center',
-          flexDirection: 'column'
-        }}
-      >
-        <img
+      <ServiceTitleContainer>
+        <ImageIcon
           id="ufo"
           src={serviceIcon}
           className="animated infinite swing"
           alt="Our Services"
-          style={{height: '200px', animationDuration: '4s'}}
         />
         <Title textColor="#EEEEEE">OUR SERVICES</Title>
-      </div>
+      </ServiceTitleContainer>
     )
   }
 }
