@@ -1,6 +1,0 @@
-@media only screen and (max-width: 768px) {
-  .columns.is-desktop.is-gapless.is-mobile-reverse {
-    display: flex;
-    flex-direction: column-reverse;
-  }
-}

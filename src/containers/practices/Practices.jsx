@@ -3,6 +3,25 @@ import Practice from '../../components/practice/Practice'
 import {practices} from '../../constants/practices'
 import ContentContainer from '../../containers/contentContainer'
 import Title from '../../components/title'
+import styled from 'styled-components'
+
+const PracticeTitleContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`
+
+const PracticesContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-content: center;
+`
+
+const PracticesContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+`
 
 export default class Practices extends React.Component {
   constructor (props) {
@@ -27,36 +46,18 @@ export default class Practices extends React.Component {
   render () {
     return (
       <ContentContainer leftRightPanel={true}>
-        <div
-          className="column is-half"
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center'
-          }}
-        >
+        <PracticeTitleContainer>
           <Title textAlign="start">
             OUR<br />
             PRACTICES
           </Title>
-        </div>
-        <div
-          className="column is-half"
-          style={{
-            display: 'flex',
-            justifyContent: 'center',
-            alignContent: 'center'
-          }}
-        >
-          <div
-            style={{
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'flex-start'
-            }}
-          >
-            {this._renderPractices(practices)}
-          </div>
+        </PracticeTitleContainer>
+        <div className="column is-half">
+          <PracticesContainer>
+            <PracticesContent>
+              {this._renderPractices(practices)}
+            </PracticesContent>
+          </PracticesContainer>
         </div>
       </ContentContainer>
     )

@@ -2,10 +2,17 @@ import React from 'react'
 import menus from '../../constants/menus'
 import logo from '../../images/logo_nextzy_black.png'
 import Scroll from 'react-scroll'
+import styled from 'styled-components'
 
 const Link = Scroll.Link
 const Events = Scroll.Events
 const scrollSpy = Scroll.scrollSpy
+
+const HeaderContainer = styled.div`
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+`
 
 export default class HeaderNavigation extends React.Component {
   constructor (props) {
@@ -63,7 +70,7 @@ export default class HeaderNavigation extends React.Component {
 
   render () {
     return (
-      <div style={{position: 'fixed', width: '100%', zIndex: 100}}>
+      <HeaderContainer>
         <nav className="navbar" aria-label="main navigation">
           <div className="navbar-brand">
             <Link
@@ -121,7 +128,7 @@ export default class HeaderNavigation extends React.Component {
             </div>
           </div>
         </nav>
-      </div>
+      </HeaderContainer>
     )
   }
 }
