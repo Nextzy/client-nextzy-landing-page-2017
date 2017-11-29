@@ -8,7 +8,6 @@ const ContactContainer = styled.div`
   background: linear-gradient(45deg, #181a41, #03375f);
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   height: 100%;
 `
@@ -33,7 +32,14 @@ export default class ContactDetail extends React.Component {
         <Title textColor="#EEEEEE">
           <b>CONTACT US</b>
         </Title>
-        <div>
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'flex-start',
+            padding: '40px'
+          }}
+        >
           <ContactTitle className="title has-text-light">Address</ContactTitle>
           <p>
             Nextzy Technologies Co., Ltd.<br />
