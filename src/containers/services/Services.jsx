@@ -2,7 +2,14 @@ import React from 'react'
 import Service from '../../components/service/Service'
 import ServiceTitle from '../../components/service/ServiceTitle'
 import {services} from '../../constants/services'
-import './Services.css'
+import styled from 'styled-components'
+
+const ServicesContainer = styled.div`
+  @media only screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+`
 
 export default class Services extends React.Component {
   constructor (props) {
@@ -26,12 +33,12 @@ export default class Services extends React.Component {
 
   render () {
     return (
-      <div className="columns is-desktop is-gapless is-mobile-reverse">
+      <ServicesContainer className="columns is-desktop is-gapless">
         <div className="column is-half">{this._renderServices(services)}</div>
         <div className="column is-half">
           <ServiceTitle />
         </div>
-      </div>
+      </ServicesContainer>
     )
   }
 }

@@ -11,38 +11,54 @@ import Contact from '../contact/Contact'
 import Footer from '../footer/Footer'
 import Scroll from 'react-scroll'
 import 'bulma/css/bulma.css'
-import './style.css'
+import styled from 'styled-components'
 
 const Element = Scroll.Element
+
+const AppContainer = styled.div`font-family: 'Montserrat';`
+
+const ContentContainer = styled.section`padding: 0;`
+
+const Content = styled.div`padding-top: 50px;`
 
 export default class App extends Component {
   render () {
     return (
-      <div className="App">
+      <AppContainer>
         <HeaderNavigation />
         <section className="hero">
-          <section className="hero-body App-content">
-            <Element name="banner" className="App-element">
-              <Banner nextzy={nextzy} tech={tech} subtitle={subtitle} />
+          <ContentContainer>
+            <Element name="banner">
+              <Content>
+                <Banner nextzy={nextzy} tech={tech} subtitle={subtitle} />
+              </Content>
             </Element>
             <Practices />
-            <Element name="services" className="App-element">
-              <Services />
+            <Element name="services">
+              <Content>
+                <Services />
+              </Content>
             </Element>
-            <Element name="works" className="App-element">
-              <Works />
+            <Element name="works">
+              <Content>
+                <Works />
+              </Content>
             </Element>
             <Clients />
-            <Element name="team" className="App-element">
-              <Team />
+            <Element name="team">
+              <Content>
+                <Team />
+              </Content>
             </Element>
-            <Element name="contact" className="App-element">
-              <Contact />
+            <Element name="contact">
+              <Content>
+                <Contact />
+              </Content>
             </Element>
             <Footer />
-          </section>
+          </ContentContainer>
         </section>
-      </div>
+      </AppContainer>
     )
   }
 }

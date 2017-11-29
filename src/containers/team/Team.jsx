@@ -4,7 +4,17 @@ import Slider from 'react-slick'
 import {members} from '../../constants/members'
 import Title from '../../components/title'
 import {settings} from './sliderSetting'
-import './Team.css'
+import styled from 'styled-components'
+
+const TeamContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+`
+
+const TeamTitle = styled.div`padding-bottom: 50px;`
+
+const TeamMembers = styled.div`padding: 0px 26px 20px 26px;`
 
 export default class Team extends React.Component {
   constructor (props) {
@@ -32,18 +42,18 @@ export default class Team extends React.Component {
 
   render () {
     return (
-      <div className="Team">
-        <div style={{paddingBottom: '50px'}}>
+      <TeamContainer>
+        <TeamTitle>
           <Title>OUR TEAM</Title>
-        </div>
-        <div style={{padding: '0px 26px 20px 26px'}}>
+        </TeamTitle>
+        <TeamMembers>
           <Slider className="memberSlider" {...settings}>
             {this._renderTeamMember(members).map((slide, index) => (
               <div key={index}>{slide}</div>
             ))}
           </Slider>
-        </div>
-      </div>
+        </TeamMembers>
+      </TeamContainer>
     )
   }
 }

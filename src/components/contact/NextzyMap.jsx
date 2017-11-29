@@ -7,7 +7,7 @@ const GoogleMapContainer = withGoogleMap(props => (
   </GoogleMap>
 ))
 
-class NextzyMap extends React.Component {
+export default class NextzyMap extends React.Component {
   render () {
     return (
       <GoogleMapContainer
@@ -26,5 +26,3 @@ class NextzyMap extends React.Component {
     )
   }
 }
-
-export default NextzyMap
