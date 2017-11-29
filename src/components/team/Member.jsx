@@ -1,7 +1,34 @@
 import React from 'react'
 import MemberDetail from './MemberDetail'
 import MemberSocial from './MemberSocial'
-import './Member.css'
+import styled from 'styled-components'
+import FadeIn from '../FadeInAnimation'
+
+const MemberContainer = styled.div`
+  box-shadow: 0 0 0 2px #9d9d9d;
+  background: #fff;
+  width: 250px;
+  height: 320px;
+`
+
+const MemberFadeInNormal = styled.div`
+  animation: ${FadeIn} 0.75s;
+  -moz-animation: ${FadeIn} 0.75s;
+  webkit-animation: ${FadeIn} 0.75s;
+  -o-animation: ${FadeIn} 0.75s;
+`
+
+const MemberFadeInHover = styled.div`
+  animation: ${FadeIn} 0.75s;
+  -moz-animation: ${FadeIn} 0.75s;
+  webkit-animation: ${FadeIn} 0.75s;
+  -o-animation: ${FadeIn} 0.75s;
+`
+
+const ImageIcon = styled.img`
+  width: 250px;
+  height: auto;
+`
 
 export default class Member extends React.Component {
   constructor (props) {
@@ -30,19 +57,18 @@ export default class Member extends React.Component {
 
   render () {
     return (
-      <div
-        className="Member"
+      <MemberContainer
         onMouseEnter={this.onMouseEnter}
         onMouseLeave={this.onMouseLeave}
       >
         {!this.state.hover ? (
-          <div className="profile-wrapper normal">
-            <img src={this.props.image.normal} alt="Profile" />
-          </div>
+          <MemberFadeInNormal>
+            <ImageIcon src={this.props.image.normal} alt="Profile" />
+          </MemberFadeInNormal>
         ) : (
-          <div className="profile-wrapper hover">
-            <img src={this.props.image.hover} alt="Profile" />
-          </div>
+          <MemberFadeInHover>
+            <ImageIcon src={this.props.image.hover} alt="Profile" />
+          </MemberFadeInHover>
         )}
         {!this.state.hover ? (
           <MemberDetail
@@ -57,7 +83,7 @@ export default class Member extends React.Component {
             linkedin={this.state.linkedin}
           />
         )}
-      </div>
+      </MemberContainer>
     )
   }
 }

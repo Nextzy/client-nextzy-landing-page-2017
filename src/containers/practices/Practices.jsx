@@ -15,6 +15,7 @@ const PracticesContainer = styled.div`
   display: flex;
   justify-content: center;
   align-content: center;
+  margin-top: 50px !important;
 `
 
 const PracticesContent = styled.div`
@@ -33,12 +34,7 @@ export default class Practices extends React.Component {
     return (
       data &&
       data.map((practice, index) => (
-        <Practice
-          style={{flexGrow: 1}}
-          icon={practice.icon}
-          text={practice.text}
-          key={index}
-        />
+        <Practice icon={practice.icon} text={practice.text} key={index} />
       ))
     )
   }
@@ -46,19 +42,19 @@ export default class Practices extends React.Component {
   render () {
     return (
       <ContentContainer leftRightPanel={true}>
-        <PracticeTitleContainer>
-          <Title textAlign="start">
-            OUR<br />
-            PRACTICES
-          </Title>
-        </PracticeTitleContainer>
-        <div className="column is-half">
-          <PracticesContainer>
-            <PracticesContent>
-              {this._renderPractices(practices)}
-            </PracticesContent>
-          </PracticesContainer>
-        </div>
+        <PracticesContainer className="column is-half">
+          <PracticeTitleContainer>
+            <Title textAlign="start">
+              OUR<br />
+              PRACTICES
+            </Title>
+          </PracticeTitleContainer>
+        </PracticesContainer>
+        <PracticesContainer className="column is-half">
+          <PracticesContent>
+            {this._renderPractices(practices)}
+          </PracticesContent>
+        </PracticesContainer>
       </ContentContainer>
     )
   }

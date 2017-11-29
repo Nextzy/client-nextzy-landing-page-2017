@@ -1,15 +1,30 @@
 import React from 'react'
-import './MemberDetail.css'
+import styled from 'styled-components'
+import FadeIn from '../FadeInAnimation'
+
+const MemberDetailContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  animation: ${FadeIn} 0.75s;
+  -moz-animation: ${FadeIn} 0.75s;
+  -webkit-animation: ${FadeIn} 0.75s;
+  -o-animation: ${FadeIn} 0.75s;
+`
+
+const Name = styled.h5`font-weight: bold;`
 
 export default class MemberDetail extends React.Component {
   render () {
     return (
-      <div className="MemberDetail">
-        <h5>
+      <MemberDetailContainer>
+        <Name>
           {this.props.first_name} {this.props.last_name}
-        </h5>
+        </Name>
         <h6>{this.props.position}</h6>
-      </div>
+      </MemberDetailContainer>
     )
   }
 }

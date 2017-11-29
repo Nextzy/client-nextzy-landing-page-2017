@@ -6,6 +6,7 @@ const PracticeContainer = styled.div`
   flex-direction: row;
   align-items: center;
   padding: 40px 0 40px 0;
+  flex-grow: 1;
 `
 
 const ImageIcon = styled.img`
