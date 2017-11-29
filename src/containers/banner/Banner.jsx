@@ -4,6 +4,7 @@ import Title from '../../components/title'
 import banner from '../../images/bg-head.png'
 import astronaut from '../../images/astronaut.png'
 import styled from 'styled-components'
+import Particles from 'react-particles-js'
 
 const BannerContainer = styled.div`
   background-image: url(${banner});
@@ -28,10 +29,45 @@ const CompanyDescription = styled.div`
   flex-direction: column;
 `
 
+const particleStyle = {
+  particles: {
+    number: {
+      value: 80,
+      density: {
+        enable: true,
+        value_area: 800
+      }
+    },
+    color: {
+      value: '#ffffff'
+    },
+    shape: {
+      type: 'circle',
+      stroke: {
+        width: 0,
+        color: '#000000'
+      },
+      polygon: {
+        nb_sides: 5
+      }
+    }
+  }
+}
+
 export default class Banner extends React.Component {
   render () {
     return (
-      <BannerContainer>
+      <BannerContainer id="particles-js">
+        <Particles
+          style={{
+            width: '100%',
+            height: '100%',
+            position: 'absolute',
+            left: 0,
+            top: '50px'
+          }}
+          params={particleStyle}
+        />
         <ContentContainer leftRightPanel="true" padding="8px">
           <ImageIcon>
             <img
