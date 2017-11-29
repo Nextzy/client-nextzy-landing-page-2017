@@ -14,6 +14,7 @@ const BannerContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 5;
 `
 
 const ImageIcon = styled.div`
@@ -32,24 +33,25 @@ const CompanyDescription = styled.div`
 const particleStyle = {
   particles: {
     number: {
-      value: 80,
+      value: 50,
       density: {
         enable: true,
         value_area: 800
       }
-    },
-    color: {
-      value: '#ffffff'
     },
     shape: {
       type: 'circle',
       stroke: {
         width: 0,
         color: '#000000'
-      },
-      polygon: {
-        nb_sides: 5
       }
+    },
+    line_linked: {
+      enable: true,
+      distance: 160,
+      color: '#c8b4b4',
+      opacity: 0.4,
+      width: 1
     }
   }
 }
@@ -64,7 +66,8 @@ export default class Banner extends React.Component {
             height: '100%',
             position: 'absolute',
             left: 0,
-            top: '50px'
+            top: '50px',
+            zIndex: 1
           }}
           params={particleStyle}
         />
