@@ -1,7 +1,7 @@
 import React from 'react'
-import facebookLogo from '../../images/icon_facebook_black.png'
-import githubLogo from '../../images/icon_github_black.png'
-import linkedinLogo from '../../images/icon_linkedin_black.png'
+import facebookLogo from '../../images/icons/icon_facebook_black.png'
+import githubLogo from '../../images/icons/icon_github_black.png'
+import linkedinLogo from '../../images/icons/icon_linkedin_black.png'
 import styled from 'styled-components'
 import FadeIn from '../FadeInAnimation'
 

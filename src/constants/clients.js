@@ -1,4 +1,4 @@
-import ais from '../images/logo_ais.png'
+import ais from '../images/logos/logo_ais.png'
 
 const clients = [
   {
@@ -23,4 +23,4 @@ const clients = [
   }
 ]
 
-export { clients }
+export {clients}

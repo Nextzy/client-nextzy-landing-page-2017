@@ -8,7 +8,7 @@ const ContactContainer = styled.div`
   background: linear-gradient(45deg, #181a41, #03375f);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   height: 100%;
 `
 

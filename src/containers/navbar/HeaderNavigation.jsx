@@ -1,6 +1,6 @@
 import React from 'react'
 import menus from '../../constants/menus'
-import logo from '../../images/logo_nextzy_black.png'
+import logo from '../../images/logos/logo_nextzy_black.png'
 import Scroll from 'react-scroll'
 import styled from 'styled-components'
 
