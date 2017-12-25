@@ -1,9 +1,9 @@
-import androidHover from '../images/icon_android_hover.png'
-import androidNormal from '../images/icon_android_normal.png'
-import appleHover from '../images/icon_apple_hover.png'
-import appleNormal from '../images/icon_apple_normal.png'
-import javaScriptHover from '../images/icon_java_script_hover.png'
-import javaScriptNormal from '../images/icon_java_script_normal.png'
+import androidHover from '../images/icons/icon_android_hover.png'
+import androidNormal from '../images/icons/icon_android_normal.png'
+import appleHover from '../images/icons/icon_apple_hover.png'
+import appleNormal from '../images/icons/icon_apple_normal.png'
+import javaScriptHover from '../images/icons/icon_java_script_hover.png'
+import javaScriptNormal from '../images/icons/icon_java_script_normal.png'
 
 export const services = [
   {

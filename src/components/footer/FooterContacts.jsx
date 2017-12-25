@@ -1,8 +1,8 @@
 import React from 'react'
-import facebookIcon from '../../images/icon_facebook_outline_white.png'
-import linkedinIcon from '../../images/icon_linkedin_outline_white.png'
-import githubIcon from '../../images/icon_github_outline_white.png'
-import emailIcon from '../../images/icon_email_outline_white.png'
+import facebookIcon from '../../images/icons/icon_facebook_outline_white.png'
+import linkedinIcon from '../../images/icons/icon_linkedin_outline_white.png'
+import githubIcon from '../../images/icons/icon_github_outline_white.png'
+import emailIcon from '../../images/icons/icon_email_outline_white.png'
 import styled from 'styled-components'
 
 const FooterContactsContainer = styled.div`

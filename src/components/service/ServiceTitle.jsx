@@ -1,5 +1,5 @@
 import React from 'react'
-import serviceIcon from '../../images/icon_our_service.png'
+import serviceIcon from '../../images/icons/icon_our_service.png'
 import Title from '../title'
 import styled from 'styled-components'
 

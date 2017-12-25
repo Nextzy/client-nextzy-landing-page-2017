@@ -1,8 +1,8 @@
 import React from 'react'
 import ContentContainer from '../contentContainer'
 import Title from '../../components/title'
-import banner from '../../images/bg-head.png'
-import astronaut from '../../images/astronaut.png'
+import banner from '../../images/banner/bg-head.png'
+import astronaut from '../../images/banner/astronaut.png'
 import styled from 'styled-components'
 import Particles from 'react-particles-js'
 
