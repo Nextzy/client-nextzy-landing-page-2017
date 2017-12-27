@@ -5,7 +5,7 @@ import {services} from '../../constants/services'
 import styled from 'styled-components'
 
 const ServicesContainer = styled.div`
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 1023px) {
     display: flex;
     flex-direction: column-reverse;
   }
@@ -34,8 +34,8 @@ export default class Services extends React.Component {
   render () {
     return (
       <ServicesContainer className="columns is-desktop is-gapless">
-        <div className="column is-half">{this._renderServices(services)}</div>
-        <div className="column is-half">
+        <div className="column">{this._renderServices(services)}</div>
+        <div className="column">
           <ServiceTitle />
         </div>
       </ServicesContainer>
