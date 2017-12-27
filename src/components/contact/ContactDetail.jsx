@@ -36,28 +36,37 @@ export default class ContactDetail extends React.Component {
           style={{
             display: 'flex',
             flexDirection: 'column',
-            alignItems: 'flex-start',
-            padding: '40px'
+            justifyContent: 'space-between',
+            padding: '40px',
+            height: '100%'
           }}
         >
-          <ContactTitle className="title has-text-light">Address</ContactTitle>
-          <p>
-            Nextzy Technologies Co., Ltd.<br />
-            219/22 Asoke Towers 7<sup>th</sup>
-            <br />
-            Soi Sukhumvit 21 Rd., Klongtoey Nua,<br />
-            Wattana, Bangkok 10110, Thailand.
-          </p>
-          <ContactTitle className="title has-text-light">Phones</ContactTitle>
-          <p>
-            02-664-3364<br />
-            Fax 02-664-0886<br />
-          </p>
-          <ContactTitle className="title has-text-light">E-mail</ContactTitle>
-          <p>
-            contact@nextzy.com<br />
-            geek@nextzy.com<br />
-          </p>
+          <div>
+            <ContactTitle className="title has-text-light">
+              Address
+            </ContactTitle>
+            <p>
+              Nextzy Technologies Co., Ltd.<br />
+              219/22 Asoke Towers 7<sup>th</sup>
+              <br />
+              Soi Sukhumvit 21 Rd., Klongtoey Nua,<br />
+              Wattana, Bangkok 10110, Thailand.
+            </p>
+          </div>
+          <div>
+            <ContactTitle className="title has-text-light">Phones</ContactTitle>
+            <p>
+              02-664-3364<br />
+              Fax 02-664-0886<br />
+            </p>
+          </div>
+          <div>
+            <ContactTitle className="title has-text-light">E-mail</ContactTitle>
+            <p>
+              contact@nextzy.com<br />
+              geek@nextzy.com<br />
+            </p>
+          </div>
         </div>
       </ContactContainer>
     )

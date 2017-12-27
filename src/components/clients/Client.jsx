@@ -30,6 +30,7 @@ const ImageWrapper = styled.div`
   background: #fff;
   border-radius: 50%;
   box-shadow: 0 0 0 6px #fff;
+  overflow: hidden;
 `
 
 export default class Client extends React.Component {
