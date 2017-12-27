@@ -1,25 +1,19 @@
 import ais from '../images/logos/logo_ais.png'
+import nitto from '../images/logos/nextzy_landing_page_client_nitto.jpg'
+import trueCompany from '../images/logos/nextzy_landing_page_client_true.jpg'
 
 const clients = [
   {
     img: ais,
-    name: 'AIS1'
+    name: 'AIS'
   },
   {
-    img: ais,
-    name: 'AIS2'
+    img: nitto,
+    name: 'Nitto'
   },
   {
-    img: ais,
-    name: 'AIS3'
-  },
-  {
-    img: ais,
-    name: 'AIS4'
-  },
-  {
-    img: ais,
-    name: 'AIS5'
+    img: trueCompany,
+    name: 'True'
   }
 ]
 
