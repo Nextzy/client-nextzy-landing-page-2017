@@ -118,7 +118,7 @@ export default class HeaderNavigation extends React.Component {
               </a>
               <a
                 className="navbar-item"
-                href="http://nextzy.me/careers/"
+                href="https://www.blognone.com/node/64996"
                 rel="noopener noreferrer"
                 target="_blank"
                 onClick={this.onLinkClick}
