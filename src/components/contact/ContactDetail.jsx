@@ -52,6 +52,7 @@ export default class ContactDetail extends React.Component {
               Soi Sukhumvit 21 Rd., Klongtoey Nua,<br />
               Wattana, Bangkok 10110, Thailand.
             </p>
+            <br />
           </div>
           <div>
             <ContactTitle className="title has-text-light">Phones</ContactTitle>
@@ -59,6 +60,7 @@ export default class ContactDetail extends React.Component {
               02-664-3364<br />
               Fax 02-664-0886<br />
             </p>
+            <br />
           </div>
           <div>
             <ContactTitle className="title has-text-light">E-mail</ContactTitle>
