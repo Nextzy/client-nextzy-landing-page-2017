@@ -23,17 +23,30 @@ export default class HeaderNavigation extends React.Component {
     this._renderMenu = this._renderMenu.bind(this)
     this.onBurgerClick = this.onBurgerClick.bind(this)
     this.onLinkClick = this.onLinkClick.bind(this)
+    this.handleOnSetActive = this.handleOnSetActive.bind(this)
+    this.handleOnSetInactive = this.handleOnSetInactive.bind(this)
   }
 
   componentDidMount () {
     Events.scrollEvent.register('begin', () => {})
     Events.scrollEvent.register('end', () => {})
     scrollSpy.update()
+    console.log(scrollSpy.isMounted())
   }
 
   componenetWillUnmount () {
     Events.scrollEvent.remove('begin')
     Events.scrollEvent.remove('end')
+  }
+
+  handleOnSetActive (event) {
+    console.log(event.target)
+    // event.target.className = `${event.target.className} is-active`
+  }
+
+  handleOnSetInactive (event) {
+    console.log(event.target)
+    // event.target.className = 'navbar-item'
   }
 
   _renderMenu (data) {
@@ -43,12 +56,14 @@ export default class HeaderNavigation extends React.Component {
         <Link
           key={menu.key}
           to={menu.link}
-          activeClass="active"
-          className="navbar-item"
+          activeClass="is-active"
+          className={'navbar-item'}
           spy={true}
-          smooth={true}
+          smooth={'easeInOutQuint'}
           duration={500}
           onClick={this.onLinkClick}
+          onSetActive={this.handleOnSetActive}
+          onSetInactive={this.handleOnSetInactive}
         >
           {menu.name}
         </Link>
@@ -76,12 +91,13 @@ export default class HeaderNavigation extends React.Component {
             <Link
               key="brand"
               to="banner"
-              isDynamic={true}
-              activeClass="active"
-              className="navbar-item"
+              activeClass="is-active"
+              className={'navbar-item'}
               spy={true}
-              smooth={true}
+              smooth={'easeInOutQuint'}
               duration={500}
+              onSetActive={this.handleOnSetActive}
+              onSetInactive={this.handleOnSetInactive}
             >
               <img id="nextzy-logo" src={logo} alt="Nextzy Technologies" />
             </Link>
