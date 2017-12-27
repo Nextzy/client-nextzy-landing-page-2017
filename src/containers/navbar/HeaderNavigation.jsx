@@ -23,8 +23,6 @@ export default class HeaderNavigation extends React.Component {
     this._renderMenu = this._renderMenu.bind(this)
     this.onBurgerClick = this.onBurgerClick.bind(this)
     this.onLinkClick = this.onLinkClick.bind(this)
-    this.handleOnSetActive = this.handleOnSetActive.bind(this)
-    this.handleOnSetInactive = this.handleOnSetInactive.bind(this)
   }
 
   componentDidMount () {
@@ -37,16 +35,6 @@ export default class HeaderNavigation extends React.Component {
   componenetWillUnmount () {
     Events.scrollEvent.remove('begin')
     Events.scrollEvent.remove('end')
-  }
-
-  handleOnSetActive (event) {
-    console.log(event.target)
-    // event.target.className = `${event.target.className} is-active`
-  }
-
-  handleOnSetInactive (event) {
-    console.log(event.target)
-    // event.target.className = 'navbar-item'
   }
 
   _renderMenu (data) {
@@ -62,8 +50,6 @@ export default class HeaderNavigation extends React.Component {
           smooth={'easeInOutQuint'}
           duration={500}
           onClick={this.onLinkClick}
-          onSetActive={this.handleOnSetActive}
-          onSetInactive={this.handleOnSetInactive}
         >
           {menu.name}
         </Link>
@@ -96,8 +82,6 @@ export default class HeaderNavigation extends React.Component {
               spy={true}
               smooth={'easeInOutQuint'}
               duration={500}
-              onSetActive={this.handleOnSetActive}
-              onSetInactive={this.handleOnSetInactive}
             >
               <img id="nextzy-logo" src={logo} alt="Nextzy Technologies" />
             </Link>
