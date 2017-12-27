@@ -1,0 +1,23 @@
+machine:
+  pre:
+    - mkdir ~/.yarn-cache
+  node:
+    version:
+      '8'
+dependencies:
+  pre:
+    - curl -o- -L https://yarnpkg.com/install.sh | bash
+  cache_directories:
+    - ~/.yarn-cache
+  override:
+    - yarn
+test:
+  override:
+    - yarn run test
+deployment:
+  master:
+    branch: master
+    commands:
+      - npm install -g firebase-tools
+      - yarn run build
+      - firebase deploy --token "$FIREBASE_DEPLOY_TOKEN" --non-interactive
