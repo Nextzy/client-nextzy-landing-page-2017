@@ -10,7 +10,7 @@ const TitleComponent = styled.h1`
     font-size: 26pt;
   }
   @media screen and (min-width: 1024px) {
-    font-size: 22pt;
+    font-size: 28pt;
   }
 `
 export default class Title extends React.Component {
@@ -22,13 +22,14 @@ export default class Title extends React.Component {
         letterSpacing: '0.2em',
         textAlign: this.props.textAlign || 'center',
         margin: '0px'
-      }
+      },
+      marginBottom: this.props.marginBottom || '50px'
     }
   }
 
   render () {
     return (
-      <div className="content" style={{marginBottom: '50px'}}>
+      <div className="content" style={{marginBottom: this.state.marginBottom}}>
         <TitleComponent style={this.state.textStyle}>
           {this.props.children}
         </TitleComponent>
