@@ -33,10 +33,10 @@ const CompanyDescription = styled.div`
 const particleStyle = {
   particles: {
     number: {
-      value: 60,
+      value: 20,
       density: {
         enable: true,
-        value_area: 800
+        value_area: 2000
       }
     },
     shape: {
