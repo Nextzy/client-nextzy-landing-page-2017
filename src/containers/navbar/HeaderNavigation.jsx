@@ -29,6 +29,7 @@ export default class HeaderNavigation extends React.Component {
     Events.scrollEvent.register('begin', () => {})
     Events.scrollEvent.register('end', () => {})
     scrollSpy.update()
+    console.log(scrollSpy.isMounted())
   }
 
   componenetWillUnmount () {
@@ -43,10 +44,10 @@ export default class HeaderNavigation extends React.Component {
         <Link
           key={menu.key}
           to={menu.link}
-          activeClass="active"
-          className="navbar-item"
+          activeClass="is-active"
+          className={'navbar-item'}
           spy={true}
-          smooth={true}
+          smooth={'easeInOutQuint'}
           duration={500}
           onClick={this.onLinkClick}
         >
@@ -76,11 +77,10 @@ export default class HeaderNavigation extends React.Component {
             <Link
               key="brand"
               to="banner"
-              isDynamic={true}
-              activeClass="active"
-              className="navbar-item"
+              activeClass="is-active"
+              className={'navbar-item'}
               spy={true}
-              smooth={true}
+              smooth={'easeInOutQuint'}
               duration={500}
             >
               <img id="nextzy-logo" src={logo} alt="Nextzy Technologies" />
