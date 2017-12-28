@@ -33,10 +33,10 @@ const CompanyDescription = styled.div`
 const particleStyle = {
   particles: {
     number: {
-      value: 25,
+      value: 60,
       density: {
         enable: true,
-        value_area: 2000
+        value_area: 800
       }
     },
     shape: {
@@ -52,7 +52,8 @@ const particleStyle = {
       color: '#c8b4b4',
       opacity: 0.4,
       width: 1
-    }
+    },
+    retina_detect: true
   }
 }
 
