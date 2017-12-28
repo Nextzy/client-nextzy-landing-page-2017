@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import {office} from '../../constants/office'
 
 const ContactContainer = styled.div`
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 1023px) {
     display: flex;
     flex-direction: column-reverse;
   }
@@ -29,7 +29,7 @@ export default class Contact extends React.Component {
   render () {
     return (
       <ContactContainer className="columns is-desktop is-gapless">
-        <div className="column is-half" style={{height: '100vh'}}>
+        <div className="column" style={{height: '100vh'}}>
           <NextzyMap
             lat={
               this.state.isBangkok ? office.bangkok.lat : office.chiangmai.lat
@@ -42,7 +42,7 @@ export default class Contact extends React.Component {
             }
           />
         </div>
-        <div className="column is-half">
+        <div className="column">
           <ContactDetail
             switchLocation={this.switchLocation}
             isBangkok={this.state.isBangkok}

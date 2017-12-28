@@ -4,11 +4,6 @@ import {withGoogleMap, GoogleMap, Marker} from 'react-google-maps'
 export default class NextzyMap extends React.Component {
   constructor (props) {
     super(props)
-    this.state = {
-      lat: this.props.lat,
-      lng: this.props.lng,
-      key: this.props.officeKey
-    }
     this.getGoogleMapContainer = this.getGoogleMapContainer.bind(this)
   }
 
@@ -16,7 +11,7 @@ export default class NextzyMap extends React.Component {
     return withGoogleMap(props => (
       <GoogleMap
         defaultZoom={17}
-        defaultCenter={{lat: this.state.lat, lng: this.state.lng}}
+        defaultCenter={{lat: this.props.lat, lng: this.props.lng}}
       >
         {<Marker {...props.marker} />}
       </GoogleMap>
@@ -32,10 +27,10 @@ export default class NextzyMap extends React.Component {
         mapElement={<div style={{width: '100%', height: `100%`}} />}
         marker={{
           position: {
-            lat: this.state.lat,
-            lng: this.state.lng
+            lat: this.props.lat,
+            lng: this.props.lng
           },
-          key: 'Asoke Tower',
+          key: this.props.officeKey,
           defaultAnimation: 2
         }}
       />
