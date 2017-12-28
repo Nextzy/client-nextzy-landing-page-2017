@@ -15,7 +15,6 @@ const PracticesContainer = styled.div`
   display: flex;
   justify-content: center;
   align-content: center;
-  margin-top: 50px !important;
 `
 
 const PracticesContent = styled.div`
