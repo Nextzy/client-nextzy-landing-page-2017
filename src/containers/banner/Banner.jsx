@@ -33,10 +33,10 @@ const CompanyDescription = styled.div`
 const particleStyle = {
   particles: {
     number: {
-      value: 50,
+      value: 25,
       density: {
         enable: true,
-        value_area: 1000
+        value_area: 2000
       }
     },
     shape: {
@@ -82,7 +82,7 @@ export default class Banner extends React.Component {
             />
           </ImageIcon>
           <CompanyDescription>
-            <Title textColor="#EEEEEE" textAlign="start">
+            <Title textColor="#EEEEEE" textAlign="start" marginBottom="0px">
               {this.props.nextzy}
               <br />
               {this.props.tech}
