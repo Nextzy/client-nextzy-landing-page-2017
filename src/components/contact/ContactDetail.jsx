@@ -28,16 +28,16 @@ const ContactTitle = styled.h3`
 export default class ContactDetail extends React.Component {
   render () {
     return (
-      <ContactContainer className="content">
-        <Title textColor="#EEEEEE">
-          <b>CONTACT US</b>
-        </Title>
+      <ContactContainer>
+        <div style={{marginTop: '50px'}}>
+          <Title textColor="#EEEEEE">CONTACT US</Title>
+        </div>
         <div
           style={{
             display: 'flex',
             flexDirection: 'column',
-            justifyContent: 'space-between',
-            padding: '40px',
+            justifyContent: 'flex-start',
+            padding: '20px',
             height: '100%'
           }}
         >

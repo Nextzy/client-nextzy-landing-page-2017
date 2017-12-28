@@ -77,7 +77,6 @@ export default class HeaderNavigation extends React.Component {
             <Link
               key="brand"
               to="banner"
-              activeClass="is-active"
               className={'navbar-item'}
               spy={true}
               smooth={'easeInOutQuint'}
