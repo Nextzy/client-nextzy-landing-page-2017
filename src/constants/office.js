@@ -11,7 +11,7 @@ const office = {
     lng: 98.9724383,
     key: 'Cube No.7',
     address:
-      '17 / 1 Cube No.7 Sirimangkalajarn Lane 7\nSuthep, Muang, 50200, Thailand.'
+      '17 / 1 Cube No.7 Sirimangkalajarn Lane 7\nSuthep, Muang, Chiang Mai 50200, Thailand.'
   }
 }
 
