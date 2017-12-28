@@ -4,13 +4,13 @@ import styled from 'styled-components'
 const TitleComponent = styled.h1`
   font-weight: bold !important;
   @media screen and (min-width: 425px) {
-    font-size: 24pt;
+    font-size: 12pt !important;
   }
   @media screen and (min-width: 768px) {
-    font-size: 26pt;
+    font-size: 26pt !important;
   }
   @media screen and (min-width: 1024px) {
-    font-size: 28pt;
+    font-size: 28pt !important;
   }
 `
 export default class Title extends React.Component {
