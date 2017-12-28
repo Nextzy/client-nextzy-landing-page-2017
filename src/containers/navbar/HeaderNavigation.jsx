@@ -29,7 +29,6 @@ export default class HeaderNavigation extends React.Component {
     Events.scrollEvent.register('begin', () => {})
     Events.scrollEvent.register('end', () => {})
     scrollSpy.update()
-    console.log(scrollSpy.isMounted())
   }
 
   componenetWillUnmount () {

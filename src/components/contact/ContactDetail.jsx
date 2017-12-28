@@ -53,7 +53,7 @@ export default class ContactDetail extends React.Component {
           <Title textColor="#EEEEEE">CONTACT US</Title>
         </div>
         <button
-          class="button is-link is-inverted is-outlined"
+          className="button is-link is-inverted is-outlined"
           onClick={this.props.switchLocation}
         >
           {this.props.isBangkok ? `Live in Chiang Mai?` : `Live in Bangkok?`}
