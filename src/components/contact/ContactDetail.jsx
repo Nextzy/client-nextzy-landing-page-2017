@@ -25,37 +25,74 @@ const ContactTitle = styled.h3`
   }
 `
 
+const newline = '\n'
+
 export default class ContactDetail extends React.Component {
+  nl2br (text) {
+    if (typeof text === 'number') {
+      return text
+    } else if (typeof text !== 'string') {
+      return ''
+    }
+
+    let lines = text.split(newline)
+    return lines.map(function (line, i) {
+      return (
+        <span key={i}>
+          {line}
+          <br />
+        </span>
+      )
+    })
+  }
+
   render () {
     return (
       <ContactContainer>
-        <div style={{marginTop: '50px'}}>
+        <div style={{marginTop: '30px'}}>
           <Title textColor="#EEEEEE">CONTACT US</Title>
+        </div>
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            marginBottom: '30px'
+          }}
+        >
+          <button
+            style={{width: '190px', height: '60px'}}
+            className="button is-link is-inverted is-outlined"
+            onClick={this.props.switchLocation}
+          >
+            {this.props.isBangkok ? `Live in Chiang Mai?` : `Live in Bangkok?`}
+          </button>
         </div>
         <div
           style={{
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'flex-start',
-            padding: '20px',
+            padding: '10px',
             height: '100%'
           }}
         >
           <div>
-            <ContactTitle className="title has-text-light">
+            <ContactTitle
+              className="title has-text-light"
+              style={{marginBottom: '10px'}}
+            >
               Address
             </ContactTitle>
-            <p>
-              Nextzy Technologies Co., Ltd.<br />
-              219/22 Asoke Towers 7<sup>th</sup>
-              <br />
-              Soi Sukhumvit 21 Rd., Klongtoey Nua,<br />
-              Wattana, Bangkok 10110, Thailand.
-            </p>
+            <p>{this.nl2br(this.props.officeAddress)}</p>
             <br />
           </div>
           <div>
-            <ContactTitle className="title has-text-light">Phones</ContactTitle>
+            <ContactTitle
+              className="title has-text-light"
+              style={{marginBottom: '10px'}}
+            >
+              Phones
+            </ContactTitle>
             <p>
               02-664-3364<br />
               Fax 02-664-0886<br />
@@ -63,7 +100,12 @@ export default class ContactDetail extends React.Component {
             <br />
           </div>
           <div>
-            <ContactTitle className="title has-text-light">E-mail</ContactTitle>
+            <ContactTitle
+              className="title has-text-light"
+              style={{marginBottom: '10px'}}
+            >
+              E-mail
+            </ContactTitle>
             <p>
               contact@nextzy.com<br />
               geek@nextzy.com<br />
