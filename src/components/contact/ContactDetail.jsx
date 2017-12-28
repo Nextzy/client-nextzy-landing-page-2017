@@ -72,7 +72,7 @@ export default class ContactDetail extends React.Component {
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'flex-start',
-            padding: '20px',
+            padding: '10px',
             height: '100%'
           }}
         >
