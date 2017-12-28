@@ -9,7 +9,7 @@ const office = {
   chiangmai: {
     lat: 18.795208,
     lng: 98.972442,
-    key: 'Chiang Mai',
+    key: 'Cube No.7',
     address:
       'Nextzy Technologies Co., Ltd. (Chiang Mai)\n17 / 1 Cube No.7 Sirimangkalajarn Lane 7\nSuthep, Muang, 50200, Thailand.'
   }
