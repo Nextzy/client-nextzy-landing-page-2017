@@ -4,7 +4,7 @@ const office = {
     lng: 100.5623,
     key: 'Asoke Tower',
     address:
-      '219 / 22 Asoke Towers 7th, Soi Sukhumvit 21 Rd., Klongtoey Nua,\nWattana, Bangkok 10110, Thailand.'
+      '219 / 22 Asoke Towers 7th, Soi Sukhumvit 21 Rd.\nKlongtoey Nua, Wattana, Bangkok 10110, Thailand.'
   },
   chiangmai: {
     lat: 18.795211,
