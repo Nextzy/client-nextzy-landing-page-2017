@@ -1,30 +1,39 @@
 import React from 'react'
-import { withGoogleMap, GoogleMap, Marker } from 'react-google-maps'
+import {withGoogleMap, GoogleMap, Marker} from 'react-google-maps'
 
-const GoogleMapContainer = withGoogleMap(props => (
-  <GoogleMap defaultZoom={17} defaultCenter={{ lat: 13.7456, lng: 100.5623 }}>
-    {<Marker {...props.marker} />}
-  </GoogleMap>
-))
+export default class NextzyMap extends React.Component {
+  constructor (props) {
+    super(props)
+    this.getGoogleMapContainer = this.getGoogleMapContainer.bind(this)
+  }
 
-class NextzyMap extends React.Component {
-  render() {
+  getGoogleMapContainer () {
+    return withGoogleMap(props => (
+      <GoogleMap
+        defaultZoom={17}
+        defaultCenter={{lat: this.props.lat, lng: this.props.lng}}
+      >
+        {<Marker {...props.marker} />}
+      </GoogleMap>
+    ))
+  }
+
+  render () {
+    const GoogleMapContainer = this.getGoogleMapContainer()
     return (
       <GoogleMapContainer
         className="NextzyMap"
-        containerElement={<div style={{ width: '100%', height: `100%` }} />}
-        mapElement={<div style={{ width: '100%', height: `100%` }} />}
+        containerElement={<div style={{width: '100%', height: `100%`}} />}
+        mapElement={<div style={{width: '100%', height: `100%`}} />}
         marker={{
           position: {
-            lat: 13.7456,
-            lng: 100.5623
+            lat: this.props.lat,
+            lng: this.props.lng
           },
-          key: 'Asoke Tower',
+          key: this.props.officeKey,
           defaultAnimation: 2
         }}
       />
     )
   }
 }
-
-export default NextzyMap

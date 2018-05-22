@@ -1,13 +1,26 @@
 import React from 'react'
-import './Practice.css'
+import styled from 'styled-components'
+
+const PracticeContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 40px 0 40px 0;
+  flex-grow: 1;
+`
+
+const ImageIcon = styled.img`
+  padding-right: 20px;
+  height: 60px;
+`
 
 export default class Practice extends React.Component {
   render () {
     return (
-      <div className="Practice">
-        <img src={this.props.icon} alt={this.props.text} />
-        <h3>{this.props.text}</h3>
-      </div>
+      <PracticeContainer>
+        <ImageIcon src={this.props.icon} alt={this.props.text} />
+        <h4 className="subtitle is-5">{this.props.text}</h4>
+      </PracticeContainer>
     )
   }
 }

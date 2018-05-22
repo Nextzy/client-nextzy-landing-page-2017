@@ -1,20 +1,61 @@
 import React from 'react'
-import {Col} from 'react-bootstrap'
 import ContactDetail from '../../components/contact/ContactDetail'
 import NextzyMap from '../../components/contact/NextzyMap'
-import './Contact.css'
+import styled from 'styled-components'
+import {office} from '../../constants/office'
+
+const ContactContainer = styled.div`
+  @media only screen and (max-width: 1023px) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+`
 
 export default class Contact extends React.Component {
+  constructor (props) {
+    super(props)
+    this.state = {
+      isBangkok: true
+    }
+    this.switchLocation = this.switchLocation.bind(this)
+  }
+
+  switchLocation () {
+    this.setState({
+      isBangkok: !this.state.isBangkok
+    })
+  }
+
   render () {
     return (
-      <Col className="Contact" id="contact" xs={12} sm={12} md={12} lg={12}>
-        <Col className="map" xs={12} sm={12} md={6} lg={6}>
-          <NextzyMap />
-        </Col>
-        <Col className="detail" xs={12} sm={12} md={6} lg={6}>
-          <ContactDetail />
-        </Col>
-      </Col>
+      <ContactContainer className="columns is-desktop is-gapless">
+        <div className="column" style={{height: '100vh'}}>
+          <NextzyMap
+            lat={
+              this.state.isBangkok ? office.bangkok.lat : office.chiangmai.lat
+            }
+            lng={
+              this.state.isBangkok ? office.bangkok.lng : office.chiangmai.lng
+            }
+            officeKey={
+              this.state.isBangkok ? office.bangkok.key : office.chiangmai.key
+            }
+          />
+        </div>
+        <div className="column">
+          <ContactDetail
+            switchLocation={this.switchLocation}
+            isBangkok={this.state.isBangkok}
+            officeAddress={
+              this.state.isBangkok ? (
+                office.bangkok.address
+              ) : (
+                office.chiangmai.address
+              )
+            }
+          />
+        </div>
+      </ContactContainer>
     )
   }
 }

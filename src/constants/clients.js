@@ -1,26 +1,35 @@
-import ais from '../images/logo_ais.png'
+import ais from '../images/logos/logo_ais.png'
+import nitto from '../images/logos/nextzy_landing_page_client_nitto.jpg'
+import streamIt from '../images/logos/nextzy_landing_page_client_stream_it.jpg'
+import trueCompany from '../images/logos/nextzy_landing_page_client_true.jpg'
+import tip from '../images/logos/nextzy_landing_page_client_tip.jpg'
+import iteam from '../images/logos/nextzy_landing_page_client_iteam.jpg'
 
 const clients = [
   {
     img: ais,
-    name: 'AIS1'
+    name: 'AIS'
   },
   {
-    img: ais,
-    name: 'AIS2'
+    img: nitto,
+    name: 'Nitto'
   },
   {
-    img: ais,
-    name: 'AIS3'
+    img: streamIt,
+    name: 'Stream I.T. Consulting'
   },
   {
-    img: ais,
-    name: 'AIS4'
+    img: tip,
+    name: 'Dhipaya Insurance'
   },
   {
-    img: ais,
-    name: 'AIS5'
+    img: iteam,
+    name: 'iTeam Studio'
+  },
+  {
+    img: trueCompany,
+    name: 'True'
   }
 ]
 
-export { clients }
+export {clients}

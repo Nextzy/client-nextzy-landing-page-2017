@@ -1,11 +1,19 @@
 import React from 'react'
-import {Col} from 'react-bootstrap'
-import CenterTitle from '../../components/centerTitle'
+import Title from '../../components/title'
 import Slider from 'react-slick'
 import Client from '../../components/clients/Client'
 import {clients} from '../../constants/clients'
-import './Clients.css'
 import {settings} from './sliderSetting'
+import styled from 'styled-components'
+import './Clients.css'
+
+const ClientsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(45deg, #181a41, #03375f);
+  padding: 50px;
+`
 
 export default class Clients extends React.Component {
   constructor (props) {
@@ -24,16 +32,16 @@ export default class Clients extends React.Component {
 
   render () {
     return (
-      <Col className="Clients" xs={12} sm={12} md={12} lg={12}>
-        <CenterTitle textColor="#EEEEEE">OUR CLIENTS</CenterTitle>
-        <Col className="clients-slider-wrapper" xs={12} sm={12} md={12} lg={12}>
-          <Slider className="clients-slider" {...settings}>
+      <ClientsContainer>
+        <Title textColor="#EEEEEE">OUR CLIENTS</Title>
+        <div>
+          <Slider {...settings}>
             {this._renderClient(clients).map((slide, index) => (
               <div key={index}>{slide}</div>
             ))}
           </Slider>
-        </Col>
-      </Col>
+        </div>
+      </ClientsContainer>
     )
   }
 }

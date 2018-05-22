@@ -1,11 +1,20 @@
 import React from 'react'
-import {Col} from 'react-bootstrap'
 import Member from '../../components/team/Member'
 import Slider from 'react-slick'
 import {members} from '../../constants/members'
-import CenterTitle from '../../components/centerTitle'
+import Title from '../../components/title'
 import {settings} from './sliderSetting'
-import './Team.css'
+import styled from 'styled-components'
+
+const TeamContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+`
+
+const TeamTitle = styled.div`padding-bottom: 50px;`
+
+const TeamMembers = styled.div`padding: 0px 26px 20px 26px;`
 
 export default class Team extends React.Component {
   constructor (props) {
@@ -33,14 +42,18 @@ export default class Team extends React.Component {
 
   render () {
     return (
-      <Col className="Team" id="team" xs={12} sm={12} md={12} lg={12}>
-        <CenterTitle>OUR TEAM</CenterTitle>
-        <Slider className="member-slider" {...settings}>
-          {this._renderTeamMember(members).map((slide, index) => (
-            <div key={index}>{slide}</div>
-          ))}
-        </Slider>
-      </Col>
+      <TeamContainer>
+        <TeamTitle>
+          <Title>OUR TEAM</Title>
+        </TeamTitle>
+        <TeamMembers>
+          <Slider className="memberSlider" {...settings}>
+            {this._renderTeamMember(members).map((slide, index) => (
+              <div key={index}>{slide}</div>
+            ))}
+          </Slider>
+        </TeamMembers>
+      </TeamContainer>
     )
   }
 }

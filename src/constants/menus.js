@@ -1,27 +1,27 @@
 module.exports = [
   {
     key: 1,
-    link: '#banner',
+    link: 'banner',
     name: 'Home'
   },
   {
     key: 2,
-    link: '#services',
+    link: 'services',
     name: 'Services'
   },
   {
     key: 3,
-    link: '#works',
+    link: 'works',
     name: 'Works'
   },
   {
     key: 4,
-    link: '#team',
+    link: 'team',
     name: 'Team'
   },
   {
     key: 5,
-    link: '#contact',
+    link: 'contact',
     name: 'Contact'
   }
 ]

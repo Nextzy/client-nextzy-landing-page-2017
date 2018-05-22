@@ -1,16 +1,25 @@
 import React from 'react'
-import {Col} from 'react-bootstrap'
 import CompanyName from '../../components/footer/CompanyName'
 import FooterContacts from '../../components/footer/FooterContacts'
-import './Footer.css'
+import styled from 'styled-components'
+
+const FooterContainer = styled.div`
+  display: flex;
+  padding: 30px;
+  background: #000000;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap-reverse;
+  align-content: center;
+`
 
 export default class Footer extends React.Component {
   render () {
     return (
-      <Col xs={12} sm={12} md={12} lg={12} className="Footer">
+      <FooterContainer>
         <CompanyName />
         <FooterContacts />
-      </Col>
+      </FooterContainer>
     )
   }
 }

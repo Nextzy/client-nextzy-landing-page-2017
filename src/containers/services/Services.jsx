@@ -1,9 +1,15 @@
 import React from 'react'
-import {Col} from 'react-bootstrap'
 import Service from '../../components/service/Service'
 import ServiceTitle from '../../components/service/ServiceTitle'
 import {services} from '../../constants/services'
-import './Services.css'
+import styled from 'styled-components'
+
+const ServicesContainer = styled.div`
+  @media only screen and (max-width: 1023px) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+`
 
 export default class Services extends React.Component {
   constructor (props) {
@@ -27,12 +33,12 @@ export default class Services extends React.Component {
 
   render () {
     return (
-      <Col className="Services" id="services" xs={12} sm={12} md={12} lg={12}>
-        <Col className="service-items" xs={12} sm={12} md={6} lg={6}>
-          {this._renderServices(services)}
-        </Col>
-        <ServiceTitle />
-      </Col>
+      <ServicesContainer className="columns is-desktop is-gapless">
+        <div className="column">{this._renderServices(services)}</div>
+        <div className="column">
+          <ServiceTitle />
+        </div>
+      </ServicesContainer>
     )
   }
 }

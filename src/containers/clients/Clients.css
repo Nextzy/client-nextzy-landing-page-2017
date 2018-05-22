@@ -1,10 +1,3 @@
-.Clients {
-  display: flex;
-  flex-direction: column;
-  background: linear-gradient(45deg, #181A41, #03375F);
-  padding: 40px;
-}
-
 .slick-track > .slick-slide {
   display: flex;
   justify-content: center;

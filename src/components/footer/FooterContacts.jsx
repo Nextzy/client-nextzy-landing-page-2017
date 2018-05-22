@@ -1,38 +1,41 @@
 import React from 'react'
-import { Col } from 'react-bootstrap'
-import facebook_icon from '../../images/icon_facebook_outline_white.png'
-import linkedin_icon from '../../images/icon_linkedin_outline_white.png'
-import github_icon from '../../images/icon_github_outline_white.png'
-import email_icon from '../../images/icon_email_outline_white.png'
-import './FooterContacts.css'
+import facebookIcon from '../../images/icons/icon_facebook_outline_white.png'
+import linkedinIcon from '../../images/icons/icon_linkedin_outline_white.png'
+import githubIcon from '../../images/icons/icon_github_outline_white.png'
+import emailIcon from '../../images/icons/icon_email_outline_white.png'
+import styled from 'styled-components'
 
-class FooterContacts extends React.Component {
-  render() {
+const FooterContactsContainer = styled.div`
+  display: flex;
+  flex: 1;
+  justify-content: space-around;
+
+  @media only screen and (max-width: 425px) {
+    flex: 0 0 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+`
+
+const ImageIcon = styled.img`height: 32px;`
+
+export default class FooterContacts extends React.Component {
+  render () {
     return (
-      <Col
-        xs={12}
-        sm={12}
-        mdOffset={3}
-        md={3}
-        lgOffset={3}
-        lg={3}
-        className="FooterContacts"
-      >
+      <FooterContactsContainer>
         <a href="https://www.facebook.com/nextzy">
-          <img src={facebook_icon} alt="Facebook" />
+          <ImageIcon src={facebookIcon} alt="Facebook" />
         </a>
         <a href="https://www.linkedin.com/company/3755640/">
-          <img src={linkedin_icon} alt="Linkedin" />
+          <ImageIcon src={linkedinIcon} alt="Linkedin" />
         </a>
         <a href="https://github.com/Nextzy">
-          <img src={github_icon} alt="Github" />
+          <ImageIcon src={githubIcon} alt="Github" />
         </a>
         <a href="mailto:contact@nextzy.com">
-          <img src={email_icon} alt="E-mail" />
+          <ImageIcon src={emailIcon} alt="E-mail" />
         </a>
-      </Col>
+      </FooterContactsContainer>
     )
   }
 }
-
-export default FooterContacts
